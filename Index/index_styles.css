@@ -1,0 +1,166 @@
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+}
+
+.fa {
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: var(--lys-rosa);
+}
+
+.fa-chevron-down {
+    font-size: 1.2rem;
+}
+
+h2, h1, p {
+    margin: 0;
+}
+
+
+
+
+
+header {
+    background-color: var(--dark-orange);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem 1rem 1rem;
+    justify-content: space-between;
+}
+
+header > div > nav > ul, footer > div > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+}
+
+header > div > nav > ul > li, footer > div > ul > li {
+    list-style: none;
+}
+
+header > div > nav > ul > li > a, footer > div > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--robotCon);
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+
+.herosection {
+    height: 90vh;
+    background-image: url(img/larisa-birta-slbOcNlWNHA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    width: 120px;
+    margin-bottom: 3rem;
+}
+
+.herosection >  div {
+    padding-top: 52vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.herosection >  div > h1 {
+    font-family: var(--BUKO);
+    font-weight: 500;
+    font-size: 7rem;
+    line-height: 7rem;
+}
+
+.herosection >  div > p {
+    font-family: var(--robotCon);
+    font-weight: 100;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin: 0;
+}
+
+
+.toDiv {
+    height: 500px;
+    background-color: var(--lys-rosa);
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+.abovefooter {
+    width: 500px;
+    background-color: var(--blue-green);
+    height: 200px;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 2rem;
+    border-radius: 20px 0 0 0;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.abovefooter > input {
+    width: 300px;
+    height: 35px;
+}
+
+.abovefooter > button {
+    border: none;
+    color: white;
+    background-color: #CF9B7F;
+    padding: 0.5rem;
+}
+
+
+
+
+
+footer {
+    background-color: var(--blue-green);
+}
+
+footer > div > ul {
+    margin: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 3rem 0 3rem 6rem;
+}
+
+footer > div > p {
+    text-align: center;
+    color: white;
+    padding-bottom: 0.3rem;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+}
+
+
+
+
+
