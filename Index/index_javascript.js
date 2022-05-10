@@ -18,4 +18,14 @@ const toDiv = document.querySelector(".toDiv");
 scrollDownChevron.addEventListener("click", () => toDiv.scrollIntoView({behavior: "smooth"}));
 
 
+const burgerMenu = document.getElementById("menu");
+const overlay = document.querySelector(".overlay");
+
+burgerMenu.addEventListener("click", function() {
+    if (overlay.style.display === "none") {
+        overlay.style.display = "inline-block";
+    } else {
+      overlay.style.display = "none";
+    }
+});
 

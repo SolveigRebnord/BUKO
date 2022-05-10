@@ -21,10 +21,46 @@ body {
     font-size: 1.2rem;
 }
 
+header > div > .fa-bars {
+    display: none;
+}
+
 h2, h1, p {
     margin: 0;
 }
 
+/*pen li*/
+
+header > nav > ul > li, footer > div > ul > li, .overlay li {
+    list-style: none;
+}
+
+/*bortover liste*/
+header > nav > ul, footer > div > ul, header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+}
+
+/*pen a*/
+
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--robotCon);
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+/*nedover liste*/
+
+.overlay ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
 
 
 
@@ -38,31 +74,69 @@ header {
     justify-content: space-between;
 }
 
-header > div > nav > ul, footer > div > ul {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 0;
-}
 
-header > div > nav > ul > li, footer > div > ul > li {
-    list-style: none;
-}
-
-header > div > nav > ul > li > a, footer > div > ul > li > a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: var(--robotCon);
-    color: white;
-    letter-spacing: 0.8px;
-}
 
 header nav {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 3.5rem;
 }
+
+@media (max-width: 700px) {
+    
+    header {
+        display: grid;
+        grid-row: auto;
+        grid-template-areas:
+        'menu logo profile';
+    }
+
+    #logo {
+        grid-area: logo;
+    }
+
+    #profile {
+        grid-area: profile;
+        font-size: 1.6rem;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    header > div > .fa-bars {
+        display: inline;
+        font-size: 2rem;
+    }
+
+    div#menu {
+        grid-area: menu;
+        width: fit-content;
+    }
+
+    .overlay {
+        display: none;
+        display: block;
+        position: absolute;
+        top: 9%;
+        left: 0%;
+        background-color: #CF9B7F;
+        padding: 3rem;
+        
+    }
+
+}
+
+@media (min-width: 700px) {
+    div.overlay {
+        display: none;
+}
+}
+
+
+
+
+
+
 
 
 .herosection {
