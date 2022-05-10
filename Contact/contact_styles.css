@@ -15,7 +15,10 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--lys-rosa);
+}
+
+main {
+    margin: 0 6rem;
 }
 
 .fa-chevron-down {
@@ -153,6 +156,7 @@ section > p, section > h1 {
     align-items: center;
     justify-content: space-between;
     padding: 0.4rem 1rem; 
+    margin-bottom: 4rem;
 }
 
 .forthegrid {
@@ -188,11 +192,147 @@ section > p, section > h1 {
         display: none;
     }
 
-.title {
-    display: block;
+    .title {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+
+
+.pinkgrid, .pinkgridreverse {
+    background-color: #F6F0EC;
+    height: 360px;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.pinkgridreverse {
+    flex-direction: row-reverse;
+}
+
+.pinkgrid > div, .pinkgridreverse > div {
+    flex: 1;
     text-align: center;
 }
 
+
+.divforborders {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#borderdivtopleft {
+    top: 0%;
+}
+
+#borderdivtopleft, #borderdivtopright, #borderdivbottomleft, #borderdivbottomright {
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    position: absolute;
+
+}
+
+#borderdivtopright {
+    border-right: 1px solid black;
+    border-left: 0;
+    right: 0%;
+    top: 0%;
+}
+
+#borderdivbottomleft {
+    bottom: 0%;
+    border-bottom: 1px solid black;
+    border-top: 0;
+}
+
+#borderdivbottomright {
+    bottom: 0%;
+    right: 0%;
+    border-bottom: 1px solid black;
+    border-left: 0;
+    border-top: 0;
+    border-right: 1px solid black;
+}
+
+.divforborders > h2 {
+    font-family: var(--FiraS);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.pinkgrid div:nth-child(2), .pinkgridreverse div:nth-child(2) {
+    text-align: right;
+    font-family: var(--robotCon);
+    font-weight: 300;
+}
+
+.pinkgridreverse div:nth-child(2){
+    text-align: left;
 }
 
 
+.boldp {
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.pinkgrid div:nth-child(2) > button, .pinkgridreverse div:nth-child(2) > button {
+    background-color: #CF9B7F;
+    border: none;
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-family: var(--FiraS);
+    font-size: 1rem;
+    box-shadow: 1px 1px 12px 6px rgb(255, 253, 253) ;
+    border-radius: 5px;
+}
+
+.pinkgridreverse div:nth-child(2) > button {
+    background-color: #92ABAF;
+}
+
+@media (max-width: 900px) {
+    .pinkgrid, .pinkgridreverse {
+        flex-direction: column;
+        height: fit-content;
+        padding: 2rem 1.5rem;
+    }
+
+    .divforborders > h2{
+    margin: 2rem;
+    }
+
+    .divforborders div {
+        display: inline;
+        text-align: center;
+    }
+
+    main {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .divforborders > h2{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    main {
+        margin: 1rem;
+    }
+}
