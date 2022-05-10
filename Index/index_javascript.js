@@ -1,4 +1,4 @@
-console.log("heia");
+console.log("heia, dette er nå js for index og contact");
 
 
 fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/media")

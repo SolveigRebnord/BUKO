@@ -137,106 +137,62 @@ header > nav > ul {
 }
 
 
+/* COPY FRA INDEX (Header) ------------------------------------------------------------- */
 
-
-
-
-
-
-.herosection {
-    height: 90vh;
-    background-image: url(img/larisa-birta-slbOcNlWNHA-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
+section > p, section > h1 {
+    display: inline;
 }
 
-hr {
-    width: 120px;
-    margin-bottom: 3rem;
-}
-
-.herosection >  div {
-    padding-top: 52vh;
+.title {
+    background-color: #92ABAF;
+    height: fit-content;
+    margin-top: 0.5rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex: 1 1 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem; 
 }
 
-.herosection >  div > h1 {
-    font-family: var(--BUKO);
-    font-weight: 500;
-    font-size: 7rem;
-    line-height: 7rem;
+.forthegrid {
+    width: 120px;
 }
 
-.herosection >  div > p {
+.title h1 {
+    font-family: var(--FiraS);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 4px grey;
+}
+
+.breadcrumbs, .breadcrumbs a {
+    color: white;
+    text-decoration: none;
     font-family: var(--robotCon);
     font-weight: 100;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-    margin: 0;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
 }
 
 
-.toDiv {
-    height: 500px;
-    background-color: var(--lys-rosa);
+
+@media (max-width: 700px) {
+
+    .breadcrumbs, .forthegrid {
+        display: none;
+    }
+
+.title {
+    display: block;
     text-align: center;
-    padding-top: 200px;
 }
 
-
-.abovefooter {
-    width: 500px;
-    background-color: var(--blue-green);
-    height: 200px;
-    margin-left: auto;
-    text-align: center;
-    padding-top: 2rem;
-    border-radius: 20px 0 0 0;
-    font-family: var(--robotCon);
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.2rem;
 }
-
-.abovefooter > input {
-    width: 300px;
-    height: 35px;
-}
-
-.abovefooter > button {
-    border: none;
-    color: white;
-    background-color: #CF9B7F;
-    padding: 0.5rem;
-}
-
-
-
-
-
-footer {
-    background-color: var(--blue-green);
-}
-
-footer > div > ul {
-    padding: 3rem 0 3rem 6rem;
-    gap: 1rem;
-}
-
-footer > div > p {
-    text-align: center;
-    color: white;
-    padding-bottom: 0.3rem;
-    font-family: var(--robotCon);
-    text-transform: uppercase;
-}
-
-
-
 
 
