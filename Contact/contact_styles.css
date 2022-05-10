@@ -67,6 +67,20 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
 }
 
 
+/* button */ 
+
+.pinkgrid div:nth-child(2) > button, .pinkgridreverse div:nth-child(2) > button, .formbutton {
+    background-color: #CF9B7F;
+    border: none;
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-family: var(--FiraS);
+    font-size: 1rem;
+    box-shadow: 1px 1px 12px 6px rgb(255, 253, 253) ;
+    border-radius: 5px;
+}
+
 
 
 
@@ -289,17 +303,7 @@ section > p, section > h1 {
     margin: 2rem 0;
 }
 
-.pinkgrid div:nth-child(2) > button, .pinkgridreverse div:nth-child(2) > button {
-    background-color: #CF9B7F;
-    border: none;
-    width: 140px;
-    height: 40px;
-    color: white;
-    font-family: var(--FiraS);
-    font-size: 1rem;
-    box-shadow: 1px 1px 12px 6px rgb(255, 253, 253) ;
-    border-radius: 5px;
-}
+
 
 .pinkgridreverse div:nth-child(2) > button {
     background-color: #92ABAF;
@@ -333,6 +337,110 @@ section > p, section > h1 {
     }
 
     main {
-        margin: 1rem;
+        margin: 0;
+    }
+}
+
+
+.form h2 {
+    text-align: center;
+    font-family:var(--FiraS);
+    text-transform: uppercase;
+    color: #92ABAF;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+
+}
+
+form {
+    margin-bottom: 6rem;
+    background-color: #92ABAF;
+    color: white;
+    display: flex;
+    gap: 3rem;
+    flex-direction: row;
+    padding: 4vw 6vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+form > div:nth-child(2) {
+    text-align: right;
+}
+
+input, textarea {
+    display: block;
+    width: 300px;
+    height: 34px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+label {
+    text-transform: uppercase;
+    font-family: var(--FiraS);
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+    position: relative;
+}
+
+form > div > label.subject:after{
+    content: 'Write or choose from the list';
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    font-size: 0.8rem;
+    text-transform: initial;
+}
+
+
+form > div > label.subject > input::placeholder {
+    background-image: url(/Contact/img/icons8-chevron-48.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+
+
+textarea {
+    width: 400px;
+    height: 150px;
+    padding: 1rem;
+}
+
+.formbutton {
+    border: 1px var(--dark-orange) solid;
+    box-shadow: 1px 1px 10px 4px rgb(174, 174, 174) ;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+@media (max-width: 1000px) {
+    form {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    textarea, input {
+        max-width: 250px;
+    }
+
+    .form h2 {
+        font-size: 2.5rem;
+        line-height: 1.7rem;
     }
 }
