@@ -1,4 +1,13 @@
 
+main {
+    margin: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .instrument {
     color: red;
 }
@@ -6,3 +15,24 @@
 .school {
     font-size: 2rem;
 }
+
+.memberimg {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.cvdiv {
+    border: solid black 1px;
+    width: 400px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.showMembers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
