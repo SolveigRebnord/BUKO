@@ -1,6 +1,6 @@
 console.log("hello from the news side")
 
-fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts")
+fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
 .then(response => response.json())
 .then(data => {
     console.log(data);

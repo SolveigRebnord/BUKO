@@ -10,7 +10,8 @@ if (!id) { window.location = "news.html"; }
 
 const showSinglePost = document.querySelector(".singlepost")
 
-fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/posts/${id}`) 
+
+fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/posts/${id}?_embed`) 
 
 .then(response => response.json())
 .then(data => {

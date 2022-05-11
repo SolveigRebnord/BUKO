@@ -1,0 +1,100 @@
+
+
+
+.herosection {
+    height: 90vh;
+    background-image: url("https://www.sunroad.no/exam/wp-content/uploads/2022/05/larisa-birta-slbOcNlWNHA-unsplash-2-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+hr {
+    width: 120px;
+    margin-bottom: 3rem;
+}
+
+.herosection >  div {
+    padding-top: 52vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.herosection >  div > h1 {
+    font-family: var(--BUKO);
+    font-weight: 500;
+    font-size: 7rem;
+    line-height: 7rem;
+}
+
+.herosection >  div > p {
+    font-family: var(--robotCon);
+    font-weight: 100;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    margin: 0;
+}
+
+
+.toDiv {
+    height: 500px;
+    background-color: var(--lys-rosa);
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+.abovefooter {
+    width: 500px;
+    background-color: var(--blue-green);
+    height: 200px;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 2rem;
+    border-radius: 20px 0 0 0;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.abovefooter > input {
+    width: 300px;
+    height: 35px;
+}
+
+.abovefooter > button {
+    border: none;
+    color: white;
+    background-color: #CF9B7F;
+    padding: 0.5rem;
+}
+
+
+
+
+
+footer {
+    background-color: var(--blue-green);
+}
+
+footer > div > ul {
+    padding: 3rem 0 3rem 6rem;
+    gap: 1rem;
+}
+
+footer > div > p {
+    text-align: center;
+    color: white;
+    padding-bottom: 0.3rem;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+}
+
+
+
+
+

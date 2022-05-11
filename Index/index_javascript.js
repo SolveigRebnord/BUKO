@@ -1,22 +1,5 @@
 console.log("heia, dette er nå js for index og contact");
 
-/*
-fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/media")
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-    media = data;
-})
-.catch((error) => {
-    console.error('Error:', error);
-  });
-*/
-/*
-const scrollDownChevron = document.getElementById("scrollDown");
-const toDiv = document.querySelector(".toDiv");
-
-scrollDownChevron.addEventListener("click", () => toDiv.scrollIntoView({behavior: "smooth"}));
-*/
 
 const burgerMenu = document.getElementById("menu");
 const overlay = document.querySelector(".overlay");
@@ -41,6 +24,7 @@ const emailInput = document.getElementById("email");
 const subjectInput = document.querySelector(".subject > input"); // dette er feiiil
 const textInput = document.getElementById("textarea")
 
+const nameTheInput = document.querySelector("input#name")
 
 
 validateForm = (e) => {
@@ -60,6 +44,8 @@ validateForm = (e) => {
         if (nameLength > 5) {
             console.log("PERFECTO");
             nameInput.style.color = "green";
+            nameInput.style.borderColor = "green";
+            nameTheInput.style.border = "solid green 1px";            
             nameOK.innerHTML = "Pretty!";
         }
 
@@ -131,12 +117,16 @@ let subjectAfterInput = subjectInput.value.trim();
             console.log("WIHO");
             subjectInput.style.color = "green";
             subjectOK.innerHTML = "Pretty!";
+            subjectOK.style.color="green";
         }
 
     else {
             subjectInput.style.color = "red" // nameOK og BAD funker ikke på fargene. Kan se på dette senere. Fanger fargen fra ene..
             subjectBAD.innerHTML = "At least 15 caracthers!";
+            subjectBAD.style.color="red";
+
             console.log("Error: Not enough caracthers")
+
         }   
 
     }
