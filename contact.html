@@ -124,35 +124,64 @@
         Contact Form
     </h2>
 
-    <form action="get">
+    <form id="form">
 
      <div>
-        <label for="name">Name</label>
+        <label id="namelabel" for="name">Full name <p class="nameOK nameBAD"></p></label> 
         <input type="text" name="name" id="name">
      
       
-        <label for="email">Email</label>
+        <label for="email">Email <p class="emailOK emailBAD"></p></label>
         <input type="email" name="email" id="email">
        
 
-            <label class="subject">Subject<input placeholder=" " list="subject" name="subject" /></label>
-            
+            <label class="subject">Subject<input placeholder=" " list="subject" name="subject"  /> <p class="subjectOK subjectBAD"></p></label> 
+           
             <datalist id="subject">
-                    <option value="Booking"></option>
-                    <option value="Become a member"></option>
-                    <option value="Press/PR"></option>
+                    <option value="Booking and Arrangement"></option>
+                    <option value="Becoming a member"></option>
+                    <option value="Concerning press/PR"></option>
                     <option value="Aministrative Help"></option>
             </datalist>
+            
     </div>
+   
 
        <div>
             <label for="textarea">What can we do for you?</label>
-            <textarea placeholder="We don't bite.."></textarea>
+            <textarea id="textarea" placeholder=".."></textarea>
+            <p class="textOK textBAD"></p>
     
             <button class="formbutton" type="submit">Send</button>
        </div>
-
     </form>
+</section>
+
+
+<section class="support">
+    <div>
+        <h2>
+            We appreciate all support we recieve
+        </h2>
+        <p>
+            If this is financially, <br> on social media, <br> or precense on our concerts or events
+        </p>
+        <h3>
+            But, extra thank you to our sponsors
+        </h3>
+        <div class="supportimg">
+            <img src="Contact/img/UIB_logo.png" alt="Logo of UIB">
+            <img src="Contact/img/coop_logo.png" alt="Logo of COOP">
+        </div>
+    </div>
+
+    <div>
+        <h3>Would you or your company like to support our work?</h3>
+        <hr>
+        <p>Let us know at</p>
+        <p class="underline">board@bergenungekammerorkester.no</p>
+        <p>Or use the form above</p>
+    </div>
 </section>
 
 

@@ -1,0 +1,214 @@
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.fa {
+    color: white;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0 6rem;
+}
+
+.fa-chevron-down {
+    font-size: 1.2rem;
+}
+
+header > div > .fa-bars {
+    display: none;
+}
+
+h2, h1, p {
+    margin: 0;
+}
+
+/*pen li*/
+
+header > nav > ul > li, footer > div > ul > li, .overlay li {
+    list-style: none;
+}
+
+/*bortover liste*/
+header > nav > ul, footer > div > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+}
+
+/*pen a*/
+
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--robotCon);
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+/*nedover liste*/
+
+.overlay ul, footer > div > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
+
+
+/* button */ 
+
+.pinkgrid div:nth-child(2) > button, .pinkgridreverse div:nth-child(2) > button, .formbutton {
+    background-color: #CF9B7F;
+    border: none;
+    width: 140px;
+    height: 40px;
+    color: white;
+    font-family: var(--FiraS);
+    font-size: 1rem;
+    box-shadow: 1px 1px 12px 6px rgb(255, 253, 253) ;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+header {
+    background-color: var(--dark-orange);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem 1rem 1rem;
+    justify-content: space-between;
+}
+
+
+
+header > nav > ul {
+    gap: 4rem;
+}
+
+@media (max-width: 700px) {
+    
+    header {
+        display: grid;
+        grid-row: auto;
+        grid-template-areas:
+        'menu logo profile';
+    }
+
+    #logo {
+        grid-area: logo;
+    }
+
+    #profile {
+        grid-area: profile;
+        font-size: 1.6rem;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    header > div > .fa-bars {
+        display: inline;
+        font-size: 2rem;
+    }
+
+    div#menu {
+        grid-area: menu;
+        width: fit-content;
+    }
+
+    .overlay {
+        
+        display: block;
+        display: none;
+        position: absolute;
+        top: 9%;
+        left: 0%;
+        background-color: #CF9B7F;
+        padding: 3rem;
+        
+    }
+
+}
+
+@media (min-width: 700px) {
+    div.overlay {
+        display: none;
+}
+}
+
+
+
+section > p, section > h1 {
+    display: inline;
+}
+
+.title {
+    background-color: #92ABAF;
+    height: fit-content;
+    margin-top: 0.5rem;
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1rem; 
+    margin-bottom: 4rem;
+}
+
+.forthegrid {
+    width: 120px;
+}
+
+.title h1 {
+    font-family: var(--FiraS);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 4px grey;
+}
+
+.breadcrumbs, .breadcrumbs a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--robotCon);
+    font-weight: 100;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .breadcrumbs, .forthegrid {
+        display: none;
+    }
+
+    .title {
+        display: block;
+        text-align: center;
+    }
+}

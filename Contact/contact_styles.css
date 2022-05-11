@@ -13,6 +13,8 @@ html {
     color: white;
 }
 
+
+
 body {
     margin: 0;
 }
@@ -393,6 +395,8 @@ label {
     position: relative;
 }
 
+
+
 form > div > label.subject:after{
     content: 'Write or choose from the list';
     position: absolute;
@@ -403,11 +407,17 @@ form > div > label.subject:after{
 }
 
 
+
+
 form > div > label.subject > input::placeholder {
     background-image: url(/Contact/img/icons8-chevron-48.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+}
+
+form > div > label.subject > input:hover {
+    cursor: pointer;
 }
 
 
@@ -425,13 +435,143 @@ textarea {
     margin-left: auto;
 }
 
+
+
+.nameBAD, .emailBAD, .subjectBAD {
+    color: darkred;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    display: inline-block;
+    position: absolute;
+    right: 0%;
+    top: 35%;
+}
+
+.nameOK, .emailOK {
+    font-size: 0.8rem;
+    display: inline-block;
+    position: absolute;
+    right: 0%;
+    top: 35%;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.subjectOK, .subjectBAD {
+    font-size: 0.8rem;
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    top: 75%;
+    letter-spacing: 1px;
+    color: white;
+}
+
+textarea {
+    margin-bottom: 0;
+}
+
+
+.textOK, .textBAD {
+    font-size: 0.8rem;
+    display: inline-block;
+    letter-spacing: 1px;
+    color: white;
+    margin: 1rem 0;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.support {
+    background-color: #CF9B7F;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+
+.support h2, .support h3 {
+    font-family: var(--FiraS);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.support p {
+    font-family: var(--robotCon);
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 400px;
+}
+
+.support h3 {
+    font-size: 1.4rem;
+}
+
+.support img {
+    max-width: 150px;
+}
+
+.support img:first-child {
+    margin-right: 2rem;
+}
+
+p.underline {
+    text-decoration: underline;
+    color: black;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+
+
+.support div:nth-child(2) {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    width: 400px;
+    text-align: center;
+    
+}
+
+.support div:nth-child(2) h3 {
+    color: black;
+}
+
+.support div:nth-child(2) hr {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+
+
 @media (max-width: 1000px) {
-    form {
+    form, .support {
         padding-top: 2rem;
         padding-bottom: 2rem;
         flex-direction: column;
         gap: 1rem;
     }
+
+    .support {
+        gap: 6rem;
+    }
+
+   
+
+
 }
 
 @media (max-width: 600px) {
@@ -443,4 +583,18 @@ textarea {
         font-size: 2.5rem;
         line-height: 1.7rem;
     }
+
+    .support div:nth-child(2) {
+        width: 300px;
+    }
+
+    .supportimg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .supportimg img {
+        max-width: 120px;
+    }
+
 }
