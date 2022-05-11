@@ -1,4 +1,16 @@
 
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+
 main {
     margin: 0 2rem;
 }
@@ -35,4 +47,6 @@ a {
     flex-wrap: wrap;
     gap: 3rem;
 }
+
+
 

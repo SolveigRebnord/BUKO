@@ -1,4 +1,4 @@
-console.log("heia, dette er nå js for index og contact");
+console.log("heia, dette er nå js for contact");
 
 
 const burgerMenu = document.getElementById("menu");

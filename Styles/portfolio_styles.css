@@ -1,0 +1,110 @@
+
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+
+main {
+    margin: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.instrument {
+    color: red;
+}
+
+.school {
+    font-size: 2rem;
+}
+
+.memberimg {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.cvdiv {
+    border: solid black 1px;
+    width: 400px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.showPortfolio {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+#sectionPortfolio {
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.portfoliodiv {
+    width: fit-content;
+}
+
+
+
+.eventDescr {
+    border: solid 2px black;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    opacity: 70%;
+    padding: 1rem;
+}
+
+.eventDescr > p:nth-child(2) {
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+
+}
+
+
+.showPortfolio h2, .showPortfolio p.typeofevent, .showPortfolio p.date {
+    background-color: var(--dark-orange);
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--FiraS);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.showPortfolio p.typeofevent, .showPortfolio p.date {
+    background-color: var(--lys-rosa);
+    width: fit-content;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.showPortfolio p.date {
+background-color: var(--blue-green);
+color: white;
+}
+
+
+

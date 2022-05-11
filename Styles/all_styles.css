@@ -14,6 +14,20 @@ html {
 }
 
 
+.loadinggif > img {
+   max-width: 50px;
+}
+
+.loadinggif {
+    position: fixed;
+    left: 47%;
+    text-align: center;
+}
+
+.loadinggif > p {
+    font-family: var(--FiraS);
+}
+
 
 body {
     margin: 0;
@@ -216,4 +230,9 @@ section > p, section > h1 {
         text-align: center;
     }
 }
+
+
+
+
+
 

@@ -1,16 +1,16 @@
-console.log("hello from cv side, skal jeg heller bare lage dette i overlay?")
+console.log("hello from event side")
 
 
 
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 //console.log(id);
-if (!id) { window.location = "members.html"; }
+if (!id) { window.location = "portfolio.html"; }
 
 
 
 
-const showCV = document.querySelector(".showCV")
+const showCV = document.querySelector(".showEvent")
 
 
 fetch(`https://www.sunroad.no/exam/wp-json/wc/store/products/${id}?_embed`) 
@@ -28,7 +28,7 @@ listSinglePost = (data) => {
 
   
     let title = data.name;
-    document.title = "CV | " + title;
+    document.title = "Event | " + title;
 
     let priceBefore = data.prices.price;
             //console.log(priceBefore);
@@ -73,6 +73,3 @@ listSinglePost = (data) => {
 
 
  
-  
-
-    

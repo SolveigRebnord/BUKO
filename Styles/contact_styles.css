@@ -1,6 +1,16 @@
 
 
 
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+}
+
 
 .pinkgrid, .pinkgridreverse {
     background-color: #F6F0EC;

@@ -1,5 +1,15 @@
 
 
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+}
+
 
 .herosection {
     height: 90vh;
@@ -40,10 +50,10 @@ hr {
 
 
 .toDiv {
-    height: 500px;
+    height: 50px;
     background-color: var(--lys-rosa);
     text-align: center;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 
@@ -96,5 +106,7 @@ footer > div > p {
 
 
 
-
+.karusell {
+    margin-bottom: 10rem;
+}
 
