@@ -20,7 +20,6 @@ function listPost (array) {
 
     for (let post of array) {
         
-        
         if (post.content.rendered.includes("figure")) {
             let indexNumber = post.content.rendered.indexOf("<figure")
             console.log(indexNumber);
@@ -29,10 +28,35 @@ function listPost (array) {
             let newString = post.content.rendered.slice(indexNumber, lastIndexNumber);
             console.log(newString);
 
-            list += `<h2>${post.title.rendered}</h2>
-        ${post.content.rendered}
-        ${newString}
-        ${post.excerpt.rendered}`
+
+            // https://bobbyhadz.com/blog/javascript-get-date-without-time
+            const date = post.date;
+            //console.log(date);
+            
+            function padTo2Digits(num) {
+                return num.toString().padStart(2, '0');
+              }
+
+              function formatDate(date) {
+                return [
+                padTo2Digits(date.getDate()),
+                  padTo2Digits(date.getMonth() + 1),
+                  date.getFullYear(),
+                ].join('.');
+              }
+
+              var formattedDate = formatDate(new Date(date));
+              //console.log(formatDate(new Date(date)));
+
+            
+            
+
+            list += `<section class="showPosts"><h2 class="h2title">${post.title.rendered}</h2>
+                        ${formattedDate}
+                        ${post.excerpt.rendered}
+                        <div class="imagenews">${newString}</div>
+                        <a href="newpost.html?id=${post.id}">Link</a>
+                        </section>`
 
             
         }

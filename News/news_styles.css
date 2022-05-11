@@ -20,7 +20,7 @@ body {
 }
 
 main {
-    margin: 0 6rem;
+    margin: 0 3rem;
 }
 
 .fa-chevron-down {
@@ -211,4 +211,78 @@ section > p, section > h1 {
         display: block;
         text-align: center;
     }
+}
+
+
+
+
+
+.h2title {
+    font-size: 2rem;
+}
+
+figure img { /* bildet i seg selv*/
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    object-fit: cover;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+.imagenews { /* diven med bilde i*/
+    width: 200px;
+    height: 250px;
+}
+
+div.showPost > section.showPosts > p {
+    background-color: rebeccapurple;
+    display: inline-block;
+    width: 200px;
+
+}
+
+.showPosts { /* boksen med alt i svart kant*/
+    border: solid 2px black;
+    padding: 2rem;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showPost { /* hele siden*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 900px) {
+
+    .showPosts {
+        width: 250px;
+    }
+
+    main {
+        margin: 0 1rem;
+    }
+}
+
+
+.singlepost > img {
+    max-width: 30px;
+    margin-top: 3rem;
+}
+
+.singlepost {
+    text-align: center;
 }
