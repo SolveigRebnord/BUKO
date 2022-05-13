@@ -78,8 +78,8 @@ a {
 .eventDescr > p:nth-child(2) {
     color: white;
     font-size: 1rem;
-    position: absolute;
-
+    position: relative;
+    font-family: var(--robotCon);
 }
 
 

@@ -108,5 +108,40 @@ footer > div > p {
 
 .karusell {
     margin-bottom: 10rem;
+    height: fit-content;
+}
+
+.outPut {
+    margin: 3rem;
+    padding: 3rem;
+    border: solid black 1px;
+    position: relative;
+    height: 100px;
+}
+
+
+
+
+.mySlides:first-child {
+    display: block;
+}
+
+.index0, .index1 {
+    background-color: var(--blue-green);
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.index1  {
+    background-color: var(--dark-orange);
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    z-index: 0;
 }
 
