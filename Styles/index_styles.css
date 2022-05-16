@@ -20,13 +20,15 @@ html {
     color: white;
 }
 
+
+
 hr {
     width: 120px;
     margin-bottom: 3rem;
 }
 
 .herosection >  div {
-    padding-top: 45vh;
+    padding-top: 52vh;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -47,6 +49,15 @@ hr {
     word-spacing: 4px;
     margin: 0;
 }
+
+
+@media (max-width: 700px) {
+    .herosection >  div {
+        padding-top: 20rem;
+    }
+}
+
+
 
 
 .toDiv {
@@ -70,6 +81,7 @@ hr {
     color: white;
     font-size: 1.2rem;
     display: block;
+    box-sizing: border-box;
 }
 
 .abovefooter > input {
@@ -83,6 +95,7 @@ hr {
     background-color: #CF9B7F;
     padding: 0.5rem;
 }
+
 
 
 
