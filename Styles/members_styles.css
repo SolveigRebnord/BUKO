@@ -15,28 +15,25 @@ main {
     margin: 0 2rem;
 }
 
+
+
 a {
     text-decoration: none;
     color: black;
 }
 
-.instrument {
-    color: red;
-}
 
-.school {
-    font-size: 2rem;
-}
 
 .memberimg {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     object-fit: cover;
+    object-position: center;
 }
 
 .cvdiv {
     border: solid black 1px;
-    width: 400px;
+    width: 300px;
     text-align: center;
     padding: 1rem;
 }
@@ -45,8 +42,134 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 
 
+.showCV {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.showCV > hr {
+    background-color: var(--blue-green);
+    height: 3px;
+    border: none;
+}
+
+.showCV > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--BUKO);
+    font-size: 3rem;
+    margin-top: 3rem;
+    color: var(--blue-green);
+}
+
+.cvDetails {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 6rem 5rem 3rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--FiraS);
+    border-bottom: #92ABAF solid 3px;
+}
+
+.leftFlex {
+    position: relative;
+}
+
+.leftFlex > p {
+    border: solid var(--blue-green) 3px;
+    width: 300px;
+    height: 400px;
+    z-index: 0;
+    display: inline-block;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 20px 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+
+}
+
+.leftFlex > img {
+    z-index: 1;
+    position: absolute;
+    top: -8%;
+    left: 18%;
+}
+
+.rightFlex {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    font-weight: 300;
+}
+
+.rightFlex > p:first-of-type,.rightFlex > p:nth-child(2) {
+    background-color: var(--dark-orange);
+    padding: 1rem;
+    width: fit-content;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--FiraS);
+    letter-spacing: 1px;
+
+}
+
+.rightFlex > p:nth-child(2){
+    line-height: 0.9rem;
+    background-color: var(--blue-green);
+    margin-bottom: 0.5rem;
+}
+
+.rightFlex > h3 {
+    margin: 2rem 0 0.2rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+ 
+ 
+.rightFlex > ul {
+    margin: 0;
+}
+
+.rightFlex > ul > li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.rightFlex > ul > li:last-child {
+    margin-bottom: 0;
+}
+
+
+.space {
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: 500;
+}
+
+
+.showCV > div:last-of-type {
+    text-align: center;
+    font-family: var(--FiraS);
+    font-weight: 300;
+    width: 60%;
+    margin: 3rem auto;
+}

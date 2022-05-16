@@ -31,7 +31,7 @@ listSinglePost = (data) => {
     document.title = "CV | " + title;
 
     let priceBefore = data.prices.price;
-            //console.log(priceBefore);
+            console.log(priceBefore);
     let priceLength = priceBefore.length;
 
             
@@ -41,14 +41,23 @@ listSinglePost = (data) => {
             console.log(intoDate);
 
             let content = 
-            `<div class="cvdiv">
-            <h2>${data.name}</h2>
-            <p>${intoDate}</p>
-            <p>${data.categories[0].name}</p>
-            
-            ${data.description}
-            <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
-            </div>`
+
+            `
+        <h1>${data.name}</h1>
+        <hr>
+        <div class="cvDetails">
+            <div class="leftFlex">
+                <p>${data.categories[0].name}</p>
+                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+            </div>
+            <div class="rightFlex">
+                <p>${data.sku}</p>
+                <p>${intoDate}</p>
+                ${data.description}
+            </div>
+        </div>
+        <div>${data.short_description}</div>`
+    
 
             showCV.innerHTML = content;
     }
@@ -57,14 +66,21 @@ listSinglePost = (data) => {
         let intoDate = priceBefore.slice(0,2) + "." + priceBefore.slice(2,4) + "." + priceBefore.slice(4,8);
         console.log(intoDate);
         let content = 
-        `<div class="cvdiv">
-        <h2>${data.name}</h2>
-        <p>${intoDate}</p>
-        <p>${data.categories[0].name}</p>
-        
-        ${data.description}
-        <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
-        </div>`
+        `
+        <h1>${data.name}</h1>
+        <hr>
+        <div class="cvDetails">
+            <div class="leftFlex">
+                <p>${data.categories[0].name}</p>
+                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+            </div>
+            <div class="rightFlex">
+                <p>${data.sku}</p>
+                <p>${intoDate}</p>
+                ${data.description}
+            </div>
+        </div>
+        <div>${data.short_description}</div>`
 
         showCV.innerHTML = content;
     }

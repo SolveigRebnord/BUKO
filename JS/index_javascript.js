@@ -14,105 +14,160 @@ burgerMenu.addEventListener("click", function() {
 
 
 
-const nextB = document.getElementById("next");
-const backB = document.getElementById("back");
+
+var myArray = {};
+
+
 
 const outPutKarusell = document.querySelector(".karusell");
 const ourList = document.querySelector(".outPut");
 
 
 
+async function fetchData(){
+  const response = await fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
+  const data = await response.json();
+  return data;
+}
 
-fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-    listData(data);
+fetchData().then(data => {
+  console.log(data);
+  //listData(data);
+  myArray = data;
+  showSlides(myArray);
+
+
 })
 .catch((error) => {
-    console.error('Error:', error);
-  });
+  console.error('Error:', error);
+});
+
+
+const nextButton = document.querySelector(".next");
+
+const out1 = document.querySelector(".index1");
+const out2 = document.querySelector(".index2");
+const out3 = document.querySelector(".index3");
+
+
+
+function showSlides(array) { //geeksinner
+
+console.log(array);
+  out1.innerHTML = array[0].title.rendered;
+  out2.innerHTML = array[1].title.rendered;
+  out3.innerHTML = array[2].title.rendered;
+
+
+}
+
+
+
+
+nextButton.addEventListener("click", nextSlide(showSlides));
+
+
+
+
+
+
+function nextSlide(func) {
+
+alert(func());
+}
+
+/*
+
+  console.log(liste);
+  //console.log(currentArray);
+  let firstArr = liste;
+  //console.log(firstArr);
+
+  let removedPart = firstArr.shift();
+  //console.log(removedPart);
+  //console.log(firstArr);
+
+  let middleArr = firstArr;
+  //console.log(middleArr);
+  let secondPart = middleArr.push(removedPart);
+  //console.log(middleArr);
+  let secondArr = middleArr;
+  //console.log(secondArr);
+
+  return secondArr;
+
+}
+*/
+
+
+
+
 
 
 function listData (array) {
-  let myList = "";
 
-
-
+  let myList = [];
 
   for (let item of array) {
 
-
-
-    myList += `<div><p>${item.title.rendered}</p></div>`
+    myList.push(item.title.rendered);
+    console.log(myList);
   }
+  
   ourList.innerHTML = myList;
 
-  let divs = document.getElementsByClassName("mySlides");
-//console.log(divs);
-let firstChild = divs[0];
-//console.log(firstChild);
-
-  
 }
 
 
 
+/*
+    if (n > slides.length) {theIndex = 1}
+    if (n < 1) {theIndex = slides.length}
 
-
-
-let slideIndex = 1;
-//console.log(slideIndex);
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-
-  //const ventanu = new Promise(listData);
-  //console.log(ventanu);
-
-let out1 = document.querySelector(".index0");
-let out2 = document.querySelector(".index1");
-let out3 = document.querySelector(".index2");
-
-
-  let i;
-  let slides = document.querySelectorAll(".mySlides > div");
- console.log(slides)
-
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-
+    slides[0].className = "nr1";
+    console.log(slides[0]);
+    slides[1].className = "nr2"
+    console.log(slides[1]);
+    slides[2].className = "nr3";
+    console.log(slides[2]);
    
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.backgroundColor = "red";
-        slides[i].className = "default";
+        //slides[i].style.backgroundColor = "red";
       }
 
-      if (slideIndex == 1) { // aka index 0, aother cool title.  cool title about blir da farget! (den etter i rekken)
-        slides[slideIndex-1].style.backgroundColor = "green";
+      console.log(theIndex);
+
+   
+   */
+
+
+
+/*    if (theIndex == 1) { // aka index 0, aother cool title.  cool title about blir da farget! (den etter i rekken)
+        //slides[0].style.backgroundColor = "green";
+        console.log(slides[theIndex]);
       //console.log(slides);
-        slides[[slideIndex-1]].className = slides[[slideIndex-1]].className.replace("default", "cool title");
+        slides[0].className = slides[0].className.replace("nr2", "nr1"); //tror denne ikke dennde funker før jeg får den syncen til å funk
+        slides[1].className = slides[1].className.replace("nr3", "nr2");
+        slides[2].className = slides[2].className.replace("nr1", "nr3");
+
       }
 
-      else if (slideIndex == 2) {
-        slides[slideIndex-1].style.backgroundColor = "green";
-        slides[[slideIndex-1]].className = slides[[slideIndex-1]].className.replace("default", "nr2");
+      else if (theIndex == 2) {
+        //slides[1].style.backgroundColor = "green";
+        slides[0].className = slides[0].className.replace("nr1", "nr3");
+        slides[1].className = slides[1].className.replace("nr2", "nr1");
+        slides[2].className = slides[2].className.replace("nr3", "nr2");
       }
-      else if (slideIndex == 3) {
-        slides[slideIndex-1].style.backgroundColor = "green";
-        slides[[slideIndex-1]].className = slides[[slideIndex-1]].className.replace("default", "nr3");
+
+      else if (theIndex == 3) {
+        //slides[2].style.backgroundColor = "green";
+        slides[0].className = slides[0].className.replace("nr3", "nr2");
+        slides[1].className = slides[1].className.replace("nr1", "nr3");
+        slides[2].className = slides[2].className.replace("nr2", "nr1");
       }     
-    
-   
-    
-   
-   
-}
+    */
+
+
 /*
   var arr = [];
   arr = [...slides];

@@ -26,7 +26,7 @@ hr {
 }
 
 .herosection >  div {
-    padding-top: 52vh;
+    padding-top: 45vh;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -69,6 +69,7 @@ hr {
     text-transform: uppercase;
     color: white;
     font-size: 1.2rem;
+    display: block;
 }
 
 .abovefooter > input {
@@ -112,36 +113,45 @@ footer > div > p {
 }
 
 .outPut {
-    margin: 3rem;
-    padding: 3rem;
+ 
     border: solid black 1px;
     position: relative;
-    height: 100px;
-}
-
-
-
-
-.mySlides:first-child {
-    display: block;
-}
-
-.index0, .index1 {
-    background-color: var(--blue-green);
-    text-align: center;
-    width: 300px;
-    height: 50px;
-    border-radius: 10px;
+    height: 300px;
+    width: 1000px;
     margin: 0 auto;
-    z-index: 1;
-    position: relative;
 }
 
-.index1  {
-    background-color: var(--dark-orange);
+
+
+
+
+
+.nr1, .nr2, .nr3{
+    width: 200px;
+    height: 250px;
     position: absolute;
-    bottom: 20%;
-    right: 25%;
+    left: 3%;
+    top: 3%;
+}
+
+.nr1 {
+left: 400px;
+background-color: #CF9B7F;
+top: 25px;
+z-index: 1;
+}
+
+
+.nr2 {
+    left: 250px;
+    background-color: var(--lys-rosa);
+    top: 15px;
     z-index: 0;
+}
+
+.nr3 {
+    left: 550px;
+    background-color: var(--blue-green);
+    top: 15px;
 }
 
