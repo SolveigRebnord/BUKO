@@ -55,6 +55,10 @@ hr {
     .herosection >  div {
         padding-top: 20rem;
     }
+    .herosection >  div > p {
+        font-size: 1.4rem;
+    }
+
 }
 
 
