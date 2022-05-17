@@ -38,7 +38,7 @@ main {
 }
 
 .fa-chevron-down {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 header > div > .fa-bars {
@@ -235,4 +235,61 @@ section > p, section > h1 {
 
 
 
+
+
+footer > div:last-of-type, .copyright {
+text-align: right;
+    background-color: var(--blue-green);
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+}
+
+footer > div:last-of-type > input {
+    width: 300px;
+    height: 35px;
+}
+
+footer > div:last-of-type > button {
+    border: none;
+    color: white;
+    background-color: #CF9B7F;
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+footer {
+    background-color: var(--blue-green);
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 6rem;
+}
+
+footer > div > ul {
+    gap: 1rem;
+}
+
+
+
+footer > div:nth-child(2) > p {
+    color: white;
+    padding-bottom: 0.3rem;
+    font-family: var(--robotCon);
+    text-transform: uppercase;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
 

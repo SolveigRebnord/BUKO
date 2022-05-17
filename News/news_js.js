@@ -11,7 +11,7 @@ fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
   });
 
 
-const showPost = document.querySelector(".showPost");
+const showPost = document.querySelector(".showPosts");
 
 function listPost (array) {
 
@@ -48,18 +48,26 @@ function listPost (array) {
               var formattedDate = formatDate(new Date(date));
               //console.log(formatDate(new Date(date)));
 
-            
-            
+              var theLink = "";
+            if (post.tags == 37) {
+               theLink = `<a href="portfolio.html">See more events like this</a>`;
+            }  
 
-            list += `<section class="showPosts"><h2 class="h2title">${post.title.rendered}</h2>
+            else if (post.tags == 38) {
+                 theLink = `<a href="members.html">Read more about Heidi and our other members</a>`;
+            }
+
+            list += `<a href="newpost.html?id=${post.id}"><div class="showPost">
+                      <h2 class="h2title">${post.title.rendered}</h2>
                         ${formattedDate}
+                        ${theLink}
                         ${post.excerpt.rendered}
                         <div class="imagenews">${newString}</div>
-                        <a href="newpost.html?id=${post.id}">Link</a>
-                        </section>`
+                        </div></a>`
 
             
-        }
+        
+      }
     }
 
     
@@ -67,3 +75,4 @@ function listPost (array) {
     showPost.innerHTML = list;
 }
 
+//<a href="event.html?id=${post.id}">Read more about me!</a> dette funker ikke, må være en slags redirecter isåfall

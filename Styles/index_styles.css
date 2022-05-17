@@ -72,57 +72,6 @@ hr {
 }
 
 
-.abovefooter {
-    width: 500px;
-    background-color: var(--blue-green);
-    height: 200px;
-    margin-left: auto;
-    text-align: center;
-    padding-top: 2rem;
-    border-radius: 20px 0 0 0;
-    font-family: var(--robotCon);
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.2rem;
-    display: block;
-    box-sizing: border-box;
-}
-
-.abovefooter > input {
-    width: 300px;
-    height: 35px;
-}
-
-.abovefooter > button {
-    border: none;
-    color: white;
-    background-color: #CF9B7F;
-    padding: 0.5rem;
-}
-
-
-
-
-
-
-footer {
-    background-color: var(--blue-green);
-}
-
-footer > div > ul {
-    padding: 3rem 0 3rem 6rem;
-    gap: 1rem;
-}
-
-footer > div > p {
-    text-align: center;
-    color: white;
-    padding-bottom: 0.3rem;
-    font-family: var(--robotCon);
-    text-transform: uppercase;
-}
-
-
 
 .karusell {
     margin-bottom: 10rem;
@@ -170,5 +119,38 @@ z-index: 1;
     left: 550px;
     background-color: var(--blue-green);
     top: 15px;
+}
+
+
+
+
+
+
+.theOne {
+    background-color: var(--blue-green);
+    width: 100px;
+    height: 200px;
+    display: inline;
+}
+
+.numberTwo {
+    background-color: var(--dark-orange);
+    width: 100px;
+    height: 200px;
+    display: inline;
+}
+
+.numberThree {
+    background-color: var(--lys-rosa);
+    width: 100px;
+    height: 200px;
+    display: inline;
+}
+
+.number4 {
+    background-color: red;
+    width: 100px;
+    height: 200px;
+    display: inline;
 }
 

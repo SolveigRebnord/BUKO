@@ -12,8 +12,17 @@ burgerMenu.addEventListener("click", function() {
     }
 });
 
+//------------------------------------------------------------------
 
+const scrollDown = document.getElementById("scrollDown");
+const scrollTo = document.querySelector(".toDiv");
 
+scrollDown.addEventListener("click", scrolling);
+
+function scrolling() {
+  const scrollTo = document.querySelector(".toDiv");
+scrollTo.scrollIntoView({behaviour: "smooth"});
+}
 
 var myArray = {};
 
@@ -32,10 +41,9 @@ async function fetchData(){
 
 fetchData().then(data => {
   console.log(data);
-  //listData(data);
-  myArray = data;
-  showSlides(myArray);
-
+  let afterClass = listData(data);
+  console.log(afterClass);
+  showSlides(slideIndex);
 
 })
 .catch((error) => {
@@ -43,59 +51,88 @@ fetchData().then(data => {
 });
 
 
+function listData (array) {
+
+  console.log(array);
+  let theArray = "";
+
+  for (let item of array) {
+
+    theArray += `<div class="divs">${item.title.rendered}</div>`
+  }
+  
+  console.log(theArray);
+  
+  ourList.innerHTML = theArray;
+
+}
+
+
+
 const nextButton = document.querySelector(".next");
 
 const out1 = document.querySelector(".index1");
 const out2 = document.querySelector(".index2");
 const out3 = document.querySelector(".index3");
+const out4 = document.querySelector(".index4");
 
 
+var slideIndex = 1;
 
-function showSlides(array) { //geeksinner
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-console.log(array);
-  out1.innerHTML = array[0].title.rendered;
-  out2.innerHTML = array[1].title.rendered;
-  out3.innerHTML = array[2].title.rendered;
+function showSlides(n) {
+  let i;
+  
+  slides = document.getElementsByClassName("divs");
+ console.log(slides);
 
-
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+ 
+  
+  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].className += " theOne";
+  slides[slideIndex].className += " numberTwo";
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex+1].className += " numberThree";
+  slides[slideIndex+1].style.display = "block";
+  slides[slideIndex+2].className += " number4";
+  slides[slideIndex+2].style.display = "block";
+ 
+  
 }
 
 
 
 
-nextButton.addEventListener("click", nextSlide(showSlides));
 
-
-
-
-
-
-function nextSlide(func) {
-
-alert(func());
-}
 
 /*
 
-  console.log(liste);
-  //console.log(currentArray);
-  let firstArr = liste;
-  //console.log(firstArr);
 
-  let removedPart = firstArr.shift();
+function changeList(liste) {
+console.log(liste);
+
+let theList = liste;
+let removedPart = theList.shift();
   //console.log(removedPart);
   //console.log(firstArr);
 
-  let middleArr = firstArr;
+  let middleArr = theList;
   //console.log(middleArr);
   let secondPart = middleArr.push(removedPart);
   //console.log(middleArr);
   let secondArr = middleArr;
   //console.log(secondArr);
-
-  return secondArr;
-
+  secondArr = liste;
+console.log(liste);
 }
 */
 
@@ -104,19 +141,6 @@ alert(func());
 
 
 
-function listData (array) {
-
-  let myList = [];
-
-  for (let item of array) {
-
-    myList.push(item.title.rendered);
-    console.log(myList);
-  }
-  
-  ourList.innerHTML = myList;
-
-}
 
 
 
