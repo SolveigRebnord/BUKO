@@ -43,6 +43,13 @@ fetchData().then(data => {
   console.log(data);
   let afterClass = listData(data);
   console.log(afterClass);
+  slides = document.getElementsByClassName("divs");
+  slides[0].className += (" active");
+
+
+
+
+
   showSlides(slideIndex);
 
 })
@@ -56,11 +63,37 @@ function listData (array) {
   console.log(array);
   let theArray = "";
 
+ 
   for (let item of array) {
 
-    theArray += `<div class="divs">${item.title.rendered}</div>`
+     
+    let indexNumber = item.content.rendered.indexOf('"https')
+    console.log(indexNumber);
+    let lastIndexNumber = item.content.rendered.indexOf(' alt=')
+    console.log(lastIndexNumber);
+    let newString = item.content.rendered.slice(indexNumber, lastIndexNumber);
+    console.log(newString);
+
+
+    var theLink = "";
+    if (item.tags == 37) {
+       theLink = `<a href="portfolio.html">See more events like this</a>`;
+    }  
+
+    else if (item.tags == 38) {
+         theLink = `<a href="members.html">Read more about our members</a>`;
+    }
+
+
+    theArray += `<div class="divs">
+        <img src=${newString}>
+    <h2>${item.title.rendered}</h2>
+    ${item.excerpt.rendered}
+    ${theLink}
+    </div>`
+
+ 
   }
-  
   console.log(theArray);
   
   ourList.innerHTML = theArray;
@@ -79,35 +112,66 @@ const out4 = document.querySelector(".index4");
 
 var slideIndex = 1;
 
+slides = document.getElementsByClassName("divs");
+
+const slide1 = slides;
+const slide2 = slides[1];
+const slide3 = slides[2];
+const slide4 = slides[3];
+
+console.log(slide1);
+
+slide1.addEventListener("click", currentSlide(1));
+slide2.addEventListener("click", currentSlide(2));
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
 
 function showSlides(n) {
   let i;
   
   slides = document.getElementsByClassName("divs");
- console.log(slides);
 
-  if (n > slides.length) {slideIndex = 1}
+
+ console.log(slides);
+ if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
+  
+  
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+   
+    slides[i].className = slides[i].className.replace("divs active", "divs");
+
   }
   
- 
   
-  slides[slideIndex-1].style.display = "block";
-  slides[slideIndex-1].className += " theOne";
-  slides[slideIndex].className += " numberTwo";
-  slides[slideIndex].style.display = "block";
-  slides[slideIndex+1].className += " numberThree";
-  slides[slideIndex+1].style.display = "block";
-  slides[slideIndex+2].className += " number4";
-  slides[slideIndex+2].style.display = "block";
- 
   
-}
+  slides[slideIndex-1].className += " active";
+  slides[slideIndex-1].animate(
+    [
+   
+      {
+        transform: "translateY(5%)",
+        opacity: 0
+      },
+      {
+        transform: "translateY(5%)",
+        opacity: 1
+      }
+    ],
+    { duration: 600, easing: "ease-in-out", fill: "forwards"}
+  );
+};
+  
+
 
 
 

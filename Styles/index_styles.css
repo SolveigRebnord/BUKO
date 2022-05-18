@@ -10,6 +10,10 @@ html {
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
 }
 
+* {
+    font-family: var(--FiraS);
+}
+
 
 .herosection {
     height: 90vh;
@@ -64,93 +68,150 @@ hr {
 
 
 
-.toDiv {
-    height: 50px;
-    background-color: var(--lys-rosa);
-    text-align: center;
-    padding-top: 100px;
-}
 
 
 
 .karusell {
     margin-bottom: 10rem;
     height: fit-content;
+    
 }
+
+.karusell > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 2rem 4.1rem 0 4.1rem;
+}
+
+.karusell > div:first-of-type > h1 {
+   font-size: 4rem;
+}
+
+
+
+
+
+
+
 
 .outPut {
- 
-    border: solid black 1px;
-    position: relative;
-    height: 300px;
-    width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+  position: relative;
+  height: 280px;
+  margin: 2rem 0;
+  padding: 0 2rem;
+
 }
 
 
-
-
-
-
-.nr1, .nr2, .nr3{
-    width: 200px;
-    height: 250px;
-    position: absolute;
-    left: 3%;
-    top: 3%;
-}
-
-.nr1 {
-left: 400px;
-background-color: #CF9B7F;
-top: 25px;
-z-index: 1;
-}
-
-
-.nr2 {
-    left: 250px;
+.divs  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  width: 380px;
     background-color: var(--lys-rosa);
-    top: 15px;
-    z-index: 0;
+    box-shadow: rgb(184, 184, 184) 0px 7px 8px;
+    padding: 1rem;
+    opacity: 60%;
 }
 
-.nr3 {
-    left: 550px;
+.divs > h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+.divs:nth-child(1) {
     background-color: var(--blue-green);
-    top: 15px;
+    color: white;
 }
 
-
-
-
-
-
-.theOne {
-    background-color: var(--blue-green);
-    width: 100px;
-    height: 200px;
-    display: inline;
+.divs:nth-child(1) > p {
+    background-color: white;
+    padding: 0.5rem;
+    color: black;
 }
 
-.numberTwo {
+.divs:nth-child(2) {
     background-color: var(--dark-orange);
-    width: 100px;
-    height: 200px;
-    display: inline;
+
 }
 
-.numberThree {
+.divs:nth-child(3) {
     background-color: var(--lys-rosa);
-    width: 100px;
-    height: 200px;
-    display: inline;
 }
 
-.number4 {
-    background-color: red;
-    width: 100px;
-    height: 200px;
-    display: inline;
+.divs:nth-child(4) {
+    background-color: burlywood;
 }
 
+.divs > p, .divs > a {
+    display: none;
+}
+
+.divs > img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
+}
+
+
+
+.active {
+    width: 800px;
+    height: 250px;
+    transition: transform 1s ease-in;
+    box-shadow: rgb(155, 155, 155) 0 10px 12px;
+    position: absolute;
+    left: 22%;
+    top: 60%;
+    display: grid;
+    grid-template-areas: 
+    'img h2'
+    'img p'
+    'img a';
+    justify-content: space-between;
+    text-align: right;
+}
+
+.active > p, .active > a {
+    display: inline-block;
+    grid-area: p;
+    max-width: 400px;
+}
+
+.active > a {
+    grid-area: a;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(142, 125, 162);
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.active > img {
+    width: 200px;
+    height: 200px;
+    grid-area: img;
+}
+
+.active > h2 {
+    grid-area: h2;
+}
+
+
+
+.buttonsdiv {
+    text-align: center;
+    padding: 5rem 0;
+}

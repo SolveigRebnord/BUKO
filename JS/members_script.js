@@ -3,7 +3,7 @@ console.log("hello from the members side")
 
 
 
-fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=4&page=1")
+fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=3&page=1")
 .then(response => response.json())
 .then(data => {
   outPut.innerHTML = "";
@@ -26,28 +26,39 @@ fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=4&
   });
 
 const outPut = document.querySelector(".showMembers");
+const knappen = document.querySelector(".loadmore");
 
-
-
+var pageIndex = 1;
 
 
 function loadMore (tall) {
   console.log("yey clicked");
 
+  let currPage = pageIndex +=tall;
 
-fetch (`https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&page=4&per_page=2`)
+
+fetch (`https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&page=${currPage}&per_page=3`)
 .then(response => response.json())
 .then(data => {
   //console.log(data);
-  
-    listPost(data);
+  let membersList = [];
+    for (let objekt of data) {
+    if (objekt.tags[0].id == 21) {
+      membersList.push(objekt);
+    }
+    
+    console.log(membersList);
+  }
+    listPost(membersList);
+ 
+    
+   
 
 })
 .catch((error) => {
     console.error('Error:', error);
   });
 }
-
 
 
 
