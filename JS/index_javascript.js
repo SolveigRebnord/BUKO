@@ -12,6 +12,11 @@ function myFunction(m) {
     const slider = document.querySelector('.outPut');
     const buttons = document.querySelector(".buttonsdiv")
     buttons.style.display = "none";
+
+   
+ 
+
+
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -81,6 +86,7 @@ scrollTo.scrollIntoView({behaviour: "smooth"});
 }
 
 var myArray = {};
+
 
 
 
