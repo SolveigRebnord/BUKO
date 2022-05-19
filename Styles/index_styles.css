@@ -277,6 +277,10 @@ padding: 1rem 3rem;
     .outPut {
         scroll-behavior: "smood";
     } 
+
+    footer {
+        flex-direction: column;
+    }
 }
 
 
