@@ -7,10 +7,15 @@ html {
     --robotCon: 'Roboto Condensed', sans-serif;
     --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+    --Nanum: 'Nanum Myeongjo', serif;
 }
 
 .fa {
     color: white;
+}
+
+.fa-user {
+    font-size: 1.3rem;
 }
 
 
@@ -103,7 +108,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
 
 
 header {
-    background-color: var(--dark-orange);
+    background-color: var(--blue-green);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -114,8 +119,34 @@ header {
 
 
 header > nav > ul {
-    gap: 3rem;
+    gap: 1rem;
 }
+
+header > nav > ul > li {
+    padding: 0 2rem 0 1rem;
+    border-right: solid white 1px;
+}
+
+header > nav > ul > li:last-child {
+    border: none;
+}
+
+
+
+@media (max-width: 900px) {
+    header > nav > ul {
+        gap: 0rem;
+    }
+    
+    header > nav > ul > li {
+        padding: 0 1rem 0 1rem;
+        border-right: solid white 1px;
+    }
+}
+
+
+
+
 
 @media (max-width: 700px) {
     
@@ -180,7 +211,6 @@ section > p, section > h1 {
 }
 
 .title {
-    background-color: #92ABAF;
     height: fit-content;
     margin-top: 0.5rem;
     display: flex;
@@ -190,6 +220,8 @@ section > p, section > h1 {
     justify-content: space-between;
     padding: 0.4rem 1rem; 
     margin-bottom: 4rem;
+    border-top: 1px solid var(--blue-green);
+    border-bottom: 1px solid var(--blue-green);
 }
 
 .forthegrid {
@@ -197,13 +229,13 @@ section > p, section > h1 {
 }
 
 .title h1 {
-    font-family: var(--FiraS);
+    padding: 0.5rem 0;
+    font-family: var(--Nanum);
     text-transform: uppercase;
-    color: white;
-    font-weight: 400;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    text-shadow: 3px 3px 4px grey;
+    color: var(--dark-orange);
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 1px
 }
 
 .breadcrumbs, .breadcrumbs a {

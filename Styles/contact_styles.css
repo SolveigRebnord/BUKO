@@ -151,8 +151,8 @@ html {
 
 form {
     margin-bottom: 6rem;
-    background-color: #92ABAF;
-    color: white;
+    background-color: var(--lys-rosa);
+    color: black;
     display: flex;
     gap: 3rem;
     flex-direction: row;
@@ -232,7 +232,7 @@ textarea {
 
 
 .nameBAD, .emailBAD, .subjectBAD {
-    color: darkred;
+    color: black;
     letter-spacing: 1px;
     font-size: 0.8rem;
     display: inline-block;
@@ -248,7 +248,7 @@ textarea {
     right: 0%;
     top: 35%;
     letter-spacing: 1px;
-    color: white;
+    color: black;
 }
 
 .subjectOK, .subjectBAD {
@@ -258,7 +258,7 @@ textarea {
     left: 0%;
     top: 75%;
     letter-spacing: 1px;
-    color: white;
+    color: black;
 }
 
 textarea {
@@ -270,7 +270,7 @@ textarea {
     font-size: 0.8rem;
     display: inline-block;
     letter-spacing: 1px;
-    color: white;
+    color: black;
     margin: 1rem 0;
     font-family: var(--robotCon);
     text-transform: uppercase;

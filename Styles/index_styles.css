@@ -15,6 +15,8 @@ html {
 }
 
 
+
+
 .herosection {
     height: 90vh;
     background-image: url("https://www.sunroad.no/exam/wp-content/uploads/2022/05/larisa-birta-slbOcNlWNHA-unsplash-2-scaled.jpg");
@@ -43,6 +45,7 @@ hr {
     font-weight: 500;
     font-size: 7rem;
     line-height: 7rem;
+    color: var(--dark-orange);
 }
 
 .herosection >  div > p {
@@ -64,7 +67,6 @@ hr {
     }
 
 }
-
 
 
 

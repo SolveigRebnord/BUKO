@@ -2,6 +2,7 @@ console.log("heia, index");
 
 
 
+
 var mediaQuery = window.matchMedia("(max-width: 600px)");
 console.log(mediaQuery);
 

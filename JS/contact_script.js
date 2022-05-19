@@ -42,23 +42,26 @@ validateForm = (e) => {
         console.log("superb, its not empty");
 
         if (nameLength > 5) {
-            console.log("PERFECTO");
+            console.log("Name approved");
             nameInput.style.color = "green";
-            nameInput.style.borderColor = "green";
-            nameTheInput.style.border = "solid green 1px";            
+            nameTheInput.style.border = "solid green 2px";            
             nameOK.innerHTML = "Pretty!";
+            nameOK.style.color = "green";
+
         }
 
     else {
-            nameInput.style.color = "red" // nameOK og BAD funker ikke på fargene. Kan se på dette senere. Fanger fargen fra ene..
+            nameInput.style.color = "red"
+            nameTheInput.style.border = "solid red 2px";            
             nameBAD.innerHTML = "At least 5 caracthers!";
+            nameBAD.style.color = "red";
             console.log("Error: Not enough caracthers")
         }   
 
     }
     
     else {
-        nameBAD.innerHTML = "We need something, mmkey";
+        nameBAD.innerHTML = "We need something..";
         console.log("Error: No content")
     }
 
@@ -70,6 +73,8 @@ validateForm = (e) => {
 
     const emailOK = document.querySelector(".emailOK")
     const emailBAD = document.querySelector(".emailBAD")
+    const emailTheInput = document.querySelector("input#email")
+
 
     let emailAfterInput = emailInput.value.trim();
     let emailPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/ //ressurs på nett, finne?
@@ -80,23 +85,28 @@ validateForm = (e) => {
 
 
     if (emailPattern.test(emailAfterInput)) {
-        emailOK.innerHTML = "Neat! *Sends spam*";
         emailAfterInput = true;
-        console.log("JOY");
-
+        console.log("Email approved");
+        emailInput.style.color = "green";
+        emailTheInput.style.border = "solid green 2px";            
+        emailOK.innerHTML = "Neat! *Sends spam*";        
+        emailOK.style.color = "green";
     }
 
     else {
         emailAfterInput = false;
         emailBAD.innerHTML = "I don't think that's correct"
         console.log("Error: Not valid email")
+        emailInput.style.color = "red"
+        emailTheInput.style.border = "solid red 2px";            
+        emailBAD.style.color = "red";
     }
 
 }
 
 else {
     emailAfterInput = false;
-    emailBAD.innerHTML = "We need something, mmkey";
+    emailBAD.innerHTML = "We need something..";
     console.log("Error: No content")
 }
     
@@ -104,6 +114,9 @@ else {
 
 const subjectOK = document.querySelector(".subjectOK")
 const subjectBAD = document.querySelector(".subjectBAD")
+const subjectTheInput = document.querySelector("input[name=subject]");
+
+
 
 
 let subjectAfterInput = subjectInput.value.trim();
@@ -114,25 +127,28 @@ let subjectAfterInput = subjectInput.value.trim();
         console.log("superb, its not empty");
 
         if (subjectLength > 15) {
-            console.log("WIHO");
+            subjectAfterInput = true;
+            console.log("Subject approved");
             subjectInput.style.color = "green";
-            subjectOK.innerHTML = "Pretty!";
-            subjectOK.style.color="green";
+            subjectTheInput.style.border = "solid green 2px";            
+            subjectOK.innerHTML = "Nice!";        
+            subjectOK.style.color = "green";
         }
 
     else {
-            subjectInput.style.color = "red" // nameOK og BAD funker ikke på fargene. Kan se på dette senere. Fanger fargen fra ene..
+            subjectInput.style.color = "red" 
             subjectBAD.innerHTML = "At least 15 caracthers!";
             subjectBAD.style.color="red";
-
-            console.log("Error: Not enough caracthers")
-
+            console.log("Error: Not enough caracthers");
+            subjectAfterInput = false;
+            subjectTheInput.style.border = "solid red 2px";            
+        
         }   
 
     }
     
     else {
-        subjectBAD.innerHTML = "We need something, mmkey";
+        subjectBAD.innerHTML = "We need something..";
         console.log("Error: No content")
     }
 
@@ -140,6 +156,8 @@ let subjectAfterInput = subjectInput.value.trim();
 
 const textOK = document.querySelector(".textOK")
 const textBAD = document.querySelector(".textBAD")
+const textTheInput = document.getElementById("textarea");
+
 
 
 let textAfterInput = textInput.value.trim();
@@ -150,21 +168,27 @@ let textAfterInput = textInput.value.trim();
         console.log("superb, its not empty");
 
         if (textLength > 25) {
-            console.log("SUXSEX");
+            textAfterInput = true;
+            console.log("Text approved");
             textInput.style.color = "green";
             textOK.innerHTML = "Amazeballs";
+            textTheInput.style.border = "solid green 2px";                
+            textOK.style.color = "green";
         }
 
     else {
-            textInput.style.color = "red" // nameOK og BAD funker ikke på fargene. Kan se på dette senere. Fanger fargen fra ene..
+            textAfterInput = false;
+            textInput.style.color = "red"
             textBAD.innerHTML = "At least 25 caracthers!";
             console.log("Error: Not enough caracthers")
+            textBAD.style.color="red";
+            textTheInput.style.border = "solid red 2px";    
         }   
 
     }
     
     else {
-        textBAD.innerHTML = "We need something, mmkey";
+        textBAD.innerHTML = "We need something..";
         console.log("Error: No content")
     }
 
