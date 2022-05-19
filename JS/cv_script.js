@@ -72,7 +72,7 @@ listSinglePost = (data) => {
         <div class="cvDetails">
             <div class="leftFlex">
                 <p>${data.categories[0].name}</p>
-                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt} onclick="enlargeImg()">
             </div>
             <div class="rightFlex">
                 <p>${data.sku}</p>
@@ -89,6 +89,11 @@ listSinglePost = (data) => {
 
 
  
-  
+const img = document.querySelector(".memberimg");
+
+function enlargeImg () {
+    img.style.width = "60%";
+    img.style.height = "auto";
+}
 
     

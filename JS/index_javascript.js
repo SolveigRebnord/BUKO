@@ -1,6 +1,62 @@
 console.log("heia, index");
 
 
+
+var mediaQuery = window.matchMedia("(max-width: 600px)");
+console.log(mediaQuery);
+
+function myFunction(m) {
+  if (m.matches) { // If media query matches
+    document.body.style.backgroundColor = "aliceblue";
+
+    const slider = document.querySelector('.outPut');
+    const buttons = document.querySelector(".buttonsdiv")
+    buttons.style.display = "none";
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', _ => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', _ => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const SCROLL_SPEED = 3;
+  const walk = (x - startX) * SCROLL_SPEED;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+
+
+  }
+  else { // If media query matches
+    document.body.style.backgroundColor = "white";
+  }
+
+}
+
+
+mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
+myFunction(mediaQuery) // Call listener function at run time
+
+
+
+
+
+
 const burgerMenu = document.getElementById("menu");
 const overlay = document.querySelector(".overlay");
 
@@ -152,7 +208,7 @@ function showSlides(n) {
 
   }
   
-  
+
   
   slides[slideIndex-1].className += " active";
   slides[slideIndex-1].animate(
@@ -171,9 +227,6 @@ function showSlides(n) {
   );
 };
   
-
-
-
 
 
 

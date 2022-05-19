@@ -117,6 +117,7 @@ hr {
     justify-content: flex-start;
     gap: 1rem;
   width: 380px;
+  height: 80px;
     background-color: var(--lys-rosa);
     box-shadow: rgb(184, 184, 184) 0px 7px 8px;
     padding: 1rem;
@@ -215,3 +216,68 @@ hr {
     text-align: center;
     padding: 5rem 0;
 }
+
+@media (max-width: 1000px) {
+    .outPut {
+        scale: 0.75;
+    }
+
+    .active {
+        width: 100%;
+        left: 0;
+    }
+
+    .divs {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .outPut {
+scale: 1;
+padding: 1rem 3rem;
+	display: grid;
+	grid-template-columns: repeat(4, 300px);
+    justify-content: start;
+    grid-template-rows: 1fr;
+	grid-column-gap: 3rem;
+	grid-row-gap: 1rem;
+	overflow: scroll;
+	height: fit-content;
+	scroll-snap-type: both mandatory;
+	scroll-padding: 1rem;
+    }
+
+    .active, .divs {
+        width: 300px;
+        height: 400px;
+        position: initial;
+        
+      
+        scroll-snap-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 1rem;
+    opacity: 1;
+    }
+
+    .divs > p, .divs > a {
+        display: inline-block;
+    }
+
+    .active > img, .divs > img {
+   width: 100px;
+   height: 100px;
+    }
+
+    .active {
+        scroll-snap-type: unset;
+    }
+
+    .outPut {
+        scroll-behavior: "smood";
+    } 
+}
+
+
+

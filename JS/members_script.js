@@ -27,6 +27,7 @@ fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=3&
 
 const outPut = document.querySelector(".showMembers");
 const knappen = document.querySelector(".loadmore");
+const message = document.querySelector(".message");
 
 var pageIndex = 1;
 
@@ -40,17 +41,25 @@ function loadMore (tall) {
 fetch (`https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&page=${currPage}&per_page=3`)
 .then(response => response.json())
 .then(data => {
+
+  if (data.length == 0) {
+    return knappen.style.display = "none";
+  }
   //console.log(data);
   let membersList = [];
     for (let objekt of data) {
     if (objekt.tags[0].id == 21) {
       membersList.push(objekt);
     }
-    
     console.log(membersList);
   }
+
+
+
     listPost(membersList);
  
+   
+    
     
    
 
@@ -82,5 +91,5 @@ outPut.innerHTML += list;
       
   }
 
-
 }
+
