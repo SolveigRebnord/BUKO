@@ -153,7 +153,7 @@ a {
     background-color: var(--dark-orange);
     padding: 1rem;
     width: fit-content;
-    display: inline-block;
+    display: inline;
     color: white;
     text-transform: uppercase;
     font-family: var(--FiraS);
@@ -215,8 +215,18 @@ a {
     flex-direction: column;
     }
 
-    .rightFlex > p:first-of-type {
+    .rightFlex > p:nth-child(3) {
+       padding-top: 3rem ;
+    }
+
+    .rightFlex > p:nth-child(2) {
+        margin-left: 1em;
+    }
+
+
+    .rightFlex {
         display: inline;
+        padding-top: 1rem;
     }
 
     .leftFlex {
