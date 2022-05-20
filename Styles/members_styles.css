@@ -219,4 +219,9 @@ a {
         display: inline;
     }
 
+    .leftFlex {
+        margin-right: 1rem;
+    }
+
+
 }
