@@ -1,0 +1,117 @@
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+    --Nanum: 'Nanum Myeongjo', serif;
+}
+
+main {
+    margin: 0;
+}
+
+h1 {
+    font-family: var(--Nanum);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-family: var(--Nanum);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.margin {
+    margin-left: 14rem;
+    margin-top: 15rem;
+    text-align: right;
+}
+
+.undermenu > div > ul > li > a {
+    color: black;
+    text-transform: initial;
+}
+
+.undermenu > div > ul > li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+transition: 0.8s ;
+}
+
+.undermenu > div > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+
+
+
+
+
+
+.undermenu {
+    position: fixed;
+    left: 4%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.margin > section {
+    height: 90vh;
+}
+
+.margin > section > div > p {
+    grid-area: tekst;
+}
+
+
+
+
+.active {
+min-height: 40px;
+min-width: 90px;
+    background-color: var(--lys-rosa);
+    padding: 0.3rem 1rem 0.3rem 4rem;
+    margin-left: -4rem;
+    transition: 0.5s ease-in;
+}
+
+
+.ourstory, .conductor, .board {
+    width: 90%;
+    height: 600px;
+    margin: 2rem auto;
+}
+
+.margin > section > div {
+    font-family: var(--robotCon);
+    font-weight: 300;
+    font-size: 1rem;
+
+
+}
+section > div > p > img {
+    float: right;
+    padding: 1rem;
+    max-width: 35vw;
+    height: min-content;
+display: inline;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ourstory > div > p > span {
+    font-weight: 800;
+    font-size: 1.2rem;
+}

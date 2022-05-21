@@ -10,13 +10,8 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
 }
 
-.fa {
-    color: white;
-}
 
-.fa-user {
-    font-size: 1.3rem;
-}
+
 
 
 .loadinggif > img {
@@ -42,9 +37,7 @@ main {
     margin: 0 6rem;
 }
 
-.fa-chevron-down {
-    font-size: 1.5rem;
-}
+
 
 header > div > .fa-bars {
     display: none;
@@ -56,12 +49,12 @@ h2, h1, p {
 
 /*pen li*/
 
-header > nav > ul > li, footer > div > ul > li, .overlay li {
+header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li {
     list-style: none;
 }
 
 /*bortover liste*/
-header > nav > ul, footer > div > ul {
+header > nav > ul, footer > div > ul, .undermenu > div > ul {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -70,7 +63,7 @@ header > nav > ul, footer > div > ul {
 
 /*pen a*/
 
-header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a{
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--robotCon);
@@ -108,12 +101,21 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a {
 
 
 header {
-    background-color: var(--blue-green);
+     background-color: var(--blue-green);
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem 2rem 1rem 1rem;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 96%;
+    padding: 2rem;
+    transition: 0.3s;
+
+}
+
+#logo > a > img {
+    height: 80px;
 }
 
 
@@ -163,31 +165,23 @@ header > div.menu > img {
         grid-area: logo;
     }
 
-    #profile {
-        grid-area: profile;
-        font-size: 1.6rem;
-    }
-
+   
     header > nav {
         display: none;
     }
-
-    
 
     div#menu {
         grid-area: menu;
     }
 
     .overlay {
-        
         display: block;
         display: none;
         position: absolute;
-        top: 7%;
+        top: 8%;
         left: 0%;
         background-color: #CF9B7F;
         padding: 3rem;
-        
     }
 
 }

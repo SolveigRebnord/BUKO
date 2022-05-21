@@ -61,18 +61,23 @@ myFunction(mediaQuery) // Call listener function at run time
 
 
 
-
+//----------------------------------------------------------------------
 
 const burgerMenu = document.getElementById("menu");
 const overlay = document.querySelector(".overlay");
 
 burgerMenu.addEventListener("click", function() {
     if (overlay.style.display === "none") {
+      overlay.style.transition = "display 2s ease-in"
         overlay.style.display = "inline-block";
+        
+        
     } else {
       overlay.style.display = "none";
     }
 });
+
+
 
 //------------------------------------------------------------------
 
@@ -85,6 +90,9 @@ function scrolling() {
   const scrollTo = document.querySelector(".toDiv");
 scrollTo.scrollIntoView({behaviour: "smooth"});
 }
+
+
+//--------------------------------------------------------------------
 
 var myArray = {};
 
