@@ -74,7 +74,6 @@ hr {
 
 
 .karusell {
-    margin-bottom: 10rem;
     height: fit-content;
     
 }
@@ -84,7 +83,7 @@ hr {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 2rem 4.1rem 0 4.1rem;
+    margin: 2rem 4.1rem 3rem 4.1rem;
 }
 
 .karusell > div:first-of-type > h1 {
@@ -116,7 +115,7 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1rem;
   width: 380px;
   height: 80px;
@@ -175,8 +174,9 @@ hr {
     transition: transform 1s ease-in;
     box-shadow: rgb(155, 155, 155) 0 10px 12px;
     position: absolute;
-    left: 22%;
-    top: 60%;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
     display: grid;
     grid-template-areas: 
     'img h2'
@@ -216,27 +216,47 @@ hr {
 
 .buttonsdiv {
     text-align: center;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
-@media (max-width: 1000px) {
-    .outPut {
-        scale: 0.75;
-    }
+.buttonsdiv > button {
+    border: none;
+    background-color:white;
+}
 
+.fa-circle-right {
+    color: black;
+    display: block;
+    font-family: 'Font Awsome ';
+}
+
+.buttonsdiv > button:first-of-type {
+    margin-right: 2rem;
+   
+}
+
+
+
+@media (max-width: 1000px) {
+    
     .active {
-        width: 100%;
-        left: 0;
+        width: 650px;
+        height: fit-content;
+        align-items: center;
+        gap: 1rem;
+        margin-left: -332.5px;
+     
     }
 
     .divs {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 730px) {
     .outPut {
-scale: 1;
+
 padding: 0rem 3rem;
 	display: grid;
 	grid-template-columns: repeat(4, 300px);
@@ -250,11 +270,11 @@ padding: 0rem 3rem;
     margin: 0;
 	
     }
-
     .active, .divs {
         width: 300px;
         height: 400px;
-        position: inherit;
+        position: relative;
+        left: 0;
         scroll-snap-align: center;
 	display: inline-block;
 	border-radius: 3px;
@@ -269,9 +289,7 @@ padding: 0rem 3rem;
     top: 0;
     }
 
-    .active {
-        top: -5%;
-    }
+   
 
     .divs > p, .divs > a, .active > p {
         display: block;
@@ -286,11 +304,12 @@ padding: 0rem 3rem;
         text-decoration: none;
         color: white;
        display: inline-block;
-
-     
     }
 
-    
+    .karusell > div:first-of-type {
+        margin: 3rem;
+    }
+
 
     footer {
         flex-direction: column;
