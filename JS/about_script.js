@@ -19,9 +19,11 @@ burgerMenu.addEventListener("click", function() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+
+    
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.querySelector("header > div > a > img").style.height = "30px";
-    document.querySelector("header").style.padding = "0.5rem 0.5rem 0.5rem 2rem";
+    document.querySelector("header").style.padding = "0.5rem 2rem 0.5rem 2rem";
     document.querySelector("header").style.width = "98%";
 
   } else {
@@ -29,6 +31,12 @@ function scrollFunction() {
     document.querySelector("header").style.padding = "2rem";
     document.querySelector("header").style.width = "96%";
   }
+
+
+
+
+
+
 }
 
 
@@ -76,27 +84,31 @@ document.addEventListener('scroll', function () {
 });
 
 
-/*
-const options = {
-    rootMargin: '0px',
-    threshold: 1.0
-  };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        let noeomg = document.querySelector("nav > div > ul > li.theboardli");
+const navUl = document.querySelector(".undermenu");
+const active = document.querySelector(".active");
 
-      console.log(entry.intersectionRatio > 0 ? 'visible' : 'invisible');
-      if (entry.intersectionRatio > 0) {
-      noeomg.style.backgroundColor = "grey";
-      }
 
-      if (entry.intersectionRatio < 0){
-          noeomg.style.backgroundColor = "white";
-      }
-    });
-  }, options);
-  
-  const element = document.querySelector("section > section.board > h2");
-  observer.observe(element);
-  */
+var mediaQuery = window.matchMedia("(max-width: 600px)");
+console.log(mediaQuery);
+
+function myFunction(m) {
+  if (m.matches) { // If media query matches
+
+    navUl.style.display = "none";
+    active.style.position = "fixed";
+    active.style.left = "0";
+    active.style.top = "10%";
+    active.style.display = "inline-block";
+
+  }
+
+
+else { // If media query matches
+    navUl.style.display = "flex";
+}
+}
+
+
+mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
+myFunction(mediaQuery) // Call listener function at run time
+
