@@ -30,7 +30,9 @@ html {
 
 
 body {
-    margin: 0;
+    margin-top: 8rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 main {
