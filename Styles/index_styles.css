@@ -311,10 +311,19 @@ width: fit-content;
 
 @media (max-width: 730px) {
 
+    main {
+        margin: 0 2rem;
+    }
+
+    .karusell > div:first-of-type {
+        width: 100%;
+        margin: 3rem 0 3rem 0;
+    }
+
 
     .outPut {
 
-padding: 0rem 2rem;
+padding: 0 1rem;
 	display: grid;
 	grid-template-columns: repeat(4, 300px);
     justify-content: start;
@@ -325,6 +334,7 @@ padding: 0rem 2rem;
 	height: 600px;
 	scroll-snap-type: both mandatory;
     margin: 0;
+
 	
     }
     .active, .divs {
@@ -363,9 +373,7 @@ padding: 0rem 2rem;
        display: inline-block;
     }
 
-    .karusell > div:first-of-type {
-        margin: 3rem;
-    }
+  
 
 
     footer {
