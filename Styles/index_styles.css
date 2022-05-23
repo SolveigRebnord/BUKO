@@ -133,8 +133,8 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.5rem;
-  width: fit-content;
+    gap: 1vw;
+  width: 25vw;
   height: 80px;
   font-size: 1vw;
     background-color: var(--lys-rosa);
