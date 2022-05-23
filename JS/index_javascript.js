@@ -66,7 +66,6 @@ var mediaQuery = window.matchMedia("(max-width: 700px)");
 
 function myFunction(m) {
   if (m.matches) { // If media query matches
-    document.body.style.backgroundColor = "aliceblue";
 
     const slider = document.querySelector('.outPut');
     const buttons = document.querySelector(".buttonsdiv")
