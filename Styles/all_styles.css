@@ -167,8 +167,8 @@ header > nav > img {
     display: none;
 }
 
-header > div.menu > img {
-    width: 10px;
+div#menu > img {
+    width: 35px;
 }
 
 
@@ -250,6 +250,7 @@ header > div.menu > img {
     .search {
         text-align: right;
         grid-area: search;
+        padding: 0;
 
     }
 
@@ -264,6 +265,7 @@ header > div.menu > img {
         grid-row: auto;
         grid-template-areas:
         'menu logo search';
+        padding: 1rem 2rem;
     }
 
     #logo {
@@ -272,7 +274,7 @@ header > div.menu > img {
     }
 
     #logo > a > img {
-        max-width: 120px;
+        height: 50px;
     }
 
    
