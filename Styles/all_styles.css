@@ -160,7 +160,7 @@ header > nav > img {
 
 .search > img {
 display: none;
-width: 30px;
+width: 25px;
 }
 
 .search > p {
@@ -168,7 +168,7 @@ width: 30px;
 }
 
 
-@media (max-width: 930px) {
+@media (max-width: 1000px) {
     header > nav > ul {
         gap: 1rem;
     }
