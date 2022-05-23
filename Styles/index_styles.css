@@ -8,6 +8,7 @@ html {
     --robotCon: 'Roboto Condensed', sans-serif;
     --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+    --Nanum: 'Nanum Myeongjo', serif;
 }
 
 * {
@@ -100,11 +101,12 @@ hr {
 }
 
 .karusell > div:first-of-type {
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 2rem 4.1rem 3rem 4.1rem;
+    margin: 0 auto;
 }
 
 .karusell > div:first-of-type > h1 {
@@ -121,69 +123,51 @@ hr {
 .outPut {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
   position: relative;
-  height: 400px;
-  margin: 2rem 0;
-  padding: 0 2rem;
+  height: 20vw;
+  margin: 0 auto;
+width: 90%;
+padding-top: 2rem;
 
 }
 
 
 .divs  {
+    flex: 1 1 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 1vw;
-  width: 25vw;
-  height: 80px;
   font-size: 1vw;
-    background-color: var(--lys-rosa);
-    box-shadow: rgb(184, 184, 184) 0px 7px 8px;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
     opacity: 60%;
+    font-weight: 300;
+width: fit-content;
+
 }
 
 .divs > h2 {
+    font-weight: 300;
     text-transform: uppercase;
-    font-weight: 400;
+    font-size: 0.9rem;
 
 }
 
-.divs:nth-child(1) {
-    background-color: var(--blue-green);
-    color: white;
-}
 
-.divs:nth-child(1) > p {
-    background-color: white;
-    padding: 0.5rem;
-    color: black;
-}
 
-.divs:nth-child(2) {
-    background-color: var(--dark-orange);
 
-}
 
-.divs:nth-child(3) {
-    background-color: var(--lys-rosa);
-}
-
-.divs:nth-child(4) {
-    background-color: burlywood;
-}
 
 .divs > p, .divs > a {
     display: none;
 }
 
 .divs > img {
-    width: 80px;
-    height: 80px;
+    width: 80%;
+    height: 16vw;
     object-fit: cover;
 }
 
@@ -194,52 +178,62 @@ hr {
 .active {
     width: 800px;
     height: 250px;
+    padding: 1rem;
     transition: transform 1s ease-in;
     box-shadow: rgb(155, 155, 155) 0 10px 12px;
     position: absolute;
     left: 50%;
     margin-left: -400px;
-    top: 35%;
+    top: 110%;
     display: grid;
     grid-template-areas: 
     'img h2'
     'img p'
     'img a';
     justify-content: space-between;
-    text-align: right;
+    text-align: center;
+    gap: 0rem;
 }
 
-.active > p, .active > a {
+.active > p {
     display: inline-block;
     grid-area: p;
     max-width: 400px;
+    text-align: left;
 }
 
 .active > a {
+    display: inline;
     grid-area: a;
     text-decoration: none;
     color: white;
-    background-color: rgb(142, 125, 162);
+    background-color: var(--blue-green);
     width: fit-content;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
+    margin: 0 auto;
 }
 
 .active > img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     grid-area: img;
 }
 
 .active > h2 {
     grid-area: h2;
+    font-family: var(--Nanum);
+
 }
 
 
 
 .buttonsdiv {
-    text-align: center;
-    padding: 3rem 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-bottom: 30rem;
 }
 
 .buttonsdiv > button {
