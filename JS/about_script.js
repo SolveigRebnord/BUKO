@@ -20,6 +20,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 
+  
+
     
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.querySelector("header > div > a > img").style.height = "30px";
@@ -32,8 +34,7 @@ function scrollFunction() {
     document.querySelector("header").style.width = "96%";
   }
 
-
-
+  
 
 
 
@@ -99,7 +100,6 @@ function myFunction(m) {
     active.style.left = "0";
     active.style.top = "10%";
     active.style.display = "inline-block";
-
   }
 
 

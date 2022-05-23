@@ -1,7 +1,44 @@
 console.log("heia, index");
 
+const burgerMenu = document.getElementById("menu");
+const overlay = document.querySelector(".overlay");
+
+burgerMenu.addEventListener("click", function() {
+    if (overlay.style.display === "none") {
+      overlay.style.transition = "display 2s ease-in"
+        overlay.style.display = "inline-block";
+        
+        
+    } else {
+      overlay.style.display = "none";
+    }
+});
 
 
+
+//------------------------------------------------------------------
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+  
+
+    
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.querySelector("header > div > a > img").style.height = "30px";
+    document.querySelector("header").style.padding = "1rem 2rem 1rem 2rem";
+  
+
+  } else {
+    document.querySelector("header > div > a > img").style.height = "80px";
+    document.querySelector("header").style.padding = "2rem";
+  
+  }
+}
+
+//-----------------------------------------------------------------------
 
 var mediaQuery = window.matchMedia("(max-width: 600px)");
 console.log(mediaQuery);
@@ -63,23 +100,7 @@ myFunction(mediaQuery) // Call listener function at run time
 
 //----------------------------------------------------------------------
 
-const burgerMenu = document.getElementById("menu");
-const overlay = document.querySelector(".overlay");
 
-burgerMenu.addEventListener("click", function() {
-    if (overlay.style.display === "none") {
-      overlay.style.transition = "display 2s ease-in"
-        overlay.style.display = "inline-block";
-        
-        
-    } else {
-      overlay.style.display = "none";
-    }
-});
-
-
-
-//------------------------------------------------------------------
 
 const scrollDown = document.getElementById("scrollDown");
 const scrollTo = document.querySelector(".toDiv");

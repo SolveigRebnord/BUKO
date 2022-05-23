@@ -101,6 +101,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 
 
 header {
+    box-sizing: border-box;
      background-color: var(--blue-green);
     display: flex;
     flex-direction: row;
@@ -108,7 +109,9 @@ header {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 96%;
+    left: 0;
+    right: 0;
+    width: 100%;
     padding: 2rem;
     transition: 0.3s;
     z-index: 100;
@@ -179,7 +182,8 @@ header > div.menu > img {
         grid-template-areas:
         'logo nav'
         'logo search';
-        align-content: center;
+        justify-content: space-between;
+
     }
 
     header > nav > ul {
@@ -216,11 +220,10 @@ header > div.menu > img {
     }
     
     .search {
-        margin-top: 0.5rem;
-
-        display: inline-block;
-        grid-area: search;
         text-align: right;
+        margin: 0;
+        display: block;
+        grid-area: search;
         padding-right: 1rem;
     }
 
@@ -240,11 +243,14 @@ header > div.menu > img {
 
 @media (max-width: 750px) {
 
+ 
+
   
 
     .search {
-        padding: 0 2rem 0 0;
         text-align: right;
+        grid-area: search;
+
     }
 
     header > nav > ul > li:last-of-type {
@@ -258,7 +264,6 @@ header > div.menu > img {
         grid-row: auto;
         grid-template-areas:
         'menu logo search';
-        width: 93%;
     }
 
     #logo {
@@ -280,9 +285,8 @@ header > div.menu > img {
         grid-area: menu;
     }
 
-    .search {
-        grid-area: search;
-    }
+
+    
 
     .overlay {
         display: block;

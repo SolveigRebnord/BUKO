@@ -33,6 +33,15 @@ h2 {
     text-align: right;
 }
 
+
+@media (max-width: 750px) {
+    .margin {
+        margin-left: 0;
+    margin-top: 15rem;
+    text-align: left;
+    }
+}
+
 .undermenu > div > ul > li > a {
     color: black;
     text-transform: initial;
