@@ -453,6 +453,7 @@ footer > div:nth-child(2) {
 
 footer > div > div:last-of-type img {
     max-width: 40px;
+    max-height: 40px;
 }
 
 footer > div > div:last-of-type {
@@ -510,14 +511,10 @@ input[type=emailnewsletter] {
         display: none;
     }
 
-    footer > div > ul {
-        gap: 2rem;
+    footer > div > ul > li {
+        padding-bottom: 1rem;
     }
 
-    footer > div > div:last-of-type img {
-        max-width: 40px;
-        max-height: 40px;
-    }
 
 }
 
