@@ -10,6 +10,11 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
 }
 
+* {
+    font-family: var(--FiraS);
+    font-weight: 300;
+}
+
 
 .underlined {
     text-decoration: underline;
@@ -21,14 +26,12 @@ html {
 }
 
 .loadinggif {
-    position: fixed;
-    left: 47%;
+    margin-top: 15rem;
+    height: 200px;
     text-align: center;
 }
 
-.loadinggif > p {
-    font-family: var(--FiraS);
-}
+
 
 
 body {

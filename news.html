@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News | BUKO</title>
 
-    <link rel="stylesheet" href="Styles/all_styles.css">
-    <link rel="stylesheet" href="News/news_styles.css">
+    <link rel="stylesheet" href="./Styles/all_styles.css">
+    <link rel="stylesheet" href="./Styles/news_styles.css">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -22,71 +22,128 @@
      <!--Fira Sans X Condensed-->
      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;200;300;400;500&display=swap" rel="stylesheet">
 
-  
+    <!--Nanum-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
     
 
-<header>
-    <div id="logo">
-        <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
-    </div>
 
-    <div id="menu">
-        <i class="fa fa-solid fa-bars"></i>
-    </div>
 
-    <nav> <!--Tror dette heller burde være bare en div. Nav er store navigeringsseksjoner-->
-        <ul>
-            <li><a href="/news.html">News</a></li>
-            <li><a href="/portfolio.html">Portfolio</a></li>
-            <li><a href="/members.html">Members</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            
-        </ul>
-    </nav>
+    <body>
 
-    <div>
-        <a id="profile" href="/about.html"><i class="fa fa-solid fa-user"></i></a>
-    </div>
-
-    <div class="overlay">
-        <ul>
-            <li><a href="/news.html">News</a></li>
-            <li><a href="/portfolio.html">Portfolio</a></li>
-            <li><a href="/members.html">Members</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-    </div>
+        <header>
+            <div id="logo">
+                <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
+            </div>
         
-</header>
+            <div id="menu">
+                <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-menu-rounded-50-2.png" alt="">
+            </div>
+        
+            <nav>
+                <ul>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                    <li><a href="/members.html">Members</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt=""></li>
+                </ul>
+                
+                
+            </nav>
+            <div class="search">
+                <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt="">
+            </div>
+           
+           
+        
+            <div class="overlay">
+                <ul>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="/portfolio.html">Portfolio</a></li>
+                    <li><a href="/members.html">Members</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+                
+        </header>
+    
+    
 
-<section class="title">
-    <p class="breadcrumbs">
-        <a href="index.html">Home</a> / News
-    </p>
-
-    <h1>News</h1>
-
-    <div class="forthegrid">
-    </div>
-</section>
 
 
 <main>
+
+<section>
+    <h1>Recent news</h1>
+</section>
+
 <div class="showPosts">
     <div class="loadinggif">
-        <img src="News/img/icons8-music.gif" alt="Music note dancing">
-        <p>Loading...</p>
+        <img src="./img/icons8-music.gif" alt="Music note dancing">
+        <p>Writing a symphony..</p>
     </div>
 </div>
 
-
-
 </main>
-<script src="News/news_js.js"></script>
+
+
+<footer>
+
+    <div>
+        <ul>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/members.html">Members</a></li>
+            <li><a href="/about.html">About Us</a>
+                <div>
+                    <a href="about.html">Our Story</a>
+                    <a href="about.html">Conductor</a>
+                    <a href="about.html">The board</a>
+                    <a href="about.html">Future visions and goals</a>
+                </div>
+            </li>
+            <li><a href="/contact.html">Contact</a>
+                <div>
+                    <a href="about.html">Booking</a>
+                    <a href="about.html">Play with us</a>
+                    <a href="about.html">Contact</a>
+                    <a href="about.html">Donations and sponsorship</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div>
+        <div>
+            <label for="emailnewsletter">
+                Sign up to our newsletter
+            </label> <br>
+            <input type="emailnewsletter">
+            <button type="submit">Submit</button>
+        </div>
+        <div>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-facebook-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-instagram-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-linkedin-circled-60.png" alt="">
+        </div>
+    </div>
+
+
+<div class="copyright">
+    <p>&copy; 2022 Bergen Unge Kammerorkester</p>
+    <p>Developed by <span class="underlined">Sunroad</span></p>
+</div>
+</footer>
+
+<script src="./JS/news_js.js"></script>
+<script src="./JS/allscripst_script.js"></script>
 </body>
 </html>

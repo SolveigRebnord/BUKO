@@ -57,13 +57,19 @@ function listPost (array) {
                  theLink = `<a href="members.html">Read more about Heidi and our other members</a>`;
             }
 
-            list += `<a href="newpost.html?id=${post.id}"><div class="showPost">
+            list += `
+            <div class="showPost">
+                      <div>
                       <h2 class="h2title">${post.title.rendered}</h2>
                         ${formattedDate}
                         ${theLink}
                         ${post.excerpt.rendered}
-                        <div class="imagenews">${newString}</div>
-                        </div></a>`
+                        <a href="newpost.html?id=${post.id}">Link til Heidi</a>
+                      </div>
+                      <div>
+                        ${newString}
+                      </div>
+              </div>`
 
             
         

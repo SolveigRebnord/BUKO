@@ -6,7 +6,7 @@ const overlay = document.querySelector(".overlay");
 burgerMenu.addEventListener("click", function() {
     if (overlay.style.visibility === "hidden") {
         overlay.style.visibility = "visible";
-        overlay.style.transition = "0.3s ease-out";
+        overlay.style.transition = "0.01s ease-out";
 
         
         

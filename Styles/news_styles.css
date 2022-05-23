@@ -1,0 +1,156 @@
+
+html {
+    --dark-orange: #CF9B7F;
+    --lys-rosa: #F6F0EC;
+    --blue-green: #92ABAF;
+
+    --robotCon: 'Roboto Condensed', sans-serif;
+    --BUKO: 'Cinzel', serif;
+    --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+    --Nanum: 'Nanum Myeongjo', serif;
+}
+
+
+
+
+main {
+    margin: 0 7rem;
+}
+
+section {
+    padding-top: 6rem;
+}
+
+
+
+
+
+
+
+
+figure img { /* bildet i seg selv*/
+
+    height: 45vw;
+    display: inline-block;
+    object-fit: cover;
+    width: 100%;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.showPost > div > a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: solid 1px white;
+}
+
+
+
+.showPost > div > p {
+    max-width: 500px;
+    font-weight: 300;
+    font-family: var(--robotCon);
+}
+
+
+
+.showPost { 
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0px;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    background-color: rgb(118, 88, 88);
+    margin-bottom: 1rem;
+    gap: 2rem;
+    
+}
+
+.showPost > div {
+    width: 80%;
+}
+
+.showPost:nth-child(2), .showPost:nth-child(4) {
+    flex-direction: row-reverse;
+    background-color: var(--lys-rosa);
+    color: black;
+    text-align: right;
+}
+
+.showPost > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.showPost:nth-child(2) > div:first-of-type, .showPost:nth-child(4) > div:first-of-type {
+    align-items: flex-end;
+}
+
+.showPost:nth-child(2) > div > a, .showPost:nth-child(4) > div > a {
+    color: black;
+    border: solid 1px black;
+}
+
+
+
+
+.showPost > div > h2 {
+    font-size: 2rem;
+    font-family: var(--BUKO);
+}
+
+
+.showPosts { /* hele siden*/
+    width: 100%;
+    height: max-content;
+
+}
+
+@media (max-width: 900px) {
+
+    .showPost > div > p,.showPost > div > a  {
+        font-size: 0.8rem;
+    }
+
+    main {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .showPost {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .showPost:nth-child(2), .showPost:nth-child(4) {
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+.singlepost > img {
+    max-width: 30px;
+    margin-top: 3rem;
+}
+
+.singlepost {
+    text-align: center;
+}
+
