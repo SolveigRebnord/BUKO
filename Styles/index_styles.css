@@ -127,7 +127,7 @@ hr {
     justify-content: space-between;
     gap: 0.5rem;
   position: relative;
-  height: 20vw;
+  height: 24vw;
   margin: 0 auto;
 width: 90%;
 padding-top: 2rem;
@@ -234,7 +234,6 @@ width: fit-content;
     justify-content: space-between;
     margin: 0 auto;
     padding-bottom: 30rem;
-    padding-top: 4vw;
 }
 
 .buttonsdiv > button {
