@@ -101,7 +101,7 @@ hr {
 }
 
 .karusell > div:first-of-type {
-    width: 90%;
+    width: 84%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -109,9 +109,18 @@ hr {
     margin: 0 auto;
 }
 
-.karusell > div:first-of-type > h1 {
-   font-size: 4rem;
+.karusell > div:first-of-type > h1, .karusell > div:first-of-type > a {
+   font-size: 2rem;
+   text-transform: uppercase;
+   font-weight: 300;
 }
+
+.karusell > div:first-of-type > a {
+font-size: 1rem;
+text-transform: initial;
+color: black;
+}
+
 
 
 
@@ -123,14 +132,14 @@ hr {
 .outPut {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
   position: relative;
-  height: 24vw;
+  height: 20vw;
   margin: 0 auto;
 width: 90%;
-padding-top: 2rem;
+padding-top: 1rem;
 
 }
 
@@ -146,7 +155,10 @@ padding-top: 2rem;
     opacity: 60%;
     font-weight: 300;
 width: fit-content;
+}
 
+.divs:hover {
+    cursor: pointer;
 }
 
 .divs > h2 {
@@ -183,7 +195,7 @@ width: fit-content;
     box-shadow: rgb(155, 155, 155) 0 10px 12px;
     position: absolute;
     left: 50%;
-    margin-left: -400px;
+    margin-left: -420px;
     top: 110%;
     display: grid;
     grid-template-areas: 
@@ -193,6 +205,10 @@ width: fit-content;
     justify-content: space-between;
     text-align: center;
     gap: 0rem;
+}
+
+.active:hover {
+    cursor:initial;
 }
 
 .active > p {
@@ -229,7 +245,7 @@ width: fit-content;
 
 
 .buttonsdiv {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -241,15 +257,21 @@ width: fit-content;
     background-color:white;
 }
 
-.fa-circle-right {
-    color: black;
-    display: block;
-    font-family: 'Font Awsome ';
+.buttonsdiv > button:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
 
-.buttonsdiv > button:first-of-type {
-    margin-right: 2rem;
-   
+
+.buttonsdiv > button:first-of-type img {
+    width: 35px;
+    transform: rotate(-95deg) scaleY(-1);
+}
+
+.buttonsdiv > button:last-of-type img {
+    width: 35px;
+    transform: rotate(-10deg) scaleX(-1);
+
 }
 
 
@@ -262,11 +284,19 @@ width: fit-content;
         align-items: center;
         gap: 1rem;
         margin-left: -332.5px;
-     
     }
 
-  
+    .buttonsdiv {
+        width: 90%;
+    }
 }
+
+@media (max-width: 1250px) {
+    .active {
+        top: 125%;
+    }
+}
+
 
 @media (max-width: 730px) {
     .outPut {

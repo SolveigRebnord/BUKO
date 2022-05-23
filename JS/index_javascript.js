@@ -253,11 +253,11 @@ function showSlides(n) {
     [
    
       {
-        transform: "translateY(5%)",
+
         opacity: 0
       },
       {
-        transform: "translateY(5%)",
+
         opacity: 1
       }
     ],
