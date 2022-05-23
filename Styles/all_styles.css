@@ -125,24 +125,46 @@ header > nav > ul {
     margin: 1rem 0 0 0;
 }
 
+
+
 header > nav > ul > li {
     padding: 0 2rem 0 1rem;
     border-right: solid white 1px;
 }
 
-header > nav > ul > li:last-child {
+header > nav > ul > li:nth-child(5) {
     border: none;
+    padding-right: 1rem;
 }
 
-header > nav {
-    display: flex;
-    flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
+header > nav > ul > li:last-of-type {
+    border: none;
+    padding-right: 1rem;
 }
+
+header > nav > ul > li:last-of-type img {
+    height: 20px;
+    width: 20px;
+}
+
+
 
 header > nav > div {
 padding-right: 2rem;
+}
+
+header > nav > img {
+    max-width: 30px;
+    display: inline;
+}
+
+.search > img {
+display: none;
+width: 30px;
+}
+
+.search > p {
+    display: inline;
 }
 
 
@@ -164,6 +186,20 @@ padding-right: 2rem;
         max-width: 100px;
     }
 
+    header > nav > ul > li:last-of-type {
+        display: none;
+    }
+
+    .search > img {
+        display: inline-block;
+    }
+
+    .search {
+        padding: 0.5rem 1rem 0 0;
+        text-align: right;
+    }
+
+
 }
 
 
@@ -172,18 +208,24 @@ header > div.menu > img {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 790px) {
     
     header {
         display: grid;
+        grid-auto-columns: 1fr;
         grid-row: auto;
         grid-template-areas:
-        'menu logo';
+        'menu logo search';
         width: 93%;
     }
 
     #logo {
         grid-area: logo;
+        margin: 0 auto;
+    }
+
+    #logo > a > img {
+        max-width: 120px;
     }
 
    
@@ -195,6 +237,8 @@ header > div.menu > img {
         display: inline-block;
         grid-area: menu;
     }
+
+
 
     .overlay {
         display: block;

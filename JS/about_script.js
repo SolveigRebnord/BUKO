@@ -24,7 +24,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.querySelector("header > div > a > img").style.height = "30px";
     document.querySelector("header").style.padding = "0.5rem 2rem 0.5rem 2rem";
-    document.querySelector("header").style.width = "98%";
+    document.querySelector("header").style.width = "96%";
 
   } else {
     document.querySelector("header > div > a > img").style.height = "80px";
