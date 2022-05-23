@@ -274,12 +274,18 @@ width: fit-content;
 
 }
 
+@media (max-width: 1250px) {
+    .active {
+        top: 125%;
+    }
+}
 
 
 @media (max-width: 1000px) {
     
     .active {
         width: 650px;
+        top: 140%;
         height: fit-content;
         align-items: center;
         gap: 1rem;
@@ -287,15 +293,16 @@ width: fit-content;
     }
 
     .buttonsdiv {
+        padding-top: 1rem;
         width: 90%;
+    }
+
+    .outPut {
+        padding-top: 2rem;
     }
 }
 
-@media (max-width: 1250px) {
-    .active {
-        top: 125%;
-    }
-}
+
 
 
 @media (max-width: 730px) {
