@@ -509,6 +509,16 @@ input[type=emailnewsletter] {
     footer > div > ul > li > div {
         display: none;
     }
+
+    footer > div > ul {
+        gap: 2rem;
+    }
+
+    footer > div > div:last-of-type img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
 }
 
 @media (max-width: 650px) {
