@@ -234,6 +234,7 @@ width: fit-content;
     justify-content: space-between;
     margin: 0 auto;
     padding-bottom: 30rem;
+    padding-top: 4vw;
 }
 
 .buttonsdiv > button {
