@@ -11,7 +11,9 @@ html {
 }
 
 
-
+.underlined {
+    text-decoration: underline;
+}
 
 
 .loadinggif > img {
@@ -30,6 +32,7 @@ html {
 
 
 body {
+    margin-bottom: 0;
     margin-top: 8rem;
     margin-left: 0;
     margin-right: 0;
@@ -65,7 +68,7 @@ header > nav > ul, footer > div > ul, .undermenu > div > ul {
 
 /*pen a*/
 
-header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a{
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a{
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--robotCon);
@@ -104,7 +107,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 
 header {
     box-sizing: border-box;
-     background-color: var(--blue-green);
+    background-color: var(--blue-green);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -379,59 +382,175 @@ section > p, section > h1 {
 
 
 
-footer > div:last-of-type, .copyright {
-text-align: right;
-    background-color: var(--blue-green);
-    font-family: var(--robotCon);
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.2rem;
-    display: block;
-}
-
-footer > div:last-of-type > input {
-    width: 300px;
-    height: 35px;
-}
-
-footer > div:last-of-type > button {
-    border: none;
-    color: white;
-    background-color: #CF9B7F;
-    padding: 0.5rem;
-}
-
-
-
-
 
 
 footer {
-    background-color: var(--blue-green);
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+    background-color: var(--lys-rosa);
+    color: black;
+    padding: 4rem 8vw;
+}
+
+
+footer {
+    display: grid;
+    grid-template-areas:
+    'menus newsletter'
+    'copyright newsletter';
     justify-content: space-between;
-    align-items: center;
-    padding: 3rem 6rem;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+footer > div:first-of-type {
+    grid-area: menus;
+}
+
+feConvolveMatrix > div:nth-child(2) {
+    grid-area: newsletter;
+}
+
+footer > div:last-of-type {
+    grid-area: copyright;
+    text-align: left;
 }
 
 footer > div > ul {
     gap: 1rem;
 }
 
-
-
-footer > div:nth-child(2) > p {
-    color: white;
-    padding-bottom: 0.3rem;
-    font-family: var(--robotCon);
-    text-transform: uppercase;
+footer > div > ul > li > a {
+    font-family: var(--FiraS);
+    color: black;
+    font-weight: 300;
 }
 
-.copyright {
-    text-align: center;
-    color: white;
+footer > div > ul > li > div > a {
+    display: inline;
+    color: black;
     font-size: 0.8rem;
+    text-transform: initial;
+    padding-left: 2rem;
+}
+
+footer > div > ul > li:last-child> div > a:first-of-type {
+    padding-left: 2.5rem;
+}
+
+footer > div > ul > li > div {
+    display: inline-block;
+}
+
+
+
+
+footer > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+footer > div > div:last-of-type img {
+    max-width: 40px;
+}
+
+footer > div > div:last-of-type {
+display: flex;
+gap: 1rem;
+
+}
+
+footer > div > div:first-of-type {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+    footer > div > div:first-of-type input {
+        width: 280px;
+        height: 35px;
+        display: inline;
+        border-radius: 3px;
+        border: none;
+        margin-top: 0.7rem;
+    }
+    
+input[type=emailnewsletter] {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+    
+    footer > div > div:first-of-type button {
+        border: none;
+        border-radius: 3px;
+        color: white;
+        background-color: #CF9B7F;
+        padding: 0.6rem;
+    }
+    
+    
+
+.copyright p {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+
+.copyright > p:last-of-type {
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+    footer > div > ul > li > div {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    
+    footer {
+        grid-template-areas:
+        'menus'
+        'newsletter'
+        'copyright';
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 2rem;
+    }
+
+    footer > div > ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    footer > div:nth-child(2) {
+        align-items: center;
+    }
+
+    footer > div > div:first-of-type {
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+    footer > div > ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    footer > div > div:first-of-type input {
+        width: 60vw;
+    }
+
+
 }
 
