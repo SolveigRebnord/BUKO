@@ -133,12 +133,13 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 1rem;
-  width: 380px;
+    gap: 0.5rem;
+  width: fit-content;
   height: 80px;
+  font-size: 1vw;
     background-color: var(--lys-rosa);
     box-shadow: rgb(184, 184, 184) 0px 7px 8px;
-    padding: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
     opacity: 60%;
 }
 
