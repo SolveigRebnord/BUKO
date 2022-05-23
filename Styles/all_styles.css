@@ -296,14 +296,33 @@ div#menu > img {
     
 
     .overlay {
-        display: block;
-        display: none;
+        visibility:hidden;
         position: absolute;
-        top: 8%;
+        top: 100%;
         left: 0%;
-        background-color: #CF9B7F;
+        background-color: var(--lys-rosa);
         padding: 3rem;
+        transition: visibility 0.3s ease-out;
+        text-align: center;
+        width: 100vw;
+        box-sizing: border-box;
     }
+
+    
+
+    .overlay > ul > li > a {
+        color: black;
+        font-weight: 300;
+    }
+
+    .overlay ul {
+        gap: 2rem;
+    }
+
+ 
+
+
+    
 
 }
 
@@ -453,7 +472,6 @@ footer > div:nth-child(2) {
 
 footer > div > div:last-of-type img {
     max-width: 40px;
-    max-height: 40px;
 }
 
 footer > div > div:last-of-type {
@@ -511,9 +529,6 @@ input[type=emailnewsletter] {
         display: none;
     }
 
-    footer > div > ul > li {
-        padding-bottom: 1rem;
-    }
 
 
 }

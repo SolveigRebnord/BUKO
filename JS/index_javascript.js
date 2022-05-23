@@ -4,13 +4,14 @@ const burgerMenu = document.getElementById("menu");
 const overlay = document.querySelector(".overlay");
 
 burgerMenu.addEventListener("click", function() {
-    if (overlay.style.display === "none") {
-      overlay.style.transition = "display 2s ease-in"
-        overlay.style.display = "inline-block";
+    if (overlay.style.visibility === "hidden") {
+        overlay.style.visibility = "visible";
+        overlay.style.transition = "0.3s ease-out";
+
         
         
     } else {
-      overlay.style.display = "none";
+      overlay.style.visibility = "hidden";
     }
 });
 

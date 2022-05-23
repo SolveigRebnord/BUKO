@@ -52,7 +52,6 @@ main {
 
 hr {
     width: 120px;
-    margin-bottom: 3rem;
 }
 
 .herosection >  div:nth-child(2) {
@@ -80,10 +79,22 @@ hr {
 }
 
 
-@media (max-width: 700px) {
-    .herosection >  div {
-        padding-top: 20rem;
+@media (max-width: 750px) {
+
+    .herosection {
+        margin: 0;
     }
+    .herosection > div {
+        height: fit-content;
+    }
+    body {
+        margin-top: 6.2rem;
+    }
+
+    .herosection >  div {
+
+    }
+
     .herosection >  div > p {
         font-size: 1.4rem;
     }
