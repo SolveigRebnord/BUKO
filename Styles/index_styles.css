@@ -121,7 +121,7 @@ hr {
     justify-content: center;
     gap: 2rem;
   position: relative;
-  height: 280px;
+  height: 400px;
   margin: 2rem 0;
   padding: 0 2rem;
 
@@ -132,7 +132,7 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
   width: 380px;
   height: 80px;
@@ -180,8 +180,9 @@ hr {
     width: 80px;
     height: 80px;
     object-fit: cover;
-
 }
+
+
 
 
 
@@ -193,7 +194,7 @@ hr {
     position: absolute;
     left: 50%;
     margin-left: -400px;
-    top: 50%;
+    top: 35%;
     display: grid;
     grid-template-areas: 
     'img h2'

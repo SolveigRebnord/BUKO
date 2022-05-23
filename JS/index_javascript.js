@@ -62,7 +62,7 @@ myFunction(mediaQuery) // Call listener function at run time
 //-----------------------------------------------------------------------
 
 var mediaQuery = window.matchMedia("(max-width: 600px)");
-console.log(mediaQuery);
+//console.log(mediaQuery);
 
 function myFunction(m) {
   if (m.matches) { // If media query matches
@@ -155,15 +155,12 @@ async function fetchData(){
 fetchData().then(data => {
   console.log(data);
   let afterClass = listData(data);
-  console.log(afterClass);
-  slides = document.getElementsByClassName("divs");
-  slides[0].className += (" active");
-
-
-
 
 
   showSlides(slideIndex);
+
+
+  
 
 })
 .catch((error) => {
@@ -173,19 +170,19 @@ fetchData().then(data => {
 
 function listData (array) {
 
-  console.log(array);
+  //console.log(array);
   let theArray = "";
 
  
-  for (let item of array) {
+  for (let [index, item] of array.entries()) {
 
      
     let indexNumber = item.content.rendered.indexOf('"https')
-    console.log(indexNumber);
+    //console.log(indexNumber);
     let lastIndexNumber = item.content.rendered.indexOf(' alt=')
-    console.log(lastIndexNumber);
+    //console.log(lastIndexNumber);
     let newString = item.content.rendered.slice(indexNumber, lastIndexNumber);
-    console.log(newString);
+    //console.log(newString);
 
 
     var theLink = "";
@@ -198,7 +195,7 @@ function listData (array) {
     }
 
 
-    theArray += `<div class="divs">
+    theArray += `<div class="divs" onclick="currentSlide(${index+1})">
         <img src=${newString}>
     <h2>${item.title.rendered}</h2>
     ${item.excerpt.rendered}
@@ -207,7 +204,7 @@ function listData (array) {
 
  
   }
-  console.log(theArray);
+
   
   ourList.innerHTML = theArray;
 
@@ -215,32 +212,12 @@ function listData (array) {
 
 
 
-const nextButton = document.querySelector(".next");
-
-const out1 = document.querySelector(".index1");
-const out2 = document.querySelector(".index2");
-const out3 = document.querySelector(".index3");
-const out4 = document.querySelector(".index4");
-
-
-var slideIndex = 1;
-
-slides = document.getElementsByClassName("divs");
-
-const slide1 = slides;
-const slide2 = slides[1];
-const slide3 = slides[2];
-const slide4 = slides[3];
-
-console.log(slide1);
-
-slide1.addEventListener("click", currentSlide(1));
-slide2.addEventListener("click", currentSlide(2));
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+var slideIndex = 1;
 
 
 function currentSlide(n) {
@@ -248,26 +225,30 @@ function currentSlide(n) {
 }
 
 
+
+
+
 function showSlides(n) {
   let i;
   
   slides = document.getElementsByClassName("divs");
 
+  console.log(slides);
 
- console.log(slides);
+  
+
  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   
   
   for (i = 0; i < slides.length; i++) {
-   
-    slides[i].className = slides[i].className.replace("divs active", "divs");
-
+    slides[i].className = slides[i].className.replace(" active", "");
   }
   
 
   
   slides[slideIndex-1].className += " active";
+  //console.log(slides[slideIndex-1]);
   slides[slideIndex-1].animate(
     [
    
@@ -284,6 +265,10 @@ function showSlides(n) {
   );
 };
   
+
+
+
+
 
 
 
