@@ -169,7 +169,19 @@ header > div.menu > img {
 }
 
 
+
+
 @media (max-width: 1000px) {
+
+
+    header {
+        display: grid;
+        grid-template-areas:
+        'logo nav'
+        'logo search';
+        align-content: center;
+    }
+
     header > nav > ul {
         gap: 1rem;
         margin-top: 0;
@@ -177,6 +189,7 @@ header > div.menu > img {
 
     header > nav {
         margin-right: 0.5rem;
+        grid-area: nav;
     }
     
     header > nav > ul > li {
@@ -185,18 +198,35 @@ header > div.menu > img {
     }
 
     #logo img {
-        max-width: 100px;
+        max-width: 120px;
+        
+    }
+
+    #logo {
+        grid-area: logo;
     }
 
     header > nav > ul > li:last-of-type {
-        padding-right: 0.5rem;
+        display: none;
+
     }
 
     header > nav > ul > li:nth-child(5) {
-
         padding-right: 0.5rem;
     }
     
+    .search {
+        margin-top: 0.5rem;
+
+        display: inline-block;
+        grid-area: search;
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    .search > img {
+        width: 25px;
+    }
  
 
 
@@ -208,14 +238,12 @@ header > div.menu > img {
 
 
 
-@media (max-width: 820px) {
+@media (max-width: 750px) {
 
-    .search > img {
-        width: 25px;
-    }
+  
 
     .search {
-        padding: 0 1rem 0 0;
+        padding: 0 2rem 0 0;
         text-align: right;
     }
 
@@ -223,10 +251,7 @@ header > div.menu > img {
         display: none;
     }
 
-    .search {
-        display: inline-block;
-    }
-    
+  
     header {
         display: grid;
         grid-auto-columns: 1fr;
@@ -259,8 +284,6 @@ header > div.menu > img {
         grid-area: search;
     }
 
-
-
     .overlay {
         display: block;
         display: none;
@@ -273,7 +296,7 @@ header > div.menu > img {
 
 }
 
-@media (min-width: 820px) {
+@media (min-width: 750px) {
     div.overlay {
         display: none;
 }
