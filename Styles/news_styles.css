@@ -17,12 +17,19 @@ main {
     margin: 0 7rem;
 }
 
-section {
+section:first-of-type {
     padding-top: 6rem;
 }
 
+section h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(125, 125, 125);
+}
 
-
+section:nth-child(2) {
+padding: 3rem 0;
+}
 
 
 
@@ -116,8 +123,9 @@ figure {
 .showPosts { /* hele siden*/
     width: 100%;
     height: max-content;
-
+    margin-bottom: 2rem;
 }
+
 
 @media (max-width: 900px) {
 
@@ -140,6 +148,15 @@ figure {
         flex-direction: column;
     }
 
+}
+
+main > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    margin: 3rem 0;
 }
 
 
