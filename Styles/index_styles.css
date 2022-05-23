@@ -123,7 +123,7 @@ hr {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
   position: relative;
   height: 400px;
   margin: 2rem 0;
