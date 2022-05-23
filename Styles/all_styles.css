@@ -149,6 +149,7 @@ header > nav > ul > li:last-of-type img {
 
 
 
+
 header > nav > div {
 padding-right: 2rem;
 }
@@ -158,23 +159,24 @@ header > nav > img {
     display: inline;
 }
 
-.search > img {
-display: none;
-width: 25px;
+
+.search {
+    display: none;
 }
 
-.search > p {
-    display: inline;
+header > div.menu > img {
+    width: 10px;
 }
 
 
 @media (max-width: 1000px) {
     header > nav > ul {
         gap: 1rem;
+        margin-top: 0;
     }
 
     header > nav {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
     
     header > nav > ul > li {
@@ -187,28 +189,43 @@ width: 25px;
     }
 
     header > nav > ul > li:last-of-type {
-        display: none;
+        padding-right: 0.5rem;
     }
 
+    header > nav > ul > li:nth-child(5) {
+
+        padding-right: 0.5rem;
+    }
+    
+ 
+
+
+
+
+}
+
+
+
+
+
+@media (max-width: 820px) {
+
     .search > img {
-        display: inline-block;
+        width: 25px;
     }
 
     .search {
-        padding: 0.5rem 1rem 0 0;
+        padding: 0 1rem 0 0;
         text-align: right;
     }
 
+    header > nav > ul > li:last-of-type {
+        display: none;
+    }
 
-}
-
-
-header > div.menu > img {
-    width: 10px;
-}
-
-
-@media (max-width: 790px) {
+    .search {
+        display: inline-block;
+    }
     
     header {
         display: grid;
@@ -238,6 +255,10 @@ header > div.menu > img {
         grid-area: menu;
     }
 
+    .search {
+        grid-area: search;
+    }
+
 
 
     .overlay {
@@ -252,7 +273,7 @@ header > div.menu > img {
 
 }
 
-@media (min-width: 700px) {
+@media (min-width: 820px) {
     div.overlay {
         display: none;
 }
