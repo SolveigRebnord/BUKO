@@ -60,64 +60,6 @@ myFunction(mediaQuery) // Call listener function at run time
 
 }
 
-//-----------------------------------------------------------------------
-
-var mediaQuery = window.matchMedia("(max-width: 700px)");
-//console.log(mediaQuery);
-
-function myFunction(m) {
-  if (m.matches) { // If media query matches
-
-    const slider = document.querySelector('.outPut');
-    const buttons = document.querySelector(".buttonsdiv")
-    buttons.style.display = "none";
-
-   
- 
-
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', e => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mouseleave', _ => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', _ => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', e => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const SCROLL_SPEED = 3;
-  const walk = (x - startX) * SCROLL_SPEED;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-
-
-  }
-  else { // If media query matches
-    document.body.style.backgroundColor = "white";
-  }
-
-}
-
-
-mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
-myFunction(mediaQuery) // Call listener function at run time
-
-
-
 
 //----------------------------------------------------------------------
 
@@ -155,11 +97,7 @@ async function fetchData(){
 fetchData().then(data => {
   console.log(data);
   let afterClass = listData(data);
-
-
   showSlides(slideIndex);
-
-
   
 
 })
@@ -199,7 +137,10 @@ function listData (array) {
         <img src=${newString}>
     <h2>${item.title.rendered}</h2>
     ${item.excerpt.rendered}
-    ${theLink}
+    <div class="links">
+      ${theLink}
+      <a href="newpost.html?id=${item.id}">Read more</a>
+    </div>
     </div>`
 
  
@@ -235,6 +176,26 @@ function showSlides(n) {
 
   console.log(slides);
 
+
+
+
+
+  var mediaQuery = window.matchMedia("(max-width: 700px)");
+
+function disbleFunction(m) {
+  if (m.matches) {
+
+    for (let slide of slides) {
+      removeClick(slide);
+    }
+  }
+}
+
+mediaQuery.addEventListener("change", disbleFunction);
+disbleFunction(mediaQuery);
+
+
+
   
 
  if (n > slides.length) {slideIndex = 1}
@@ -266,6 +227,73 @@ function showSlides(n) {
 };
   
 
+
+function removeClick(el) {
+  el.style.cursor = "pointer";
+  el.off('onclick'); // funker ikke!
+}
+
+
+//-----------------------------------------------------------------------
+
+var mediaQuery = window.matchMedia("(max-width: 700px)");
+//console.log(mediaQuery);
+
+function myFunction(m) {
+  if (m.matches) { 
+
+    const slider = document.querySelector('.outPut');
+
+    const buttons = document.querySelector(".buttonsdiv")
+    buttons.style.display = "none";
+   //console.log(slider);
+
+
+
+
+ 
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+
+  startX = e.pageX - slider.offsetLeft; /* offsetLeft gir posisjon til venstre for elementet */
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', _ => {
+  isDown = false;
+
+});
+
+slider.addEventListener('mouseup', _ => {
+  isDown = false;
+
+});
+
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return; /* er det her den klarer å snu og gjøre samme tilbake?*/
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const SCROLL_SPEED = 3;
+  const walk = (x - startX) * SCROLL_SPEED;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+
+
+  }
+  else {
+
+  }
+
+}
+
+
+mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
+myFunction(mediaQuery) // Call listener function at run time
 
 
 

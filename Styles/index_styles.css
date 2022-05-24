@@ -91,9 +91,6 @@ hr {
         margin-top: 6.2rem;
     }
 
-    .herosection >  div {
-
-    }
 
     .herosection >  div > p {
         font-size: 1.4rem;
@@ -184,11 +181,7 @@ width: fit-content;
 }
 
 
-
-
-
-
-.divs > p, .divs > a {
+.divs > p, .links a {
     display: none;
 }
 
@@ -206,6 +199,7 @@ width: fit-content;
     width: 800px;
     height: 250px;
     padding: 1rem;
+    background-color: var(--lys-rosa);
     transition: transform 1s ease-in;
     box-shadow: rgb(155, 155, 155) 0 10px 12px;
     position: absolute;
@@ -217,8 +211,9 @@ width: fit-content;
     'img h2'
     'img p'
     'img a';
+    align-items: center;
     justify-content: space-between;
-    text-align: center;
+    text-align: right;
     gap: 0rem;
 }
 
@@ -230,20 +225,35 @@ width: fit-content;
     display: inline-block;
     grid-area: p;
     max-width: 400px;
-    text-align: left;
+    font-size: 0.9rem;
 }
 
-.active > a {
-    display: inline;
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     grid-area: a;
+    gap: 1rem;
+}
+
+.active > div > a {
+
     text-decoration: none;
     color: white;
-    background-color: var(--blue-green);
-    width: fit-content;
+    background-color: rgb(118, 88, 88);
     padding: 0.5rem;
     border-radius: 3px;
-    margin: 0 auto;
+    width: fit-content;
+    font-size: 0.9rem;
 }
+
+.active > div > a:first-of-type {
+    background-color: transparent;
+    color: black;
+    text-decoration: underline;
+}
+
+
 
 .active > img {
     width: 250px;
@@ -253,7 +263,8 @@ width: fit-content;
 
 .active > h2 {
     grid-area: h2;
-    font-family: var(--Nanum);
+    font-size: 1.5rem;
+    font-family: var(--FiraS);
 
 }
 
@@ -333,7 +344,6 @@ width: fit-content;
 
 
     .outPut {
-
 padding: 0 1rem;
 	display: grid;
 	grid-template-columns: repeat(4, 300px);
@@ -343,49 +353,78 @@ padding: 0 1rem;
 	grid-column-gap: 3rem;
 	overflow: scroll;
 	height: 600px;
-	scroll-snap-type: both mandatory;
+	scroll-snap-type: both mandatory; /* gjør at den snapper til bilde både x og y vei */
     margin: 0;
-
-	
     }
+
+
     .active, .divs {
         width: 300px;
-        height: 400px;
+        height: 500px;
         position: relative;
         left: 0;
         scroll-snap-align: center;
-	display: inline-block;
+	display: flex;
 	border-radius: 3px;
-	font-size: 1rem;
+	font-size: 0.9rem;
     opacity: 1;
-    border: 0.5px solid grey;
-    box-shadow: grey 10px 6px 12px;
     margin: 0;
+ justify-content: flex-end;
+ gap: 1rem;
     box-sizing: border-box;
     transition: none;
     text-align: left;
-    padding: 1rem;
     top: 0;
+    background-color: white;
     }
+
+    .divs > h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    } 
 
    
-
-    .divs > p, .divs > a, .active > p {
-        display: block;
+    .divs > p {
+        display: none;
     }
 
-    .active > img, .divs > img {
-   width: 100px;
-   height: 100px;
+    .links > a {
+        display: inline-block;
     }
 
-    .active > a {
-        text-decoration: none;
-        color: white;
-       display: inline-block;
+  .links > a:last-of-type {
+      font-weight: 400;
+      font-size: 1rem;
+  }
+
+
+   .links {
+       display: flex;
+       gap: 0.5rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
     }
 
-  
+.divs > img {
+position: absolute;
+top: 0;
+   width: 100%;
+   height: 75%;
+   margin: 0 auto;
+   box-shadow: grey 10px 12px 12px;
+    }
+
+    
+
+    
+
+
+
+
+
+
+
 
 
     footer {
