@@ -17,9 +17,22 @@ main {
     margin: 0 7rem;
 }
 
-section:first-of-type {
+.breadcrumbs{
     padding-top: 6rem;
 }
+
+section:first-of-type a {
+    text-decoration: none;
+}
+
+section:first-of-type a:hover { /* uuu klarer du at linjen går til en pil?*/
+    text-decoration: underline;
+}
+
+
+
+
+
 
 section h1 {
     font-size: 3rem;
@@ -148,26 +161,55 @@ figure {
         flex-direction: column;
     }
 
+    section:first-of-type {
+        padding-top: 0rem;
+    }
+
+
 }
 
-main > nav {
+
+/* Single post (newpost.html)-------------*/
+
+
+.showOnePost {
+    padding: 5rem 1rem 8rem 1rem;
+}
+
+.singlePost {
     display: flex;
+    height: 40vw;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    flex-direction: row;
-    margin: 3rem 0;
 }
 
 
 
-
-.singlepost > img {
-    max-width: 30px;
-    margin-top: 3rem;
+.singlePost > div {
+    align-items: flex-start;
 }
 
-.singlepost {
-    text-align: center;
+.singlePost > div:last-of-type {
+    align-items: center;
 }
 
+.singlePost > div:first-of-type a {
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 900px) {
+    .singlePost {
+   
+        flex-direction: column-reverse;
+        height: 500px;
+        justify-content: flex-start;
+    }
+
+    .showOnePost {
+        padding-top: 30vw;
+        padding-bottom: 1rem;
+    }
+
+    
+}

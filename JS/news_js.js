@@ -50,11 +50,11 @@ function listPost (array) {
 
               var theLink = "";
             if (post.tags == 37) {
-               theLink = `<a href="portfolio.html">See more events like this</a>`;
+               theLink = `<a href="portfolio.html">Check out our portfolio</a>`;
             }  
 
             else if (post.tags == 38) {
-                 theLink = `<a href="members.html">Read more about Heidi and our other members</a>`;
+                 theLink = `<a href="members.html">Check out all our members</a>`;
             }
 
             list += `
@@ -62,9 +62,9 @@ function listPost (array) {
                       <div>
                       <h2 class="h2title">${post.title.rendered}</h2>
                         ${formattedDate}
-                        ${theLink}
                         ${post.excerpt.rendered}
-                        <a href="newpost.html?id=${post.id}">Link til Heidi</a>
+                        <a href="newpost.html?id=${post.id}">Read more</a>
+                        ${theLink}
                       </div>
                       <div>
                         ${newString}

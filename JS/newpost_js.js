@@ -8,7 +8,7 @@ if (!id) { window.location = "news.html"; }
 
 
 
-const showSinglePost = document.querySelector(".singlepost")
+const showSinglePost = document.querySelector(".showOnePost")
 
 
 fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/posts/${id}?_embed`) 
@@ -24,14 +24,16 @@ fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/posts/${id}?_embed`)
 
 listSinglePost = (data) => {
 
-
-
+  
+ 
     title = data.title.rendered;
 
     const date = data.date;
             //console.log(date);
             
-          
+            const breadCrumbs = document.querySelector(".breadcrumbs");
+            breadCrumbs.innerHTML = `<a href="index.html">Home</a> / <a href="news.html">News</a> / ${title}`;
+         
  
     if (data.content.rendered.includes("figure")) {
         let indexNumber = data.content.rendered.indexOf("<figure")
@@ -55,12 +57,28 @@ listSinglePost = (data) => {
 
           var formattedDate = formatDate(new Date(date));
           //console.log(formatDate(new Date(date)));
+
+           
+          var theLink = "";
+          if (data.tags == 37) {
+             theLink = `<a href="portfolio.html">Check out our portfolio</a>`;
+          }  
+
+          else if (data.tags == 38) {
+               theLink = `<a href="members.html">Check out all our members</a>`;
+          }
   
     let content = 
-    `<section class="showPosts"><h2 class="h2title">${data.title.rendered}</h2>
-    ${formattedDate}
-    ${data.excerpt.rendered}
-    <div class="imagenews">${newString}</div>
+    `<section class="showPost singlePost">
+      <div>
+        <h2 class="h2title">${data.title.rendered}</h2>
+        ${formattedDate}
+        ${data.excerpt.rendered} 
+        ${theLink}
+      </div>
+      <div>
+        ${newString}
+      </div>
     </section>`;
 
     showSinglePost.innerHTML = content;

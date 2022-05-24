@@ -20,18 +20,20 @@ html {
     text-decoration: underline;
 }
 
+.breadcrumbs a {
+    color: black;
+}
+
 
 .loadinggif > img {
    max-width: 50px;
 }
 
 .loadinggif {
-    margin-top: 15rem;
+    margin-top: 5rem;
     height: 200px;
     text-align: center;
 }
-
-
 
 
 body {
@@ -45,7 +47,9 @@ main {
     margin: 0 6rem;
 }
 
-
+a {
+    color: black;
+}
 
 #menu  {
     display: none;
@@ -373,22 +377,13 @@ section > p, section > h1 {
     letter-spacing: 1px
 }
 
-.breadcrumbs, .breadcrumbs a {
-    color: white;
-    text-decoration: none;
-    font-family: var(--robotCon);
-    font-weight: 100;
-}
 
-.breadcrumbs a:hover {
-    text-decoration: underline;
-}
 
 
 
 @media (max-width: 700px) {
 
-    .breadcrumbs, .forthegrid {
+    .forthegrid {
         display: none;
     }
 
@@ -398,7 +393,25 @@ section > p, section > h1 {
     }
 }
 
+main > nav:last-of-type {
 
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3rem;
+flex-direction: row;
+margin: 3rem 0;
+}
+
+
+main > nav:last-of-type a {
+    padding: 0.6rem 2rem;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border: solid black 1px;
+    border-radius: 5px;
+}
 
 
 
