@@ -11,6 +11,8 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
 }
 
+
+
 * {
     font-family: var(--FiraS);
 }
@@ -39,6 +41,7 @@ main {
     flex: 1;
     justify-content: center;
     flex-shrink: 0.9;
+    overflow: hidden;
 }
 
 .heroimages > img {
@@ -334,24 +337,26 @@ width: fit-content;
 @media (max-width: 730px) {
 
     main {
-        margin: 0 2rem;
+        margin: 0;
     }
 
     .karusell > div:first-of-type {
-        width: 100%;
-        margin: 3rem 0 3rem 0;
+        width: 90%;
+        margin: 3rem auto;
     }
 
 
     .outPut {
-padding: 0 1rem;
+
 	display: grid;
 	grid-template-columns: repeat(4, 300px);
     justify-content: start;
     align-content: center;
     grid-template-rows: 1fr;
-	grid-column-gap: 2rem;
+	grid-column-gap: 3rem;
 	overflow: scroll;
+    width: 90%;
+    padding: 0 5%;
 	height: 600px;
 	scroll-snap-type: both mandatory; /* gjør at den snapper til bilde både x og y vei */
     margin: 0;
