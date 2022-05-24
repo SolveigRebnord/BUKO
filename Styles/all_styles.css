@@ -30,7 +30,7 @@ html {
 }
 
 .loadinggif {
-    margin-top: 5rem;
+    margin: 5rem auto 0 auto;
     height: 200px;
     text-align: center;
 }
@@ -61,7 +61,7 @@ h2, h1, p {
 
 /*pen li*/
 
-header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li {
+header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li, .wholePortfolio > div > ul > li {
     list-style: none;
 }
 
@@ -85,7 +85,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 
 /*nedover liste*/
 
-.overlay ul, footer > div > ul {
+.overlay ul, footer > div > ul, .wholePortfolio > div > ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;

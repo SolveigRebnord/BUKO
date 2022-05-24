@@ -22,38 +22,45 @@
     <!--Fira Sans X Condensed-->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;200;300;400;500&display=swap" rel="stylesheet">
 
-        <!--Nanum-->
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <!--Nanum-->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
 
+  
     <header>
         <div id="logo">
             <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
         </div>
     
         <div id="menu">
-            <i class="fa fa-solid fa-bars"></i>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-menu-rounded-50-2.png" alt="">
         </div>
     
         <nav>
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact</a></li>
+                <li><img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt=""></li>
             </ul>
-        </nav>  
-    
-        <div>
-            <a id="profile" href="/about.html"><i class="fa fa-solid fa-user"></i></a>
+            
+            
+        </nav>
+        <div class="search">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt="">
         </div>
+       
+       
     
         <div class="overlay">
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
@@ -63,34 +70,130 @@
             
     </header>
 
-<section class="title">
-    <p class="breadcrumbs">
-        <a href="index.html">Home</a> / Portfolio
-    </p>
 
-    <h1>Portfolio</h1>
-
-    <div class="forthegrid">
-    </div>
-</section>
 
 <main>
 
-<section class="sectionPortfolio">
-        
-            <div class="loadinggif">
-                <img src="News/img/icons8-music.gif" alt="Music note dancing">
-                <p>Loading...</p>
-   
-        </div>
-    </section>
-   
+<section class="breadcrumbs">
+    <p><a href="./index.html">Home</a> / News</p>
+</section>
 
+
+
+<h1>Portfolio</h1>
+
+<section class="wholePortfolio">
+
+    <div>
+        <h3>Filters</h3>
+
+        <ul>
+            <li>
+                <input type="radio" name="portfolioevents" checked="true"><label for="portfolioevents">Show portfolio</label>
+            </li>
+            <li>
+                <input type="radio" name="media"><label for="media">Show media only</label>
+            </li>
+        </ul>
+
+        <ul class="ul_portfolioevents">
+            <li><input type="checkbox" name="concerts"><label for="concerts">Concerts</label></li>
+            <li><input type="checkbox" name="tours"><label for="tours">Tours</label></li>
+            <li><input type="checkbox" name="assembles"><label for="assembles">Assembles</label></li>
+            <li><input type="checkbox" name="collaborations"><label for="collaborations">Collaborations</label></li>
+
+            <br>
+            
+            <li><input type="checkbox" name="2018"><label for="2018">2018</label></li>
+            <li><input type="checkbox" name="2019"><label for="2019">2019</label></li>
+            <li><input type="checkbox" name="2020"><label for="2020">2020</label></li>
+            <li><input type="checkbox" name="2021"><label for="2021">2021</label></li>
+        </ul>
+
+
+
+        <ul class="ul_media">
+            <li><input type="checkbox" name="images"><label for="images">Images</label></li>
+            <li><input type="checkbox" name="movies"><label for="movies">Movies</label></li>
+            <li><input type="checkbox" name="soundtracks"><label for="soundtracks">Soundtracks</label></li>
+
+        </ul>
+
+
+      
+ 
+    </div>
+
+
+
+    <div class="sectionPortfolio">
+            
+        <div class="loadinggif">
+            <img src="./img/icons8-music.gif" alt="Music note dancing">
+            <p>Writing a symphony..</p>
+        </div>
+
+    </div>
+   
+</section>
 
 
 
 
 </main>  
+
+<footer>
+
+    <div>
+        <ul>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/members.html">Members</a></li>
+            <li><a href="/about.html">About Us</a>
+                <div>
+                    <a href="about.html">Our Story</a>
+                    <a href="about.html">Conductor</a>
+                    <a href="about.html">The board</a>
+                    <a href="about.html">Future visions and goals</a>
+                </div>
+            </li>
+            <li><a href="/contact.html">Contact</a>
+                <div>
+                    <a href="about.html">Booking</a>
+                    <a href="about.html">Play with us</a>
+                    <a href="about.html">Contact</a>
+                    <a href="about.html">Donations and sponsorship</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div>
+        <div>
+            <label for="emailnewsletter">
+                Sign up to our newsletter
+            </label> <br>
+            <input type="emailnewsletter">
+            <button type="submit">Submit</button>
+        </div>
+        <div>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-facebook-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-instagram-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-linkedin-circled-60.png" alt="">
+        </div>
+    </div>
+
+
+<div class="copyright">
+    <p>&copy; 2022 Bergen Unge Kammerorkester</p>
+    <p>Developed by <span class="underlined">Sunroad</span></p>
+</div>
+</footer>
+
 </body>
+
 <script src="./JS/portfolio_script.js"></script>
+<script src="./JS/allscripst_script.js"></script>
+
 </html>

@@ -19,6 +19,7 @@ main {
 
 .breadcrumbs{
     padding-top: 6rem;
+    padding-left: 1rem;
 }
 
 section:first-of-type a {
@@ -200,7 +201,6 @@ figure {
 
 @media (max-width: 900px) {
     .singlePost {
-   
         flex-direction: column-reverse;
         height: 500px;
         justify-content: flex-start;
@@ -210,6 +210,11 @@ figure {
         padding-top: 30vw;
         padding-bottom: 1rem;
     }
+
+    .singlePost > div > a {
+        margin: 0 auto;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -217,4 +222,6 @@ figure {
         padding-left: 0;
         padding-right: 0;
     }
+
+
 }

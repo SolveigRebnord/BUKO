@@ -8,104 +8,125 @@ html {
     --robotCon: 'Roboto Condensed', sans-serif;
     --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
+    --Nanum: 'Nanum Myeongjo', serif;
 }
-
 
 main {
-    margin: 0 2rem;
+    margin: 12rem 2rem;
 }
+
 
 a {
     text-decoration: none;
     color: black;
 }
 
-.instrument {
-    color: red;
+
+
+.wholePortfolio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    column-gap: 2rem;
+    margin: 5rem auto;
 }
 
-.school {
-    font-size: 2rem;
+.wholePortfolio > div > ul {
+    gap: 0.5rem;
 }
 
-.memberimg {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
-}
-
-.cvdiv {
+.wholePortfolio > div:first-of-type {
     border: solid black 1px;
-    width: 400px;
-    text-align: center;
-    padding: 1rem;
 }
+
+.wholePortfolio > div:first-of-type > ul:first-of-type {
+    text-transform: uppercase;
+
+    align-items: center;
+    gap: 1rem;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sectionPortfolio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
     gap: 3rem;
+    padding: 0 2rem 2rem 2rem ;
 }
 
 .showPortfolio {
     width: 400px;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 600px;
     position: relative;
-    border: solid 1px black;
-}
-
-
-
-
-
-
-
-.sectionPortfolio > a > div > p:last-child {
-    border: solid 2px black;
-    box-sizing: border-box;
-    color: white;
-    height: 100px;
-    background-color: black;
-    opacity: 80%;
-    padding: 1rem;
     display: flex;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    font-family: var(--FiraS);
-
-}
-
-
-
-
-.showPortfolio h2, .showPortfolio p.typeofevent, .showPortfolio p.date {
-    background-color: var(--dark-orange);
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--FiraS);
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 1rem;
-    width: fit-content;
-}
-
-.showPortfolio p.typeofevent, .showPortfolio p.date {
-    background-color: var(--lys-rosa);
-    width: fit-content;
-    font-size: 1.2rem;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+    justify-content: flex-end;
     color: black;
+    transition: 0.3s ease-out;
+    box-sizing: border-box;
 }
 
-.showPortfolio p.date {
-background-color: var(--blue-green);
-color: white;
+.showPortfolio:hover {
+    scale: 1.05;
 }
+
+.showPortfolio:hover img {
+    box-shadow: grey 6px 12px 15px;
+
+}
+
+
+
+
+
+.showPortfolio img {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    object-fit: cover;
+    box-shadow: grey 2px 4px 12px;
+
+}
+
+
+.showPortfolio > h2, .showPortfolio > p {
+    z-index: 2;
+}
+
+
+.typeofevent, .date {
+    font-weight: 400;
+}
+
+
+.showPortfolio > h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 
 .showPortfolio > a {
     width: 100%;
