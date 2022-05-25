@@ -33,8 +33,8 @@ a {
 
 
 .wholePortfolio > div:first-of-type {
-    border: solid black 1px;
     height: fit-content;
+    border-bottom: 0.5px solid black;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -110,6 +110,10 @@ cursor: default;
     display: flex;
     flex-direction: row;
     gap: 3rem;
+}
+
+.secondchoice > ul {
+    margin: 0;
 }
 
 
@@ -250,8 +254,55 @@ cursor: default;
     }
 
     .secondchoice > ul > li > input[type="checkbox"] {
-       
+        width: 25px;
+        height: 25px;
     }
 
+    .showPortfolio {
+       width: 100%;
+       height: 500px;
+    }
+
+    .showPortfolio img {
+        height: 65%;
+    }
+    
+
+}
+
+@media (max-width: 600px) {
+
+    .sectionPortfolio {
+        padding: 0;
+    }
+
+.wholePortfolio > div > .secondchoice > ul {
+    flex-direction: column;
+}
+
+.wholePortfolio > div > .secondchoice {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wholePortfolio > div > .secondchoice > .ul_years {
+    transform: scale(-1, 1);
+    gap: 2rem;
+}
+
+.wholePortfolio > div > .secondchoice > .ul_years > li > label {
+    transform: scale(-1, 1);
+}
+
+.wholePortfolio > div:first-of-type {
+    align-items: center;
+    gap: 2rem;
+}
+
+.wholePortfolio > div:first-of-type {
+    margin: 0;
+}
 
 }
