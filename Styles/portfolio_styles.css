@@ -122,8 +122,15 @@ cursor: default;
     align-items: center;
 }
 
-.secondchoice > ul > li > input {
-    font-size: 3rem;
+.secondchoice > ul > li > input[type="checkbox"] {
+    -webkit-appearance: unset;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+}
+
+.secondchoice > ul > li > input[type="checkbox"]:checked {
+    background-color: black;
 }
 
 
@@ -209,8 +216,14 @@ cursor: default;
         justify-content: flex-start;
     }
 
+    .secondchoice > ul > li > input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+
     .sectionPortfolio {
-        gap: 1rem;
+        gap: 2rem;
         row-gap: 5rem;
     }
 }
