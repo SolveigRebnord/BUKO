@@ -305,4 +305,10 @@ cursor: default;
     margin: 0;
 }
 
+.wholePortfolio > div > .secondchoice > .ul_media {
+    flex-direction: row;
+}
+
+
+
 }

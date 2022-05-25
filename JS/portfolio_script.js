@@ -243,16 +243,18 @@ function listCat (array) {
 
 
 const mediaList = document.querySelector(".wholePortfolio > div > div.secondchoice > ul.ul_media");
-const portfolioList = document.querySelector(".wholePortfolio > div > div.secondchoice > ul.ul_portfolioevents");
+const portfolioList = document.querySelector("ul.ul_portfolioevents");
+const yearsList = document.querySelector("ul.ul_years");
 const portfolioCheck = document.querySelector('input[name="portfolioevents"]');
 const mediaCheck = document.querySelector('input[name="media"]');
-//console.log(portfolioCheck);
+
 
 
 portfolioCheck.addEventListener("change", function () {
 
   if (this.checked) {
     portfolioList.style.display = "flex";
+    yearsList.style.display = "flex";
     this.checked = true;
     mediaCheck.checked = false;
     mediaList.style.display = "none";
@@ -262,6 +264,7 @@ portfolioCheck.addEventListener("change", function () {
   else {
     this.checked = false;
     portfolioList.style.display = "none";
+    yearsList.style.display = "none";
     mediaCheck.checked = true;
     mediaList.style.display = "flex";
     
@@ -274,6 +277,7 @@ mediaCheck.addEventListener("change", function () {
     mediaList.style.display = "flex";
     this.checked = true;
     portfolioCheck.checked = false;
+    yearsList.style.display = "none";
     portfolioList.style.display = "none";
   }
 
@@ -282,6 +286,7 @@ mediaCheck.addEventListener("change", function () {
     mediaList.style.display = "none";
     portfolioCheck.checked = true;
     portfolioList.style.display = "flex";
+    yearsList.style.display = "flex";
 }
 });
 
