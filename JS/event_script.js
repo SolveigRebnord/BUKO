@@ -48,6 +48,7 @@ listSinglePost = (data) => {
             
             ${data.description}
             <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+     
             </div>`
 
             showCV.innerHTML = content;

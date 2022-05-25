@@ -61,12 +61,12 @@ h2, h1, p {
 
 /*pen li*/
 
-header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li, .wholePortfolio > div > ul > li {
+header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li, .wholePortfolio > div > div > ul > li {
     list-style: none;
 }
 
 /*bortover liste*/
-header > nav > ul, footer > div > ul, .undermenu > div > ul {
+header > nav > ul, footer > div > ul, .undermenu > div > ul, .wholePortfolio > div > div > ul {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -75,7 +75,7 @@ header > nav > ul, footer > div > ul, .undermenu > div > ul {
 
 /*pen a*/
 
-header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a{
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--robotCon);
@@ -85,7 +85,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 
 /*nedover liste*/
 
-.overlay ul, footer > div > ul, .wholePortfolio > div > ul {
+.overlay ul, footer > div > ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
