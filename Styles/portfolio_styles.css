@@ -43,9 +43,6 @@ margin: 2rem;
 padding: 1rem ;
 }
 
-.secondchoice > ul > li:nth-child(5) {
-    margin-left: 2rem;
-}
 
 
 
@@ -103,22 +100,29 @@ cursor: default;
 
 
 
-.wholePortfolio > div > div.secondchoice > ul.ul_media {
+.secondchoice > ul.ul_media {
     display: none;
     align-items: center;
     margin: 0;
 }
 
-
-.wholePortfolio > div > .secondchoice > .ul_portfolioevents {
-    gap: 1rem;
-    margin: 0;
-
+.secondchoice {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
 }
+
+
+.secondchoice > .ul_years {
+    gap: 0.8rem;
+    margin: 0;
+}
+
+
 
 .secondchoice > ul > li {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.2rem;
     align-items: center;
 }
 
@@ -127,6 +131,7 @@ cursor: default;
     border: 1px solid black;
     width: 15px;
     height: 15px;
+    cursor: pointer;
 }
 
 .secondchoice > ul > li > input[type="checkbox"]:checked {
@@ -226,4 +231,27 @@ cursor: default;
         gap: 2rem;
         row-gap: 5rem;
     }
+
+    .mainchoice > ul > li > input[type="checkbox"] {
+        border: solid black 1px;
+    }
+
+    .mainchoice > ul > li > input[type="checkbox"]:checked {
+        border: none;
+    }
+
+}
+
+@media (max-width: 950px) {
+    .wholePortfolio > div > .secondchoice {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    .secondchoice > ul > li > input[type="checkbox"] {
+       
+    }
+
+
 }
