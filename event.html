@@ -22,36 +22,46 @@
     <!--Fira Sans X Condensed-->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100;200;300;400;500&display=swap" rel="stylesheet">
 
+<!--Nanum-->
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
 
   
 </head>
 
 <body>
 
+  
     <header>
         <div id="logo">
             <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
         </div>
     
         <div id="menu">
-            <i class="fa fa-solid fa-bars"></i>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-menu-rounded-50-2.png" alt="">
         </div>
     
         <nav>
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact</a></li>
+                <li><img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt=""></li>
             </ul>
-        </nav>  
-    
-        <div>
-            <a id="profile" href="/about.html"><i class="fa fa-solid fa-user"></i></a>
+            
+            
+        </nav>
+        <div class="search">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt="">
         </div>
+       
+       
     
         <div class="overlay">
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
@@ -62,29 +72,42 @@
     </header>
 
 
-    
-
 
 <main>
+
+<section class="breadcrumbs">
+    <p><a href="./index.html">Home</a> / News</p>
+</section>
+
 
 
 
 <div class="showEvent">
     <div class="loadinggif">
-        <img src="News/img/icons8-music.gif" alt="Music note dancing">
+        <img src="./img/icons8-music.gif" alt="Music note dancing">
         <p>Loading...</p>
     </div>
 </div>
 
+<h2>Music</h2>
+
+<section class="showMore">
 
 
 
+<div class="showPlaylist"></div>
 
+
+<div class="showMusic"></div>
+
+<div class="showVideo"></div>
+
+</section>
 
 
 </main>
 </body>
 
 <script src="./JS/event_script.js"></script>
-
+<script src="./JS/allscripst_script.js"></script>
 </html>
