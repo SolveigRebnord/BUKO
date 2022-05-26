@@ -310,7 +310,7 @@ div#menu > img {
         left: 0%;
         background-color: var(--lys-rosa);
         padding: 3rem;
-        transition: visibility 0.3s ease-out;
+        transition: 0.3s ease-out;
         text-align: center;
         width: 100vw;
         box-sizing: border-box;

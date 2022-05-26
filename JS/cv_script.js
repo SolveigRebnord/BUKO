@@ -47,11 +47,10 @@ listSinglePost = (data) => {
 
             `
         <h1>${data.name}</h1>
-        <hr>
         <div class="cvDetails">
             <div class="leftFlex">
                 <p>${data.categories[0].name}</p>
-                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+                <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
             </div>
             <div class="rightFlex">
                 <p>${data.sku}</p>
@@ -71,11 +70,10 @@ listSinglePost = (data) => {
         let content = 
         `
         <h1>${data.name}</h1>
-        <hr>
         <div class="cvDetails">
             <div class="leftFlex">
                 <p>${data.categories[0].name}</p>
-                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt} onclick="enlargeImg()">
+                <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
             </div>
             <div class="rightFlex">
                 <p>${data.sku}</p>

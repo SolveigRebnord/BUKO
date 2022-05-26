@@ -106,7 +106,7 @@ const navUl = document.querySelector(".undermenu");
 const active = document.querySelector(".active");
 
 
-var mediaQuery = window.matchMedia("(max-width: 600px)");
+var mediaQuery = window.matchMedia("(max-width: 700px)");
 console.log(mediaQuery);
 
 function myFunction(m) {

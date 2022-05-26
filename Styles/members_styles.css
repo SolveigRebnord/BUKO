@@ -26,12 +26,6 @@ a {
 
 
 
-.memberimg {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    object-position: center;
-}
 
 .cvdiv {
     border: solid var(--dark-orange) 1px;
@@ -94,47 +88,48 @@ a {
 /*--------------------------------------------------------------*/
 
 
+.memberimg, .memberimgCV {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.memberimgCV {
+    width: 300px;
+    height: 450px;
+}
+
+
 .showCV {
     width: 80%;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
-.showCV > hr {
-    background-color: var(--blue-green);
-    height: 2px;
-    border: none;
-}
+
 
 .showCV > h1 {
-    text-align: center;
+    text-align: right;
     text-transform: uppercase;
-    font-family: var(--Nanum);
+    font-family: var(--BUKO);
     font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 500;
     margin-top: 3rem;
+    padding-right: 4.5rem;
     color: var(--blue-green);
 }
 
 .cvDetails {
-    margin-top: 1rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    padding: 6rem 5rem 3rem 5rem;
+    gap: 3rem;
+    padding: 2rem 5rem 3rem 5rem;
     justify-content: space-between;
     align-items: center;
     font-family: var(--FiraS);
     border-bottom: #92ABAF solid 3px;
-}
-
-@media (max-width: 1000px) {
-    main {
-        margin: 12rem 1rem;
-    }
-
-    .cvDetails {
-        padding: 6rem 1rem 3rem 1rem;
-    }
-
 }
 
 
@@ -144,17 +139,18 @@ a {
 }
 
 .leftFlex > p {
-    border: solid var(--blue-green) 3px;
-    width: 250px;
-    height: 350px;
+    border: solid var(--blue-green) 5px;
+    width: 280px;
+    height: 450px;
     z-index: 0;
     display: inline-block;
     display: flex;
+    font-family: var(--robotCon);
     align-items: flex-end;
     justify-content: flex-end;
     padding: 0 20px 20px 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-size: 1.2rem;
 
 }
@@ -177,7 +173,7 @@ a {
 
 .rightFlex > p:first-of-type,.rightFlex > p:nth-child(2) {
     background-color: var(--dark-orange);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     width: fit-content;
     display: inline;
     color: white;
@@ -232,6 +228,28 @@ a {
     margin: 3rem auto;
 }
 
+@media (max-width: 1050px) {
+    main {
+        margin: 12rem 1rem;
+    }
+
+    .showCV {
+width: 90%;
+    }
+
+    .showCV > h1 {
+        text-align: center;
+        padding: 0;
+    }
+
+    .cvDetails {
+        padding: 6rem 0 3rem 0;
+    }
+
+}
+
+
+
 @media (max-width: 700px) {
     main {
         margin: 0;
@@ -253,11 +271,26 @@ a {
     .rightFlex {
         display: inline;
         padding-top: 1rem;
+        margin-right: 1rem;
     }
 
     .leftFlex {
         margin-right: 2rem;
     }
 
+    .leftFlex > p {
+        width: 260px;
+        height: 360px;
+    }
+
+    .memberimgCV {
+        width: 270px;
+        height: 380px;
+    }
+
+    .leftFlex > img {
+        top: -13%;
+        left: 20%;
+    }
 
 }

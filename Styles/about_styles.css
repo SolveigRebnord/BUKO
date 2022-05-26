@@ -23,8 +23,7 @@ h1 {
 
 h2 {
     font-family: var(--Nanum);
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 3.2rem;
 }
 
 .margin {
@@ -34,13 +33,6 @@ h2 {
 }
 
 
-@media (max-width: 750px) {
-    .margin {
-        margin-left: 0;
-    margin-top: 15rem;
-    text-align: left;
-    }
-}
 
 .undermenu > div > ul > li > a {
     color: black;
@@ -67,7 +59,6 @@ transition: 0.8s ;
 
 
 
-
 .undermenu {
     position: fixed;
     left: 4%;
@@ -75,8 +66,10 @@ transition: 0.8s ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    transition: 0.3s ease;
 }
+
+
 
 .margin > section {
     height: 90vh;
@@ -84,6 +77,8 @@ transition: 0.8s ;
 
 .margin > section > div > p {
     grid-area: tekst;
+    max-width: 800px;
+    margin-left: auto;
 }
 
 
@@ -103,6 +98,12 @@ min-width: 90px;
     width: 90%;
     height: 600px;
     margin: 2rem auto;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
 }
 
 .margin > section > div {
@@ -112,12 +113,12 @@ min-width: 90px;
 
 
 }
-section > div > p > img {
-    float: right;
-    padding: 1rem;
-    max-width: 35vw;
-    height: min-content;
-display: inline;
+section > div > img {
+
+    margin-bottom: 2rem;
+    max-width: 800px;
+    height: 350px;
+display: inline-block;
     object-fit: cover;
     object-position: center;
 }
@@ -125,4 +126,26 @@ display: inline;
 .ourstory > div > p > span {
     font-weight: 800;
     font-size: 1.2rem;
+}
+
+
+
+
+
+@media (max-width: 750px) {
+    .margin {
+        margin-left: 0;
+    margin-top: 15rem;
+    }
+
+    section > div > img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .margin > section {
+        height: fit-content;
+        margin-bottom: 5rem;
+    }
+
 }
