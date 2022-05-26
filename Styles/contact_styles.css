@@ -34,6 +34,7 @@ body {
     text-align: center;
     background-color: rgb(251, 248, 248);
     margin-bottom: 5rem;
+
 }
 
 @media (max-width: 600px) {
@@ -54,6 +55,7 @@ h1, h2 {
     color: black;
     padding-top: 0.5rem;
     margin: 0;
+    font-family: 'Abril Fatface', cursive;
 }
 
 h2 {
