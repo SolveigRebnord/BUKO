@@ -176,10 +176,6 @@ function showSlides(n) {
 
   console.log(slides);
 
-
-
-
-
   var mediaQuery = window.matchMedia("(max-width: 700px)");
 
 function disbleFunction(m) {
@@ -229,7 +225,7 @@ disbleFunction(mediaQuery);
 
 
 function removeClick(el) {
-  el.style.cursor = "pointer";
+  el.style.cursor = "inherit";
   el.off('onclick'); // funker ikke!
 }
 

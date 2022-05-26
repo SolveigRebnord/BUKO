@@ -66,15 +66,32 @@ figure {
 
 .showPost > div > a {
     text-decoration: none;
+    font-weight: 400;
     color: white;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     border: solid 1px white;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    letter-spacing: 2px;
 }
+
+.showPost > div > a:hover {
+    background-color: white;
+    box-shadow: rgb(169, 141, 141) 0px 0px 3px;
+    color: rgb(118, 88, 88);
+}
+
+.showPost > div > a:last-of-type {
+    font-size: 0.9rem;
+}
+
 
 
 
 .showPost > div > p {
     max-width: 500px;
+    font-size: 0.9rem;
     font-weight: 300;
     font-family: var(--robotCon);
 }
@@ -102,7 +119,7 @@ figure {
     width: 80%;
 }
 
-.showPost:nth-child(2), .showPost:nth-child(4) {
+.showPost:nth-child(even) {
     flex-direction: row-reverse;
     background-color: var(--lys-rosa);
     color: black;
@@ -113,17 +130,25 @@ figure {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.showPost:nth-child(2) > div:first-of-type, .showPost:nth-child(4) > div:first-of-type {
+.showPost:nth-child(even) > div:first-of-type {
     align-items: flex-end;
 }
 
-.showPost:nth-child(2) > div > a, .showPost:nth-child(4) > div > a {
-    color: black;
-    border: solid 1px black;
+.showPost:nth-child(even) > div > a {
+    color: rgb(93, 69, 69);
+    border: solid 1px rgb(118, 88, 88);
+    box-sizing: border-box;
 }
+
+.showPost:nth-child(even) > div > a:hover {
+    background-color: rgb(118, 88, 88);
+    color: white;
+    box-shadow: rgb(169, 141, 141) 0px 0px 3px;
+}
+
 
 
 
@@ -138,15 +163,14 @@ figure {
     width: 100%;
     height: max-content;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 
 @media (max-width: 900px) {
-
-    .showPost > div > p,.showPost > div > a  {
-        font-size: 0.8rem;
-    }
-
+ 
     main {
         margin: 0 1rem;
     }
@@ -158,6 +182,10 @@ figure {
         padding: 2rem 1rem;
     }
 
+
+    .showPost > div {
+        width: 100%;
+    }
     .showPost:nth-child(2), .showPost:nth-child(4) {
         flex-direction: column;
     }

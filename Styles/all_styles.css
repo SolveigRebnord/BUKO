@@ -297,6 +297,7 @@ div#menu > img {
     div#menu {
         display: inline-block;
         grid-area: menu;
+        cursor: pointer;
     }
 
 
@@ -393,7 +394,10 @@ section > p, section > h1 {
     }
 }
 
-main > nav:last-of-type {
+
+
+
+.lastnav {
 
 display: flex;
 align-items: center;
@@ -404,7 +408,7 @@ margin: 3rem 0;
 }
 
 
-main > nav:last-of-type a {
+.lastnav a {
     padding: 0.6rem 2rem;
     width: 40px;
     text-align: center;
@@ -412,7 +416,6 @@ main > nav:last-of-type a {
     border: solid black 1px;
     border-radius: 5px;
 }
-
 
 
 
