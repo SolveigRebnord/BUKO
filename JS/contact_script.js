@@ -1,17 +1,6 @@
 console.log("heia, dette er nå js for contact");
 
 
-const burgerMenu = document.getElementById("menu");
-const overlay = document.querySelector(".overlay");
-
-burgerMenu.addEventListener("click", function() {
-    if (overlay.style.display === "none") {
-        overlay.style.display = "inline-block";
-    } else {
-      overlay.style.display = "none";
-    }
-});
-
 
 //Form validation
 
@@ -44,7 +33,7 @@ validateForm = (e) => {
         if (nameLength > 5) {
             console.log("Name approved");
             nameInput.style.color = "green";
-            nameTheInput.style.border = "solid green 2px";            
+            nameTheInput.style.border = "solid green 1px";            
             nameOK.innerHTML = "Pretty!";
             nameOK.style.color = "green";
 
@@ -52,7 +41,7 @@ validateForm = (e) => {
 
     else {
             nameInput.style.color = "red"
-            nameTheInput.style.border = "solid red 2px";            
+            nameTheInput.style.border = "solid red 1px";            
             nameBAD.innerHTML = "At least 5 caracthers!";
             nameBAD.style.color = "red";
             console.log("Error: Not enough caracthers")
@@ -88,7 +77,7 @@ validateForm = (e) => {
         emailAfterInput = true;
         console.log("Email approved");
         emailInput.style.color = "green";
-        emailTheInput.style.border = "solid green 2px";            
+        emailTheInput.style.border = "solid green 1px";            
         emailOK.innerHTML = "Neat! *Sends spam*";        
         emailOK.style.color = "green";
     }
@@ -98,7 +87,7 @@ validateForm = (e) => {
         emailBAD.innerHTML = "I don't think that's correct"
         console.log("Error: Not valid email")
         emailInput.style.color = "red"
-        emailTheInput.style.border = "solid red 2px";            
+        emailTheInput.style.border = "solid red 1px";            
         emailBAD.style.color = "red";
     }
 
@@ -130,18 +119,18 @@ let subjectAfterInput = subjectInput.value.trim();
             subjectAfterInput = true;
             console.log("Subject approved");
             subjectInput.style.color = "green";
-            subjectTheInput.style.border = "solid green 2px";            
+            subjectTheInput.style.border = "solid green 1px";            
             subjectOK.innerHTML = "Nice!";        
             subjectOK.style.color = "green";
         }
 
     else {
             subjectInput.style.color = "red" 
-            subjectBAD.innerHTML = "At least 15 caracthers!";
+            subjectBAD.innerHTML = "At least 15 characters";
             subjectBAD.style.color="red";
-            console.log("Error: Not enough caracthers");
+            console.log("Error: Not enough characters");
             subjectAfterInput = false;
-            subjectTheInput.style.border = "solid red 2px";            
+            subjectTheInput.style.border = "solid red 1px";            
         
         }   
 
@@ -172,17 +161,17 @@ let textAfterInput = textInput.value.trim();
             console.log("Text approved");
             textInput.style.color = "green";
             textOK.innerHTML = "Amazeballs";
-            textTheInput.style.border = "solid green 2px";                
+            textTheInput.style.border = "solid green 1px";                
             textOK.style.color = "green";
         }
 
     else {
             textAfterInput = false;
             textInput.style.color = "red"
-            textBAD.innerHTML = "At least 25 caracthers!";
-            console.log("Error: Not enough caracthers")
+            textBAD.innerHTML = "At least 25 characters";
+            console.log("Error: Not enough characters")
             textBAD.style.color="red";
-            textTheInput.style.border = "solid red 2px";    
+            textTheInput.style.border = "solid red 1px";    
         }   
 
     }

@@ -114,7 +114,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 
 header {
     box-sizing: border-box;
-    background-color: var(--blue-green);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
