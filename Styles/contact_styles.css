@@ -36,6 +36,16 @@ body {
     margin-bottom: 5rem;
 }
 
+@media (max-width: 600px) {
+    .heroimg {
+        height: 70vh;
+    }
+
+    .underhero {
+        height: 30vh;
+    }
+}
+
 h1, h2 {
 
     font-size: 4.5rem;
