@@ -31,30 +31,37 @@
 
 <body>
 
+ 
     <header>
         <div id="logo">
             <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
         </div>
     
         <div id="menu">
-            <i class="fa fa-solid fa-bars"></i>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-menu-rounded-50-2.png" alt="">
         </div>
     
         <nav>
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
                 <li><a href="/contact.html">Contact</a></li>
+                <li><img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt=""></li>
             </ul>
-        </nav>  
-    
-        <div>
-            <p>search</p>
+            
+            
+        </nav>
+        <div class="search">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt="">
         </div>
+       
+       
     
         <div class="overlay">
             <ul>
+                <li><a href="/news.html">News</a></li>
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/members.html">Members</a></li>
                 <li><a href="/about.html">About Us</a></li>
@@ -64,30 +71,28 @@
             
     </header>
 
-<section class="title">
-    <p class="breadcrumbs">
-        <a href="index.html">Home</a> / Members
-    </p>
-
-    <h1>Our Members</h1>
-
-    <div class="forthegrid">
-    </div>
-</section>
 
 
 <main>
 
+<section class="breadcrumbs">
+    <p><a href="./index.html">Home</a> / News</p>
+</section>
+
+
+<section>
+    <h1>Our members</h1>
+</section>
 
 
 <div class="showMembers">
     <div class="loadinggif">
-        <img src="News/img/icons8-music.gif" alt="Music note dancing">
-        <p>Loading...</p>
+        <img src="./img/icons8-music.gif" alt="Music note dancing">
+        <p>Chopin..be right Bach!</p>
     </div>
 </div>
 
-<button class="loadmore" onclick="loadMore(1)">Load More</button>
+<a class="loadmore" onclick="loadMore(1)">Load More</a>
 <p class="message"></p>
 
 
@@ -96,8 +101,57 @@
 
 
 </main>
+<footer>
+
+    <div>
+        <ul>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/members.html">Members</a></li>
+            <li><a href="/about.html">About Us</a>
+                <div>
+                    <a href="about.html">Our Story</a>
+                    <a href="about.html">Conductor</a>
+                    <a href="about.html">The board</a>
+                    <a href="about.html">Future visions and goals</a>
+                </div>
+            </li>
+            <li><a href="/contact.html">Contact</a>
+                <div>
+                    <a href="about.html">Booking</a>
+                    <a href="about.html">Play with us</a>
+                    <a href="about.html">Contact</a>
+                    <a href="about.html">Donations and sponsorship</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
-<script src="./JS/members_script.js"></script>
+    <div>
+        <div>
+            <label for="emailnewsletter">
+                Sign up to our newsletter
+            </label> <br>
+            <input type="emailnewsletter">
+            <button type="submit">Submit</button>
+        </div>
+        <div>
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-facebook-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-instagram-60.png" alt="">
+            <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-linkedin-circled-60.png" alt="">
+        </div>
+    </div>
+
+
+<div class="copyright">
+    <p>&copy; 2022 Bergen Unge Kammerorkester</p>
+    <p>Developed by <span class="underlined">Sunroad</span></p>
+</div>
+</footer>
+
+
 </body>
+<script src="./JS/allscripst_script.js"></script>
+<script src="./JS/members_script.js"></script>
 </html>

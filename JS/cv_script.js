@@ -26,6 +26,9 @@ fetch(`https://www.sunroad.no/exam/wp-json/wc/store/products/${id}?_embed`)
 
 listSinglePost = (data) => {
 
+    const breadCrumbs = document.querySelector(".breadcrumbs");
+    breadCrumbs.innerHTML = `<a href="index.html">Home</a> / <a href="members.html">Members</a> / ${data.name}`;
+
   
     let title = data.name;
     document.title = "CV | " + title;

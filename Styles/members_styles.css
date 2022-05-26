@@ -14,7 +14,7 @@ html {
 
 
 main {
-    margin: 0 2rem;
+    margin: 12rem 2rem 0 2rem;
 }
 
 
@@ -38,21 +38,24 @@ a {
     width: 300px;
     text-align: center;
     padding: 1rem;
+    transition: 0.4s ease;
 }
 
 .cvdiv:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .cvdiv h2 {
     font-family: var(--FiraS);
     font-weight: 300;
+    margin-bottom: 0.5rem;
 }
 
 .cvdiv p {
     font-family: var(--robotCon);
     padding: 1rem 0;
     background-color: var(--lys-rosa);
+    text-transform: uppercase;
 }
 
 
@@ -62,10 +65,33 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+    row-gap: 5rem;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 3rem;
 }
 
+
+.loadmore, .message {
+    display: block;
+    width: 70px;
+    margin: 3rem auto;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.message {
+    width: 80px;
+    cursor: initial;
+}
+
+.loadmore:hover {
+    box-shadow: linen 1px 4px 18px;
+}
+
+
+/*--------------------------------------------------------------*/
 
 
 .showCV {
@@ -75,14 +101,14 @@ a {
 
 .showCV > hr {
     background-color: var(--blue-green);
-    height: 3px;
+    height: 2px;
     border: none;
 }
 
 .showCV > h1 {
     text-align: center;
     text-transform: uppercase;
-    font-family: var(--BUKO);
+    font-family: var(--Nanum);
     font-size: 3rem;
     margin-top: 3rem;
     color: var(--blue-green);
@@ -102,7 +128,7 @@ a {
 
 @media (max-width: 1000px) {
     main {
-        margin: 0;
+        margin: 12rem 1rem;
     }
 
     .cvDetails {
