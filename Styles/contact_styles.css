@@ -23,7 +23,7 @@ body {
 
 .heroimg {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     object-fit: cover;
     object-position: top;
     margin: 0;
@@ -37,17 +37,25 @@ body {
 
 }
 
+@media (max-width: 600px) {
+    .heroimg {
+        height: 70vh;
+    }
 
+    .underhero {
+        height: 30vh;
+    }
+}
 
 h1, h2 {
 
     font-size: 4.5rem;
     font-weight: 800;
-    font-family:serif;
+
     color: black;
     padding-top: 0.5rem;
     margin: 0;
-    font-family: 'Abril Fatface', cursive;
+
 }
 
 h2 {

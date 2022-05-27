@@ -44,9 +44,9 @@ function myFunction(m) {
 
   else {
 
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      document.querySelector("header > div > a > img").style.height = "30px";
-      document.querySelector("header").style.padding = "1rem 2rem 1rem 2rem";
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      document.querySelector("header > div > a > img").style.height = "50px";
+      document.querySelector("header").style.padding = "1.5rem 2rem";
       document.querySelector("header").style.backgroundColor = "#917669";
     
 

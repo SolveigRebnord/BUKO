@@ -10,10 +10,61 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
 }
 
-* {
-    font-family: var(--FiraS);
-    font-weight: 300;
+
+
+main {
+    margin: 0 4rem;
 }
+
+body {
+    margin: 0;
+    background-color: rgb(251, 248, 248);
+}
+
+.heroimg {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: top;
+    margin: 0;
+}
+
+.underhero {
+    height: 15vh;
+    text-align: center;
+    background-color: rgb(251, 248, 248);
+    margin-bottom: 5rem;
+
+}
+
+@media (max-width: 600px) {
+    .heroimg {
+        height: 70vh;
+    }
+
+    .underhero {
+        height: 30vh;
+    }
+}
+
+h1, h2 {
+
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: black;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+    font-size: 3.5rem;
+    max-width: 400px;
+    margin-bottom:  1rem;
+}
+
 
 
 .underlined {
@@ -38,14 +89,10 @@ html {
 
 body {
     margin-bottom: 0;
-    margin-top: 8rem;
     margin-left: 0;
     margin-right: 0;
 }
 
-main {
-    margin: 0 6rem;
-}
 
 a {
     color: black;
@@ -53,10 +100,6 @@ a {
 
 #menu  {
     display: none;
-}
-
-h2, h1, p {
-    margin: 0;
 }
 
 /*pen li*/
@@ -69,7 +112,7 @@ header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > 
 header > nav > ul, footer > div > ul, .undermenu > div > ul, .wholePortfolio > div > div > ul {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     padding: 0;
 }
 
@@ -136,15 +179,16 @@ header {
 
 
 header > nav > ul {
-    gap: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 0;
+    gap: 0;
+    align-items: center;
 }
 
 
 
 header > nav > ul > li {
-    padding: 0 2rem 0 1rem;
     border-right: solid white 1px;
+    padding: 0 1.1rem;
 }
 
 header > nav > ul > li:nth-child(5) {
@@ -186,36 +230,30 @@ div#menu > img {
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
 
     header {
         display: grid;
         grid-template-areas:
-        'logo nav'
-        'logo search';
+        'logo search'
+        'nav nav';
         justify-content: space-between;
-
+        align-items: center;
+        row-gap: 1rem;
     }
 
-    header > nav > ul {
-        gap: 1rem;
-        margin-top: 0;
+    .heroimg {
+        object-position: left;
     }
 
     header > nav {
-        margin-right: 0.5rem;
         grid-area: nav;
     }
     
-    header > nav > ul > li {
-        padding: 0 1rem 0 1rem;
-        border-right: solid white 1px;
-    }
 
     #logo img {
-        max-width: 120px;
-        
+        max-width: 150px;
     }
 
     #logo {
@@ -224,28 +262,23 @@ div#menu > img {
 
     header > nav > ul > li:last-of-type {
         display: none;
-
     }
 
-    header > nav > ul > li:nth-child(5) {
-        padding-right: 0.5rem;
+    header > nav > ul > li:first-of-type {
+        padding-left: 0;
     }
-    
+
     .search {
         text-align: right;
         margin: 0;
         display: block;
         grid-area: search;
-        padding-right: 1rem;
+        padding: 1rem 1rem 0 0;
     }
 
     .search > img {
-        width: 25px;
+        width: 40px;
     }
- 
-
-
-
 
 }
 
@@ -257,36 +290,22 @@ div#menu > img {
 
  
 
-  
-
     .search {
-        text-align: right;
-        grid-area: search;
         padding: 0;
 
     }
-
-    header > nav > ul > li:last-of-type {
-        display: none;
-    }
-
   
     header {
         display: grid;
-        grid-auto-columns: 1fr;
-        grid-row: auto;
         grid-template-areas:
         'menu logo search';
-        padding: 1rem 2rem;
+        padding: 2rem;
     }
 
-    #logo {
-        grid-area: logo;
-        margin: 0 auto;
-    }
+
 
     #logo > a > img {
-        height: 50px;
+        height: 60px;
     }
 
    
