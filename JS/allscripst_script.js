@@ -36,7 +36,7 @@ function alterText (m) {
   }
 
   else {
-    h1.innerHTML = " ";
+    h1.innerHTML = ""`- `+h1+` -`;
 
   }
 }
