@@ -7,12 +7,13 @@ const overlay = document.querySelector(".overlay");
 burgerMenu.addEventListener("click", function() {
     if (overlay.style.visibility === "hidden") {
         overlay.style.visibility = "visible";
-        overlay.style.transition = "0.3s ease-out";
+        overlay.style.opacity = 1;
 
         
         
     } else {
       overlay.style.visibility = "hidden";
+      overlay.style.opacity = 0;
     }
 });
 
