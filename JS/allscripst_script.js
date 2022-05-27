@@ -1,17 +1,18 @@
 console.log("bip this is the all js");
 
 
+
 const burgerMenu = document.getElementById("menu");
 const overlay = document.querySelector(".overlay");
 
 burgerMenu.addEventListener("click", function() {
-    if (overlay.style.visibility === "hidden") {
+    if (overlay.style.visibility == "hidden") {
         overlay.style.visibility = "visible";
-        overlay.style.opacity = 1;
+        overlay.style.opacity = 1; 
+    } 
 
-        
-        
-    } else {
+
+    else {
       overlay.style.visibility = "hidden";
       overlay.style.opacity = 0;
     }
@@ -33,8 +34,6 @@ function myFunction(m) {
   if (m.matches) { // If media query matches
 
       if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-        document.querySelector("header > div > a > img").style.height = "50px";
-        document.querySelector("header").style.padding = "1rem 2rem";
         document.querySelector("header").style.backgroundColor = "#917669";
       } 
     
