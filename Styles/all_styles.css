@@ -276,8 +276,8 @@ div#menu > img {
         padding: 1rem 1rem 0 0;
     }
 
-    .search > img {
-        width: 40px;
+    .search > img, div#menu img {
+        height: 40px;
     }
 
 }
@@ -299,13 +299,13 @@ div#menu > img {
         display: grid;
         grid-template-areas:
         'menu logo search';
-        padding: 2rem;
+        padding: 3rem 2rem;
     }
 
 
 
     #logo > a > img {
-        height: 60px;
+        height: 40px;
     }
 
    
@@ -319,10 +319,7 @@ div#menu > img {
         cursor: pointer;
     }
 
-    div#menu img {
-        height: 50px;
-        width: 100%;
-    }
+  
 
 
     
