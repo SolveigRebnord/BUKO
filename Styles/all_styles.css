@@ -39,11 +39,11 @@ body {
 
 @media (max-width: 600px) {
     .heroimg {
-        height: 70vh;
+        height: 60vh;
     }
 
     .underhero {
-        height: 30vh;
+        height: 40vh;
     }
 }
 
