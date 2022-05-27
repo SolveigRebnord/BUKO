@@ -25,15 +25,18 @@ burgerMenu.addEventListener("click", function() {
 var mediaQuery700 = window.matchMedia("(max-width: 750px)");
 var mediaQuery600 = window.matchMedia("(max-width: 600px)");
 
+var h1 = document.querySelector("[h1]");
+
+
 window.addEventListener("change", alterText);
 
 function alterText (m) {
   if (m.matches) {
-    document.querySelector(".underhero > h1").innerHTML = `Bergen Youth Chamber Orchestra`;
+    h1.innerHTML = h1;
   }
 
   else {
-    document.querySelector(".underhero > h1").innerHTML = `- Bergen Youth Chamber Orchestra -`;
+    h1.innerHTML = " ";
 
   }
 }
