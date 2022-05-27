@@ -3,7 +3,8 @@ html {
     --dark-orange: #CF9B7F;
     --lys-rosa: #F6F0EC;
     --blue-green: #92ABAF;
-
+    --whiteish: rgb(251, 248, 248);
+    
     --robotCon: 'Roboto Condensed', sans-serif;
     --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
@@ -37,19 +38,6 @@ body {
 
 }
 
-@media (max-width: 600px) {
-    .heroimg {
-        height: 70vh;
-    }
-
-    .underhero {
-        height: 30vh;
-    }
-
-    .underhero h1 {
-        font-size: 1.5rem;
-    }
-}
 
 h1, h2 {
 
@@ -370,6 +358,31 @@ div#menu > img {
         display: none;
 }
 }
+
+
+
+@media (max-width: 600px) {
+    .heroimg {
+        height: 100vh;
+        object-position: right;
+    }
+
+    .underhero {
+        height: 30vh;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .underhero h1 {
+        font-size: 2rem;
+        position: absolute;
+        width: 50px;
+        right: 25%;
+        top: -100%;
+        color: white;
+    }
+}
+
 
 
 
