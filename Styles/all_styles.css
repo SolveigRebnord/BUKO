@@ -299,7 +299,7 @@ div#menu > img {
         display: grid;
         grid-template-areas:
         'menu logo search';
-        padding: 3rem 2rem;
+        padding: 2rem 2rem;
     }
 
 
