@@ -364,7 +364,7 @@ div#menu > img {
 @media (max-width: 600px) {
     .heroimg {
         height: 100vh;
-        object-position: right;
+        object-position: left;
     }
 
     .underhero {
