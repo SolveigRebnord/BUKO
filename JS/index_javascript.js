@@ -76,8 +76,8 @@ function listData (array) {
     <h2>${item.title.rendered}</h2>
     ${item.excerpt.rendered}
     <div class="links">
+    <a href="newpost.html?id=${item.id}">Read more</a>
       ${theLink}
-      <a href="newpost.html?id=${item.id}">Read more</a>
     </div>
     </div>`
 
@@ -114,7 +114,9 @@ function showSlides(n) {
 
   console.log(slides);
 
-  var mediaQuery = window.matchMedia("(max-width: 700px)");
+
+var mediaQuery = window.matchMedia("(max-width: 750px)");
+window.addEventListener("change", disbleFunction);
 
 function disbleFunction(m) {
   if (m.matches) {
@@ -125,7 +127,7 @@ function disbleFunction(m) {
   }
 }
 
-mediaQuery.addEventListener("change", disbleFunction);
+mediaQuery.addEventListener("change", disbleFunction); // Funker, men feilmelding :)
 disbleFunction(mediaQuery);
 
 

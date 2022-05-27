@@ -113,9 +113,9 @@ header > nav > ul, footer > div > ul, .undermenu > div > ul, .wholePortfolio > d
 header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a {
     text-decoration: none;
     text-transform: uppercase;
-    font-family: var(--robotCon);
-    color: white;
-    letter-spacing: 0.8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--whiteish);
+    letter-spacing: 1px;
 }
 
 /*nedover liste*/
@@ -179,8 +179,9 @@ header > nav > ul {
 
 
 header > nav > ul > li {
-    border-right: solid white 1px;
+    border-right: solid var(--whiteish) 1px;
     padding: 0 1.1rem;
+    font-size: 1.1rem;
 }
 
 header > nav > ul > li:nth-child(5) {
