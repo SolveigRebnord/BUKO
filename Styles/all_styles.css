@@ -39,11 +39,15 @@ body {
 
 @media (max-width: 600px) {
     .heroimg {
-        height: 60vh;
+        height: 70vh;
     }
 
     .underhero {
-        height: 40vh;
+        height: 30vh;
+    }
+
+    .underhero h1 {
+        font-size: 1.5rem;
     }
 }
 
