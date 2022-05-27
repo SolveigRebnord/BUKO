@@ -319,6 +319,11 @@ div#menu > img {
         cursor: pointer;
     }
 
+    div#menu img {
+        height: 50px;
+        width: 100%;
+    }
+
 
     
 
