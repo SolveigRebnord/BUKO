@@ -341,6 +341,10 @@ div#menu > img {
         object-position: 20%;
     }
 
+    .smallerheader {
+        height: 50vh;
+    }
+
     .underhero {
         height: 3rem;
         background-color: transparent;
@@ -360,15 +364,7 @@ div#menu > img {
 
 
 
-@media (max-width: 900px) {
-    .smallerheader {
-        object-position: top;
-    }
 
-    header > nav > ul > li > a {
-color: black;
-    }
-}
 /* FOOTER --------------------------------------------------------------*/
 
 
