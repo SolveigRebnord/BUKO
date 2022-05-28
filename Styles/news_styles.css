@@ -1,15 +1,22 @@
 
 html {
+    --chocBrown: rgb(167, 138, 126);
+    --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
     --lys-rosa: #F6F0EC;
     --blue-green: #92ABAF;
     --whiteish: rgb(251, 248, 248);
-
-
+    --greyLightBrown: #e1d7d1;
+    --LIGHTgreyLightBrown: #ede3deaf;
+    
     --robotCon: 'Roboto Condensed', sans-serif;
-    --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
     --Nanum: 'Nanum Myeongjo', serif;
+    --fatA: 'Abril Fatface', cursive;
+    --corGar: 'Cormorant Garamond', serif;
+    --playDis: 'Playful Display', cursive;
+    --barCon: 'Barlow Condensed', sans-serif;
+
 }
 
 
@@ -39,7 +46,7 @@ figure img, figure {
     text-transform: uppercase;
     transition: 0.3s ease;
     letter-spacing: 2px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--barCon);
 }
 
 .showPost > div > a:hover {
@@ -78,7 +85,7 @@ figure img, figure {
     align-items: flex-start;
     padding: 2rem;
     color: white;
-    background-color: rgb(167, 138, 126);
+    background-color: var(--chocBrown);
 }
 
 .showPost > div {
@@ -90,7 +97,7 @@ figure img, figure {
 
 .showPost:nth-child(even) {
     flex-direction: row-reverse;
-    background-color: #ede3deaf;
+    background-color: var(--LIGHTgreyLightBrown);
     color: black;
     text-align: right;
 }

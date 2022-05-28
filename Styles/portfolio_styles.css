@@ -1,30 +1,36 @@
 
-
 html {
+
+    --chocBrown: rgb(167, 138, 126);
+    --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
     --lys-rosa: #F6F0EC;
     --blue-green: #92ABAF;
-
+    --whiteish: rgb(251, 248, 248);
+    --greyLightBrown: #e1d7d1;
+    --LIGHTgreyLightBrown: #ede3deaf;
+    
     --robotCon: 'Roboto Condensed', sans-serif;
-    --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
     --Nanum: 'Nanum Myeongjo', serif;
+    --fatA: 'Abril Fatface', cursive;
+    --corGar: 'Cormorant Garamond', serif;
+    --playDis: 'Playful Display', cursive;
+    --barCon: 'Barlow Condensed', sans-serif;
 }
+
 
 main {
     margin: 12rem 2rem;
 }
 
+p, h2 {
+    margin: 0;
+}
 
 a {
     text-decoration: none;
     color: black;
-}
-
-h2 {
-    margin: 6rem 0 0 4rem;
-    font-size: 3rem;
-    font-weight: 100;
 }
 
 
@@ -43,10 +49,12 @@ h2 {
     border-bottom: 0.5px solid black;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;    
     gap: 4rem;
 margin: 2rem;
-padding: 1rem ;
+padding: 1rem;
+font-family: var(--FiraS);
+font-weight: 300;
 }
 
 
@@ -185,9 +193,6 @@ cursor: default;
 }
 
 
-
-
-
 .showPortfolio img {
     position: absolute;
     height: 75%;
@@ -202,10 +207,13 @@ cursor: default;
 
 .showPortfolio > h2, .showPortfolio > p {
     z-index: 2;
+    font-family: var(--FiraS);
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 
-.details, .date {
+.showPortfolio > .details, .showPortfolio > .date {
     font-weight: 400;
 }
 
@@ -214,6 +222,7 @@ cursor: default;
     text-transform: uppercase;
     font-size: 1.2rem;
     text-align: center;
+    padding-bottom: 0.5rem;
 }
 
 
@@ -267,11 +276,24 @@ cursor: default;
     .showPortfolio {
        width: 100%;
        height: 500px;
+       align-items: flex-start;
+       box-shadow: grey 6px 12px 15px;
+       padding: 4%;
     }
 
     .showPortfolio img {
-        height: 65%;
+        box-shadow: none;
+        height: 62%;
+        transform: translateY(8%);
+        width: 92%;
     }
+
+    .showPortfolio:hover {
+        scale: none;
+    }
+
+
+
     
 
 }
@@ -279,7 +301,7 @@ cursor: default;
 @media (max-width: 600px) {
 
     .sectionPortfolio {
-        padding: 0;
+        padding: 3rem 1rem;
     }
 
 .wholePortfolio > div > .secondchoice > ul {
