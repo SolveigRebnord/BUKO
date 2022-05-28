@@ -63,3 +63,18 @@ mediaQuery.addEventListener("change", myFunction) // Attach listener function on
 myFunction(mediaQuery) // Call listener function at run time
 
 }
+
+//-------------------------------------------------------------------------------
+
+const topButton = document.querySelector(".topbutton");
+
+
+topButton.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  const scrollTo = document.querySelector(".underhero");
+scrollTo.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
+
+
+//<a href="event.html?id=${post.id}">Read more about me!</a> dette funker ikke, må være en slags redirecter isåfall

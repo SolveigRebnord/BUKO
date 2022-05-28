@@ -14,23 +14,17 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
     --fatA: 'Abril Fatface', cursive;
     --corGar: 'Cormorant Garamond', serif;
-    --playDis: 'Playful Display', cursive;
+    --playDis: 'Playfair Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
 }
-
-main {
-    margin: 12rem 2rem 0 2rem;
-}
-
 
 
 a {
     text-decoration: none;
-    color: black;
 }
 
-p, h2 {
-    margin: 0;
+.smallerheaderh1 {
+    margin-left: 3rem;
 }
 
 
@@ -40,6 +34,7 @@ p, h2 {
     text-align: center;
     padding: 1rem;
     transition: 0.4s ease;
+
 }
 
 .cvdiv:hover {
@@ -47,17 +42,18 @@ p, h2 {
 }
 
 .cvdiv h2 {
-    font-family: var(--FiraS);
     font-weight: 300;
     font-size: 1.3rem;
-    word-spacing: 0;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .cvdiv p {
-    font-family: var(--robotCon);
-    padding: 1rem 0;
-    background-color: var(--lys-rosa);
+    font-family: var(--corGar);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    letter-spacing: 1px;
+    background-color: var(--greyLightBrown);
     text-transform: uppercase;
 }
 
@@ -77,21 +73,16 @@ p, h2 {
 
 .loadmore, .message {
     display: block;
-    width: 70px;
-    margin: 3rem auto;
+    width: 100px;
+    margin: 4rem auto;
     cursor: pointer;
-    padding: 1rem 2rem;
     text-align: center;
 }
 
 .message {
-    width: 80px;
     cursor: initial;
 }
 
-.loadmore:hover {
-    box-shadow: linen 1px 4px 18px;
-}
 
 
 /*--------------------------------------------------------------*/
@@ -109,66 +100,58 @@ p, h2 {
     height: 450px;
 }
 
-
 .showCV {
     width: 80%;
-    margin: 0 auto;
+    margin: 3rem auto 0 auto;
 }
-
 
 
 .showCV > h1 {
+    text-transform: inherit;
     text-align: right;
-    text-transform: uppercase;
-    font-family: var(--BUKO);
+    margin: 0 0 0 auto;
     font-size: 3rem;
-    letter-spacing: 2px;
-    font-weight: 500;
-    margin-top: 3rem;
-    padding-right: 4.5rem;
-    color: var(--blue-green);
+    padding: 0;
+    max-width: 400px;
 }
 
 .cvDetails {
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    padding: 2rem 5rem 3rem 5rem;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--FiraS);
-    border-bottom: #92ABAF solid 3px;
 }
-
 
 
 .leftFlex {
     position: relative;
 }
 
+
 .leftFlex > p {
-    border: solid var(--blue-green) 5px;
+    border: solid var(--blue-green) 3px;
     width: 280px;
     height: 450px;
     z-index: 0;
     display: inline-block;
     display: flex;
-    font-family: var(--robotCon);
+    font-family: var(--playDis);
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 0 20px 20px 0;
-    text-transform: uppercase;
+    padding: 0 20px 15px 0;
     letter-spacing: 1px;
     font-size: 1.2rem;
 
 }
 
 .leftFlex > img {
+    box-shadow: 1px 1px 12px 6px rgb(228, 224, 224) ;
     z-index: 1;
     position: absolute;
-    top: -8%;
-    left: 21%;
+    top: -7%;
+    left: 19%;
 }
 
 .rightFlex {
@@ -181,32 +164,30 @@ p, h2 {
 }
 
 .rightFlex > p:first-of-type,.rightFlex > p:nth-child(2) {
-    background-color: var(--dark-orange);
+    background-color: var(--greyLightBrown);
     padding: 1rem 1.5rem;
-    width: fit-content;
+    width: 80px;
+    text-align: center;
     display: inline;
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-family: var(--FiraS);
     letter-spacing: 1px;
-
 }
 
 .rightFlex > p:nth-child(2){
-    line-height: 0.9rem;
-    background-color: var(--blue-green);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .rightFlex > h3 {
     margin: 2rem 0 0.2rem 0;
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 1.2rem;
     letter-spacing: 1px;
 }
 
 
- 
  
 .rightFlex > ul {
     margin: 0;
@@ -231,28 +212,25 @@ p, h2 {
 
 .showCV > div:last-of-type {
     text-align: center;
-    font-family: var(--FiraS);
     font-weight: 300;
     width: 60%;
-    margin: 3rem auto;
+    margin: 5rem auto;
 }
 
+
+
 @media (max-width: 1050px) {
-    main {
-        margin: 12rem 1rem;
-    }
 
     .showCV {
-width: 90%;
-    }
-
-    .showCV > h1 {
-        text-align: center;
-        padding: 0;
+        width: 90%;
     }
 
     .cvDetails {
-        padding: 6rem 0 3rem 0;
+        padding: 3rem 0;
+    }
+    
+    main {
+        margin: 0;
     }
 
 }
@@ -261,8 +239,14 @@ width: 90%;
 
 @media (max-width: 700px) {
     main {
-        margin: 0;
+        margin: 0 1rem;
     }
+
+    .showCV > h1 {
+        font-size: 2rem;
+        padding: 0 1rem 3rem 0
+    }
+
 
     .cvDetails {
     flex-direction: column;
@@ -276,11 +260,9 @@ width: 90%;
         margin-left: 1em;
     }
 
-
     .rightFlex {
         display: inline;
         padding-top: 1rem;
-        margin-right: 1rem;
     }
 
     .leftFlex {
@@ -299,7 +281,13 @@ width: 90%;
 
     .leftFlex > img {
         top: -13%;
-        left: 20%;
+        left: 18%;
+    }
+
+    .showCV > div:last-of-type {
+        margin: 0 0 4rem 0;
+        width: 100%;
+        text-align: left;
     }
 
 }

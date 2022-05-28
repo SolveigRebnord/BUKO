@@ -229,7 +229,7 @@ div#menu > img {
     width: 35px;
 }
 
-.smallerheaderh1 {
+.smallerheaderh1, .showCV > h1 {
     margin: 3rem auto;
     width: 82%;
     padding: 2rem 2rem 2rem 0;
@@ -382,7 +382,10 @@ div#menu > img {
 }
 
 
-
+.nounderhero {
+    height: 0;
+    width: 0;
+}
 
 
 

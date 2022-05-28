@@ -49,7 +49,7 @@ listSinglePost = (data) => {
         <h1>${data.name}</h1>
         <div class="cvDetails">
             <div class="leftFlex">
-                <p>${data.categories[0].name}</p>
+                <p>- ${data.categories[0].name}</p>
                 <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
             </div>
             <div class="rightFlex">
@@ -72,7 +72,7 @@ listSinglePost = (data) => {
         <h1>${data.name}</h1>
         <div class="cvDetails">
             <div class="leftFlex">
-                <p>${data.categories[0].name}</p>
+                <p>- ${data.categories[0].name}</p>
                 <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
             </div>
             <div class="rightFlex">
@@ -90,11 +90,3 @@ listSinglePost = (data) => {
 
 
  
-const img = document.querySelector(".memberimg");
-
-function enlargeImg () {
-    img.style.width = "60%";
-    img.style.height = "auto";
-}
-
-    
