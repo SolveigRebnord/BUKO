@@ -479,7 +479,6 @@ font-family: var(--robotCon);
     }
 
     .showPlaylist, .showMusic {
-        padding: 0 1rem;
         gap: 2rem;
     }
 
