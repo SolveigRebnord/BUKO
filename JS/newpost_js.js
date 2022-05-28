@@ -69,7 +69,7 @@ listSinglePost = (data) => {
           }
   
     let content = 
-    `<section class="showPost singlePost">
+    `<section class="showPost">
       <div>
         <h2 class="h2title">${data.title.rendered}</h2>
         ${formattedDate}

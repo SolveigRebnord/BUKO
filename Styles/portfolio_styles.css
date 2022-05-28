@@ -21,18 +21,16 @@ html {
 
 
 main {
-    margin: 12rem 2rem;
-}
-
-p, h2 {
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
 
+.smallerheaderh1 {
+    margin-left: 6rem;
+}
 
 
 .wholePortfolio {
@@ -46,18 +44,14 @@ a {
 
 .wholePortfolio > div:first-of-type {
     height: fit-content;
-    border-bottom: 0.5px solid black;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;    
+    flex-direction: row-reverse;
     gap: 4rem;
-margin: 2rem;
-padding: 1rem;
-font-family: var(--FiraS);
-font-weight: 300;
+    padding: 0 6rem 5rem 0;
+    font-family: var(--FiraS);
+    font-weight: 300;
 }
-
-
 
 
 .mainchoice > ul {
@@ -74,32 +68,30 @@ font-weight: 300;
     width: 120%;
     top: -35%;
     left: -12.5%;
-z-index: 3;
-cursor: pointer;
-transition: 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .mainchoice > ul > li > input[type="checkbox"]:hover {
-    border: solid 1px black;
+    border: solid 0.5px black;
 } 
-
 
 
 .mainchoice > ul > li > label {
-z-index: 2;
-position: relative;
-font-size: 1rem;
-line-height: 1rem;
-text-align: center;
-
+    z-index: 2;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-family: var(--FiraS);
 }
 
 .mainchoice > ul > li > input[type="checkbox"]:checked {
-    background-color: #92ABAF;
-z-index: 1;
-cursor: default;
+    background-color: var(--greyLightBrown);
+    z-index: 1;
+    cursor: default;
 } 
-
 
 
 .mainchoice > ul > li > input[type="checkbox"]:checked:hover {
@@ -113,11 +105,9 @@ cursor: default;
 }
 
 
-
 .secondchoice > ul.ul_media {
     display: none;
     align-items: center;
-    margin: 0;
 }
 
 .secondchoice {
@@ -126,16 +116,9 @@ cursor: default;
     gap: 3rem;
 }
 
-.secondchoice > ul {
-    margin: 0;
-}
-
-
 .secondchoice > .ul_years {
     gap: 0.8rem;
-    margin: 0;
 }
-
 
 
 .secondchoice > ul > li {
@@ -146,7 +129,7 @@ cursor: default;
 
 .secondchoice > ul > li > input[type="checkbox"] {
     -webkit-appearance: unset;
-    border: 1px solid black;
+    border: 0.5px solid black;
     width: 15px;
     height: 15px;
     cursor: pointer;
@@ -162,15 +145,15 @@ cursor: default;
 .sectionPortfolio {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 3rem;
-    padding: 0 2rem 2rem 2rem ;
+    gap: 4rem;
+    padding: 0 6rem 2rem 6rem ;
 }
 
 .showPortfolio {
-    width: 400px;
+    width: 350px;
     height: 600px;
     position: relative;
     display: flex;
@@ -189,27 +172,24 @@ cursor: default;
 
 .showPortfolio:hover img {
     box-shadow: grey 6px 12px 15px;
-
 }
 
 
 .showPortfolio img {
     position: absolute;
-    height: 75%;
+    height: 71%;
     width: 100%;
     top: 0;
     z-index: 0;
     object-fit: cover;
     box-shadow: grey 2px 4px 12px;
-
 }
 
 
 .showPortfolio > h2, .showPortfolio > p {
     z-index: 2;
-    font-family: var(--FiraS);
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 
@@ -220,9 +200,11 @@ cursor: default;
 
 .showPortfolio > h2 {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
     padding-bottom: 0.5rem;
+    font-family: var(--barCon);
+
 }
 
 
@@ -245,10 +227,23 @@ cursor: default;
         height: 20px;
     }
 
-
     .sectionPortfolio {
-        gap: 2rem;
         row-gap: 5rem;
+    }
+
+
+}
+
+@media (max-width: 950px) {
+
+    .showPortfolio:hover img {
+        box-shadow: none;
+    }
+
+    .wholePortfolio > div > .secondchoice {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
     }
 
     .mainchoice > ul > li > input[type="checkbox"] {
@@ -257,15 +252,6 @@ cursor: default;
 
     .mainchoice > ul > li > input[type="checkbox"]:checked {
         border: none;
-    }
-
-}
-
-@media (max-width: 950px) {
-    .wholePortfolio > div > .secondchoice {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
     }
 
     .secondchoice > ul > li > input[type="checkbox"] {
@@ -277,13 +263,13 @@ cursor: default;
        width: 100%;
        height: 500px;
        align-items: flex-start;
-       box-shadow: grey 6px 12px 15px;
+       box-shadow: grey 2px 2px 15px;
        padding: 4%;
     }
 
     .showPortfolio img {
         box-shadow: none;
-        height: 62%;
+        height: 60%;
         transform: translateY(8%);
         width: 92%;
     }
@@ -291,51 +277,53 @@ cursor: default;
     .showPortfolio:hover {
         scale: none;
     }
-
-
-
-    
-
 }
 
+
+
 @media (max-width: 600px) {
+
+    .sectionPortfolio {
+        row-gap: 3rem;
+    }
+
+    .smallerheaderh1 {
+        margin-left: 3rem;
+    }
 
     .sectionPortfolio {
         padding: 3rem 1rem;
     }
 
-.wholePortfolio > div > .secondchoice > ul {
-    flex-direction: column;
-}
+    .wholePortfolio > div > .secondchoice > ul {
+        flex-direction: column;
+    }
 
-.wholePortfolio > div > .secondchoice {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-}
+    .wholePortfolio > div > .secondchoice {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
 
-.wholePortfolio > div > .secondchoice > .ul_years {
-    transform: scale(-1, 1);
-    gap: 2rem;
-}
+    .wholePortfolio > div > .secondchoice > .ul_years {
+        transform: scale(-1, 1);
+        gap: 2rem;
+    }
 
-.wholePortfolio > div > .secondchoice > .ul_years > li > label {
-    transform: scale(-1, 1);
-}
+    .wholePortfolio > div > .secondchoice > .ul_years > li > label {
+        transform: scale(-1, 1);
+    }
 
-.wholePortfolio > div:first-of-type {
-    align-items: center;
-    gap: 2rem;
-}
+    .wholePortfolio > div:first-of-type {
+        gap: 3rem;
+        align-items: center;
+        padding: 2rem 2rem;
+    }
 
-.wholePortfolio > div:first-of-type {
-    margin: 0;
-}
-
-.wholePortfolio > div > .secondchoice > .ul_media {
-    flex-direction: row;
-}
+    .wholePortfolio > div > .secondchoice > .ul_media {
+        flex-direction: row;
+    }
 }
 
 /*---------------------------------------------------------*/
