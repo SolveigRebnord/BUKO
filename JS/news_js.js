@@ -1,4 +1,5 @@
-console.log("hello from the news side")
+console.log("hello from the news side");
+
 
 fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
 .then(response => response.json())
@@ -61,7 +62,7 @@ function listPost (array) {
             <div class="showPost">
                       <div>
                       <h2 class="h2title">${post.title.rendered}</h2>
-                        ${formattedDate}
+                        <p>${formattedDate}</p>
                         ${post.excerpt.rendered}
                         <a href="newpost.html?id=${post.id}">Read more</a>
                         ${theLink}
@@ -80,5 +81,17 @@ function listPost (array) {
 
     showPost.innerHTML = list;
 }
+
+
+const topButton = document.querySelector(".topbutton");
+
+
+topButton.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  const scrollTo = document.querySelector(".underhero");
+scrollTo.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
+
 
 //<a href="event.html?id=${post.id}">Read more about me!</a> dette funker ikke, må være en slags redirecter isåfall

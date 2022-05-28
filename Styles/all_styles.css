@@ -1,14 +1,20 @@
 
 html {
+
+    --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
     --lys-rosa: #F6F0EC;
     --blue-green: #92ABAF;
     --whiteish: rgb(251, 248, 248);
     
     --robotCon: 'Roboto Condensed', sans-serif;
-    --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
     --Nanum: 'Nanum Myeongjo', serif;
+    --fatA: 'Abril Fatface', cursive;
+    --corGar: 'Cormorant Garamond', serif;
+    --playDis: 'Playful Display', cursive;
+    --barCon: 'Barlow Condensed', sans-serif;
+
 }
 
 
@@ -110,7 +116,7 @@ header > nav > ul, footer > div > ul, .undermenu > div > ul, .wholePortfolio > d
 
 /*pen a*/
 
-header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a {
+header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a, .lastnav a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
@@ -449,18 +455,20 @@ align-items: center;
 justify-content: center;
 gap: 3rem;
 flex-direction: row;
-margin: 3rem 0;
+margin: 5rem 0;
 }
 
 
 .lastnav a {
+    cursor: pointer;
+    color: black;
     padding: 0.6rem 2rem;
     width: 40px;
     text-align: center;
-    text-decoration: none;
     border: solid black 1px;
     border-radius: 5px;
 }
+
 
 
 

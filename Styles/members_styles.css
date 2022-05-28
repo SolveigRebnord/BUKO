@@ -42,7 +42,9 @@ a {
 .cvdiv h2 {
     font-family: var(--FiraS);
     font-weight: 300;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    word-spacing: 0;
+    padding: 1rem 0;
 }
 
 .cvdiv p {

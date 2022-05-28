@@ -3,6 +3,8 @@ html {
     --dark-orange: #CF9B7F;
     --lys-rosa: #F6F0EC;
     --blue-green: #92ABAF;
+    --whiteish: rgb(251, 248, 248);
+
 
     --robotCon: 'Roboto Condensed', sans-serif;
     --BUKO: 'Cinzel', serif;
@@ -14,55 +16,18 @@ html {
 
 
 main {
-    margin: 0 7rem;
-}
-
-.breadcrumbs{
-    padding-top: 6rem;
-    padding-left: 1rem;
-}
-
-section:first-of-type a {
-    text-decoration: none;
-}
-
-section:first-of-type a:hover { /* uuu klarer du at linjen går til en pil?*/
-    text-decoration: underline;
+    margin: 0;
 }
 
 
-
-
-
-
-section h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: rgb(125, 125, 125);
-}
-
-section:nth-child(2) {
-padding: 3rem 0;
-}
-
-
-
-
-
-figure img { /* bildet i seg selv*/
-
-    height: 45vw;
+figure img, figure { 
+    height: 100%;
     display: inline-block;
     object-fit: cover;
     width: 100%;
+    margin: 0;
 }
 
-figure {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-}
 
 .showPost > div > a {
     text-decoration: none;
@@ -74,6 +39,7 @@ figure {
     text-transform: uppercase;
     transition: 0.3s ease;
     letter-spacing: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .showPost > div > a:hover {
@@ -91,37 +57,40 @@ figure {
 
 .showPost > div > p {
     max-width: 500px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
-    font-family: var(--robotCon);
+    font-family: var(--FiraS);
+    padding: 0;
 }
 
 
 
 .showPost { 
-    box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
-    margin: 0 auto;
+    height: 450px;
+    width: 90%;
+    padding: 1rem;
     display: flex;
-    flex-direction: row;
     flex: 1 1 0px;
-    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: flex-start;
     padding: 2rem;
     color: white;
-    background-color: rgb(118, 88, 88);
-    margin-bottom: 1rem;
-    gap: 2rem;
-    
+    background-color: rgb(167, 138, 126);
 }
 
 .showPost > div {
-    width: 80%;
+    width: 100%;
+    height: 100%;
 }
+
+
 
 .showPost:nth-child(even) {
     flex-direction: row-reverse;
-    background-color: var(--lys-rosa);
+    background-color: #ede3deaf;
     color: black;
     text-align: right;
 }
@@ -130,15 +99,21 @@ figure {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 .showPost:nth-child(even) > div:first-of-type {
     align-items: flex-end;
 }
 
+.showPost:nth-child(even) > div > .h2title {
+    color: black;
+}
+
+
 .showPost:nth-child(even) > div > a {
-    color: rgb(93, 69, 69);
+    color: black;
     border: solid 1px rgb(118, 88, 88);
     box-sizing: border-box;
 }
@@ -150,48 +125,55 @@ figure {
 }
 
 
-
-
-
-.showPost > div > h2 {
-    font-size: 2rem;
-    font-family: var(--BUKO);
+.h2title {
+    font-weight: 800;
+    font-size: 3.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    max-width: 100%;
+padding: 0;
 }
+
+
 
 
 .showPosts { /* hele siden*/
     width: 100%;
     height: max-content;
-    margin-bottom: 2rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
 
-@media (max-width: 900px) {
- 
+@media (max-width: 800px) {
+
     main {
         margin: 0 1rem;
     }
-}
-
-@media (max-width: 720px) {
     .showPost {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 2rem 1rem;
+        height: fit-content;
+    }
+
+    .h2title {
+        font-size: 3rem;
+    }
+
+    .showPost > div > figure {
+        height: 400px;
+    } 
+
+
+    .showPost:nth-child(2), .showPost:nth-child(4) {
+        flex-direction: column-reverse;
     }
 
 
     .showPost > div {
-        width: 100%;
-    }
-    .showPost:nth-child(2), .showPost:nth-child(4) {
-        flex-direction: column;
-    }
-
-    section:first-of-type {
-        padding-top: 0rem;
+        gap: 1rem;
     }
 
 
@@ -207,7 +189,7 @@ figure {
 
 .singlePost {
     display: flex;
-    height: 40vw;
+    height: 30vw;
     align-items: center;
     justify-content: center;
 }
@@ -230,12 +212,12 @@ figure {
 @media (max-width: 900px) {
     .singlePost {
         flex-direction: column-reverse;
-        height: 500px;
+        height: fit-content;
         justify-content: flex-start;
     }
 
     .showOnePost {
-        padding-top: 30vw;
+        padding-top: 3rem;
         padding-bottom: 1rem;
     }
 
@@ -252,4 +234,14 @@ figure {
     }
 
 
+}
+
+
+.underheronewspost {
+    height: 0;
+}
+
+.heroimgnewspost {
+    height: 40vh;
+    object-position: top;
 }

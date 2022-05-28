@@ -1,6 +1,36 @@
 console.log("heia, dette er nå js for contact");
 
 
+const imgs = document.querySelectorAll(".playforyou img");
+console.log(imgs);
+
+
+
+imgs.forEach(element => {
+
+    element.addEventListener("click", function() {
+
+        if (element.className == "") {
+        element.className = "open";
+        document.querySelector("body").style.backgroundColor = "grey";
+    
+
+    }
+
+    else {
+            element.classList = "";
+            document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+            element.style.cursor = "pointer";
+    }
+    });
+});
+
+
+
+
+
+
+
 
 //Form validation
 
