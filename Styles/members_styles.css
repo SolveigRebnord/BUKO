@@ -29,7 +29,9 @@ a {
     color: black;
 }
 
-
+p, h2 {
+    margin: 0;
+}
 
 
 .cvdiv {

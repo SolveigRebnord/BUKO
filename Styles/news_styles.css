@@ -16,16 +16,22 @@ html {
     --corGar: 'Cormorant Garamond', serif;
     --playDis: 'Playful Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
-
 }
-
-
 
 
 main {
     margin: 0;
 }
 
+.smallerheaderh1 {
+
+    margin: 3rem auto;
+    width: 82%;
+    padding: 2rem 2rem 2rem 0;
+    font-family: var(--fatA);
+    font-size: 4rem;
+    text-transform: lowercase;
+}
 
 figure img, figure { 
     height: 100%;
@@ -62,7 +68,7 @@ figure img, figure {
 
 
 
-.showPost > div > p {
+.showPost > div > div > p {
     max-width: 500px;
     font-size: 1rem;
     font-weight: 300;
@@ -74,7 +80,7 @@ figure img, figure {
 
 .showPost { 
     height: 450px;
-    width: 90%;
+    width: 80%;
     padding: 1rem;
     display: flex;
     flex: 1 1 0px;
@@ -150,7 +156,7 @@ padding: 0;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 

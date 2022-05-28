@@ -20,14 +20,18 @@ html {
 }
 
 
-
 main {
     margin: 0 4rem;
 }
 
 body {
     margin: 0;
-    background-color: rgb(251, 248, 248);
+    background-color: var(--whiteish);
+}
+
+
+* {
+    font-family: var(--FiraS);
 }
 
 .heroimg {
@@ -41,59 +45,22 @@ body {
 .underhero {
     height: 15vh;
     text-align: center;
-    background-color: rgb(251, 248, 248);
-    margin-bottom: 5rem;
-
+    background-color: var(--whiteish);
+    padding: 1rem 0;
 }
 
 
-h1, h2 {
-
+h1, h2, h3 {
     font-size: 2.5rem;
     font-weight: 100;
-    color: black;
-    word-spacing: 5px;
     letter-spacing: 1px;
-    padding-top: 2rem;
+    padding: 0;
     margin: 0;
-    font-family: 'Cormorant Garamond', serif;
 }
-
-h2 {
-    font-size: 3.5rem;
-    max-width: 400px;
-    margin-bottom:  1rem;
-}
-
 
 
 .underlined {
     text-decoration: underline;
-}
-
-.breadcrumbs a {
-    color: black;
-}
-
-
-.loadinggif > img {
-   max-width: 50px;
-   background-color: var(--whiteish);
-
-}
-
-.loadinggif {
-    font-family: var(--FiraS);
-    margin: 2rem auto 0 auto;
-    height: 200px;
-    text-align: center;
-}
-
-
-body {
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 
@@ -101,63 +68,82 @@ a {
     color: black;
 }
 
+
+.loadinggif > img {
+   max-width: 50px;
+}
+
+.loadinggif {
+    font-family: var(--FiraS);
+    margin: 2rem auto 0 auto;
+    height: 200px;
+    text-align: center;
+    background-color: var(--whiteish);
+}
+
+
+
+.smallerheader {
+    height: 50vh;
+}
+
+
+
+
+
+
 #menu  {
     display: none;
 }
 
 /*pen li*/
-
 header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li, .wholePortfolio > div > div > ul > li {
     list-style: none;
 }
 
+
 /*bortover liste*/
-header > nav > ul, footer > div > ul, .undermenu > div > ul{
+header > nav > ul, footer > div > ul, .undermenu > div > ul, .list-horisontal {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     padding: 0;
+    margin: 0;
 }
 
-.list-horisontal {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
-}
+/* Her på ting som går på header må jeg velge elementene inn i CSSen, istedenfor å måtte gå gjennom alle html sider for å endre om en ednringer skjer i klasse*/
 
 /*pen a*/
-
 header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu > div > ul > li > a, footer > div > ul > li > div > a, .lastnav a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
-    color: var(--whiteish);
     letter-spacing: 1px;
 }
 
-/*nedover liste*/
 
-.overlay ul, footer > div > ul {
+/*nedover liste*/
+.overlay ul, footer > div > ul, .list-vertical {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 0;
+    margin: 0;
 }
 
 
 /* button */ 
-
-.pinkgrid div:nth-child(2) > button, .pinkgridreverse div:nth-child(2) > button, .formbutton {
-    background-color: #CF9B7F;
+.buttonstyle {
+    background-color: var(--greyLightBrown);
     border: none;
-    width: 140px;
-    height: 40px;
-    color: white;
-    font-family: var(--FiraS);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    color: black;
+    text-transform: uppercase;
+    font-family: var(--barCon);
     font-size: 1rem;
     box-shadow: 1px 1px 12px 6px rgb(255, 253, 253) ;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 
@@ -182,6 +168,8 @@ header {
     z-index: 100;
 }
 
+
+
 #logo > a > img {
     height: 80px;
 }
@@ -189,7 +177,6 @@ header {
 
 
 header > nav > ul {
-    margin: 0;
     gap: 0;
     align-items: center;
 }
@@ -201,6 +188,11 @@ header > nav > ul > li {
     padding: 0 1.1rem;
     font-size: 1.1rem;
 }
+
+header > nav > ul > li > a {
+    color: white;
+}
+
 
 header > nav > ul > li:nth-child(5) {
     border: none;
@@ -218,17 +210,9 @@ header > nav > ul > li:last-of-type img {
 }
 
 
-
-
 header > nav > div {
-padding-right: 2rem;
+    padding-right: 2rem;
 }
-
-header > nav > img {
-    max-width: 30px;
-    display: inline;
-}
-
 
 .search {
     display: none;
@@ -242,7 +226,6 @@ div#menu > img {
 
 
 @media (max-width: 900px) {
-
 
     header {
         display: grid;
@@ -262,7 +245,6 @@ div#menu > img {
         grid-area: nav;
     }
     
-
     #logo img {
         max-width: 150px;
     }
@@ -299,26 +281,20 @@ div#menu > img {
 
 @media (max-width: 750px) {
 
- 
-
     .search {
         padding: 0;
-
     }
   
     header {
         display: grid;
         grid-template-areas:
         'menu logo search';
-        padding: 2rem 2rem;
+        padding: 2rem;
     }
-
-
 
     #logo > a > img {
         height: 40px;
     }
-
    
     header > nav {
         display: none;
@@ -330,20 +306,10 @@ div#menu > img {
         cursor: pointer;
     }
 
-    div#menu a {
-        padding: 1rem;
-        overflow: hidden;
-    }
-
-  
-
-
-    
-
     .overlay {
         visibility:hidden;
         transition: visibility 0.6s, opacity 0.3s; 
-        opacity:0;
+        opacity: 0;
         position: absolute;
         top: 100%;
         left: 0%;
@@ -354,28 +320,17 @@ div#menu > img {
         box-sizing: border-box;
     }
 
-    
-
-    .overlay > ul > li > a {
-        color: black;
-        font-weight: 300;
-    }
-
     .overlay ul {
         gap: 2rem;
     }
-
- 
-
-
-    
-
 }
+
+
 
 @media (min-width: 750px) {
     div.overlay {
         display: none;
-}
+    }
 }
 
 
@@ -387,7 +342,7 @@ div#menu > img {
     }
 
     .underhero {
-        height: 30vh;
+        height: 3rem;
         background-color: transparent;
         position: relative;
     }
@@ -397,7 +352,7 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -170%;
+        top: -700%;
         color: white;
     }
 }
@@ -405,83 +360,39 @@ div#menu > img {
 
 
 
-
-/* UNDERTITTEL ----------------------------------------------------------- */
-
-
-section > p, section > h1 {
-    display: inline;
-}
-
-.title {
-    height: fit-content;
-    margin-top: 0.5rem;
-    display: flex;
-    flex: 1 1 0px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem 1rem; 
-    margin-bottom: 4rem;
-    border-top: 1px solid var(--blue-green);
-    border-bottom: 1px solid var(--blue-green);
-}
-
-.forthegrid {
-    width: 120px;
-}
-
-.title h1 {
-    padding: 0.5rem 0;
-    font-family: var(--Nanum);
-    text-transform: uppercase;
-    color: var(--dark-orange);
-    font-weight: 600;
-    font-size: 3rem;
-    letter-spacing: 1px
-}
-
-
-
-
-
-@media (max-width: 700px) {
-
-    .forthegrid {
-        display: none;
+@media (max-width: 900px) {
+    .smallerheader {
+        object-position: top;
     }
 
-    .title {
-        display: block;
-        text-align: center;
+    header > nav > ul > li > a {
+color: black;
     }
 }
-
+/* FOOTER --------------------------------------------------------------*/
 
 
 
 .lastnav {
-
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 3rem;
-flex-direction: row;
-margin: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    margin: 5rem 0;
 }
-
 
 .lastnav a {
     cursor: pointer;
-    color: black;
-    padding: 0.6rem 2rem;
-    width: 40px;
-    text-align: center;
-    border: solid black 1px;
-    border-radius: 5px;
 }
 
+.lastnav a > img {
+    width: 13px;
+}
 
+.lastnav a:first-of-type > img {
+    rotate: -90deg;
+}
 
 
 
@@ -489,7 +400,6 @@ margin: 5rem 0;
 
 footer {
     background-color: var(--greyLightBrown);
-    color: black;
     padding: 4rem 8vw;
 }
 
@@ -521,28 +431,21 @@ footer {
     gap: 1.2rem;
 }
 
-.footerleft > ul > li > a {
-    font-family: var(--FiraS);
-    color: black;
-    font-weight: 300;
-}
 
 .footerleft ul > li > div > a {
     display: inline;
-    color: black;
     font-size: 0.9rem;
     text-transform: initial;
     padding-left: 2rem;
 }
 
 .footerleft > ul > li:last-child > div > a:first-of-type {
-    padding-left: 2.5rem;
+    padding-left: 2.3rem;
 }
 
 .footerleft > ul > li > div {
     display: inline-block;
 }
-
 
 
 
@@ -565,7 +468,6 @@ footer {
 
 .footerright > div:first-of-type {
     display: flex;
-    text-transform: lowercase;
     align-items: flex-end;
     flex-direction: column;
     gap: 1rem;
@@ -575,15 +477,16 @@ footer {
     font-family: var(--fatA);
     font-size: 1.5rem;
     letter-spacing: 0.5px;
+    text-transform: lowercase;
 }
 
-    footer > div > div:first-of-type input {
-        width: 350px;
-        height: 35px;
-        display: inline;
-        border-radius: 3px;
-        border: none;
-    }
+footer > div > div:first-of-type input {
+    width: 350px;
+    height: 35px;
+    display: inline;
+    border-radius: 3px;
+    border: none;
+}
     
     
 input[type=emailnewsletter] {
@@ -594,17 +497,16 @@ input[type=emailnewsletter] {
 }
 
     
-    footer > div > div:first-of-type button {
-        border: none;
-        border-radius: 3px;
-        color: white;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        background-color: #92ABAF;
-        padding: 0.6rem;
-    }
-    
+footer > div > div:first-of-type button {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    background-color: #92ABAF;
+    padding: 0.6rem;
+}
     
 
 .copyright p {
@@ -623,9 +525,6 @@ input[type=emailnewsletter] {
     .footerleft ul > li > div {
         display: none;
     }
-
-
-
 }
 
 @media (max-width: 650px) {
@@ -641,7 +540,7 @@ input[type=emailnewsletter] {
         padding: 2rem;
     }
 
-    footer > div > ul {
+    .footerleft > ul {
         flex-direction: row;
         gap: 2rem;
     }
@@ -652,15 +551,13 @@ input[type=emailnewsletter] {
 
     footer > div > div:first-of-type {
         text-align: center;
-
     }
 }
 
 @media (max-width: 500px) {
-    footer > div > ul {
+    .footerleft  > ul {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
     }
 
     footer > div > div:first-of-type input {

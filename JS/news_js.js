@@ -62,8 +62,10 @@ function listPost (array) {
             <div class="showPost">
                       <div>
                       <h2 class="h2title">${post.title.rendered}</h2>
-                        <p>${formattedDate}</p>
-                        ${post.excerpt.rendered}
+                        <div> 
+                          <p>${formattedDate}</p>
+                          ${post.excerpt.rendered}
+                        </div>
                         <a href="newpost.html?id=${post.id}">Read more</a>
                         ${theLink}
                       </div>

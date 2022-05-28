@@ -1,68 +1,12 @@
+console.log("his is the about site");
 
-console.log("hello from the about side");
-
-const burgerMenu = document.getElementById("menu");
-const overlay = document.querySelector(".overlay");
-
-burgerMenu.addEventListener("click", function() {
-    if (overlay.style.display === "none") {
-      overlay.style.transition = "display 2s ease-in"
-        overlay.style.display = "inline-block";
-        
-        
-    } else {
-      overlay.style.display = "none";
-    }
-});
-
-//-------------------------------------------------------------
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-
-  var mediaQuery = window.matchMedia("(max-width: 750px)");
-
-
-function myFunction(m) {
-  if (m.matches) { // If media query matches
-
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.querySelector("header > div > a > img").style.height = "50px";
-        document.querySelector("header").style.padding = "1rem 2rem";
-      
-
-      } 
-    
-  }
-
-  else {
-
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      document.querySelector("header > div > a > img").style.height = "30px";
-      document.querySelector("header").style.padding = "1rem 2rem 1rem 2rem";
-    
-
-    } 
-    else {
-      document.querySelector("header > div > a > img").style.height = "80px";
-      document.querySelector("header").style.padding = "2rem";
-    
-    }
-  }
-}
-
-mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
-myFunction(mediaQuery) // Call listener function at run time
-
-}
-//-------------------------------------------------------------------
 
 const story = document.querySelector("section > section.ourstory > h2");
 const conductor = document.querySelector("section > section.conductor > h2");
 const board = document.querySelector("section > section.board > h2");
 
-
+const navUl = document.querySelector(".undermenu");
+const active = document.querySelector(".active");
 
 function isInViewport (item) {
     const str = item.getBoundingClientRect();
@@ -77,13 +21,10 @@ function isInViewport (item) {
 
 
 
-
-
-
 document.addEventListener('scroll', function () {
-    let storyTitle = document.querySelector("nav > div > ul > li:nth-child(1)");
-    let conductorTitle = document.querySelector("nav > div > ul > li:nth-child(2)");
-    let boardTitle = document.querySelector("nav > div > ul > li:nth-child(3)");
+    let storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
+    let conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
+    let boardTitle = document.querySelector(".undermenu > div > ul > li:nth-child(3)");
 
     const isStory = isInViewport(story) ?
     storyTitle.classList.add("active") :
@@ -101,7 +42,7 @@ document.addEventListener('scroll', function () {
     passive: true
 });
 
-
+/*
 const navUl = document.querySelector(".undermenu");
 const active = document.querySelector(".active");
 
@@ -129,3 +70,4 @@ else { // If media query matches
 mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
 myFunction(mediaQuery) // Call listener function at run time
 
+*/

@@ -65,7 +65,7 @@ function listData (array) {
     <h2>${item.title.rendered}</h2>
     ${item.excerpt.rendered}
     <div class="links">
-    <a href="newpost.html?id=${item.id}">Read more</a>
+    <a class="buttonstyle" href="newpost.html?id=${item.id}">Read more</a>
       ${theLink}
     </div>
     </div>`
