@@ -73,10 +73,14 @@ function listMusic (data) {
         let content = 
  
         `<h3>Listen</h3>
-        <p>${item.title.rendered}</p>
-        <audio controls><source src="${item.source_url}"></audio>
-        <p>${item.title.rendered}</p>
-         <audio controls><source src="${item.source_url}"></audio>
+        <div>
+            <p>${item.title.rendered}</p>
+            <audio controls><source src="${item.source_url}"></audio>
+        </div>
+        <div>
+            <p>${item.title.rendered}</p>
+            <audio controls><source src="${item.source_url}"></audio>
+         </div>
        `
      
          showMusic.innerHTML = content;
@@ -88,9 +92,11 @@ function listMusic (data) {
         let content = 
  
         `<h3>Watch</h3>
-        <p>${item.title.rendered}</p>
-        <video class="videoFormat" width="100%" height="fit-content" poster="https://www.sunroad.no/exam/wp-content/uploads/2022/05/larisa-birta-slbOcNlWNHA-unsplash-2-scaled.jpg" controls>
+        <div>
+        <p>- ${item.title.rendered} -</p>
+        <video class="videoFormat" width="90%" height="fit-content" poster="https://www.sunroad.no/exam/wp-content/uploads/2022/05/larisa-birta-slbOcNlWNHA-unsplash-2-scaled.jpg" controls>
          <source src="${item.source_url}"></video>
+        </div>
 
        `
      

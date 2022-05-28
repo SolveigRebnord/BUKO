@@ -23,14 +23,6 @@ main {
     margin: 0;
 }
 
-.smallerheaderh1 {
-    margin: 3rem auto;
-    width: 82%;
-    padding: 2rem 2rem 2rem 0;
-    font-family: var(--fatA);
-    font-size: 4rem;
-    text-transform: lowercase;
-}
 
 figure img, figure { 
     height: 100%;

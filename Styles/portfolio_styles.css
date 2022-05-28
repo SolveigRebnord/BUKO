@@ -15,7 +15,7 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
     --fatA: 'Abril Fatface', cursive;
     --corGar: 'Cormorant Garamond', serif;
-    --playDis: 'Playful Display', cursive;
+    --playDis: 'Playfair Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
 }
 
@@ -332,7 +332,7 @@ a {
 .showEvent {
     box-sizing: border-box;
     width: 90%;
-    margin: 0 auto;
+    margin: 5rem auto;
     gap: 3rem;
     height: 500px;
     display: grid;
@@ -356,20 +356,21 @@ a {
 .event_content p:first-of-type, .event_content > h1 {
     text-transform: uppercase;
     font-size: 1.4rem;
-    font-weight: 400;
     font-family: var(--robotCon);
     letter-spacing: 1px;
 }
 
 .event_content > h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 400;
     text-transform: inherit;
-    font-family: var(--Nanum);
+    font-family: var(--playDis);
     padding: 1rem 0 0.5rem 0;
 }
 
 .event_content > p  {
     font-size: 1rem;
+    font-weight: 300;
 }
 
 .event_content > p:nth-of-type(3) {
@@ -380,7 +381,7 @@ font-family: var(--robotCon);
 
 
 .showMore {
-    grid-auto-flow:column;
+    grid-auto-flow: column;
     display: grid;
     justify-items: center;
     grid-template-areas:
@@ -391,17 +392,27 @@ font-family: var(--robotCon);
     margin: 4rem auto 0 auto;
 }
 
-.showMore > div > h3 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    
+.portfolioh2 {
+    width: 60%;
+    padding-top: 2rem;
+    text-align: center;
+    border-top: 0.5px solid black;
+    margin: 0 auto;
+    font-family: var(--fatA);
+    font-size: 3rem;
 }
 
-.showPlaylist {
+.showMore > div > h3 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.showPlaylist, .showMusic {
     grid-area: playlist;
     flex-direction: column;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     height: 300px;
     padding: 1rem;
     text-align: center;
@@ -411,26 +422,25 @@ font-family: var(--robotCon);
 
 .showMusic {
     grid-area: music;
-    display: flex;
-    gap: 2rem;
-    padding: 1rem;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 500px;
-    justify-content: start;
 }
 
 
-.showMusic > audio {
+.showMusic > div > audio {
     width: 450px;
+    padding-top: 1rem;
 }
 
 .showVideo {
     grid-area: video;
     text-align: center;
 }
+
+.showVideo > div {
+    margin: 0 auto;
+}
+
+
 
 @media (max-width: 1200px) {
     
@@ -442,12 +452,10 @@ font-family: var(--robotCon);
 
     .showPlaylist, .showMusic {
         width: 100%;
-    }
-
-    .showMusic > audio {
-        width: 80%;
+        padding: 0;
     }
 }
+
 
 @media (max-width: 1000px) {
     .showEvent {
@@ -460,8 +468,23 @@ font-family: var(--robotCon);
     }
 }
 
+
 @media (max-width: 600px) {
     main {
         margin: 0;
+    }
+
+    .event_content > h1 {
+        font-size: 2rem;
+    }
+
+    .showPlaylist, .showMusic {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+
+    .showMusic > div > audio {
+        width: 300px;
     }
 }
