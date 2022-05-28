@@ -152,7 +152,7 @@ padding: 0;
 
 .showPosts { /* hele siden*/
     width: 100%;
-    height: max-content;
+    height: fit-content;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -165,6 +165,7 @@ padding: 0;
     main {
         margin: 0 1rem;
     }
+
     .showPost {
         flex-direction: column-reverse;
         padding: 2rem 1rem;
