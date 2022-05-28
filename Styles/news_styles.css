@@ -163,7 +163,7 @@ padding: 0;
 @media (max-width: 800px) {
 
     .showPosts {
-        height: auto;
+        height: 100%;
     }
 
   
