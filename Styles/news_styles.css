@@ -163,8 +163,9 @@ padding: 0;
 @media (max-width: 800px) {
 
     .showPosts {
-        height: fit-content;
+        height: auto;
     }
+
   
     .smallerheaderh1 {
         font-size: 3rem;
