@@ -18,6 +18,19 @@ burgerMenu.addEventListener("click", function() {
     }
 });
 
+const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
+storyTitle.addEventListener("click", function() {
+    let scrollTo = document.querySelector("section.ourstory > h2");
+    scrollTo.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+});
+const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
+conductorTitle.addEventListener("click", function() {
+    let scrollTo = document.querySelector("section.conductor");
+    scrollTo.scrollIntoView({ block: 'start', inline: "nearest",  behavior: 'smooth' });
+});
+const boardTitle = document.querySelector(".undermenu > div > ul > li:nth-child(3)");
+const futureTitle = document.querySelector(".undermenu > div > ul > li:nth-child(4)");
+
 
 
 //------------------------------------------------------------------
