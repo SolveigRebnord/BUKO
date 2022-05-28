@@ -140,7 +140,7 @@ figure img, figure {
 
 .h2title {
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'Cormorant Garamond', serif;
     color: white;
     max-width: 100%;
@@ -162,10 +162,6 @@ padding: 0;
 
 @media (max-width: 800px) {
 
-    .showPosts {
-        height: 100%;
-    }
-
   
     .smallerheaderh1 {
         font-size: 3rem;
@@ -174,11 +170,11 @@ padding: 0;
     .showPost {
         flex-direction: column-reverse;
         padding: 1rem;
-        height: fit-content;
+        min-height: 780px;
     }
 
     .h2title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .showPost > div > figure {
