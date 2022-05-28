@@ -85,6 +85,8 @@ a {
 
 .smallerheader {
     height: 50vh;
+    object-position: bottom;
+    filter: brightness(50%);
 }
 
 
@@ -227,6 +229,10 @@ div#menu > img {
 
 @media (max-width: 900px) {
 
+    .smallerheader {
+        height: 25vh;
+    }
+
     header {
         display: grid;
         grid-template-areas:
@@ -291,6 +297,7 @@ div#menu > img {
         'menu logo search';
         padding: 2rem;
     }
+
 
     #logo > a > img {
         height: 40px;
@@ -360,6 +367,7 @@ div#menu > img {
         color: white;
     }
 }
+
 
 
 
