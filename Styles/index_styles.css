@@ -6,13 +6,14 @@ html {
     --blue-green: #92ABAF;
 
     --robotCon: 'Roboto Condensed', sans-serif;
-    --BUKO: 'Cinzel', serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
     --Nanum: 'Nanum Myeongjo', serif;
-    --whiteish: rgb(251, 248, 248);
-    
-}
+    --fatA: 'Abril Fatface', cursive;
+    --corGar: 'Cormorant Garamond', serif;
+    --playDis: 'Playfair Display', cursive;
+    --barCon: 'Barlow Condensed', sans-serif;
 
+}
 
 
 * {
@@ -24,11 +25,33 @@ main {
 }
 
 
+.checkFont p:nth-child(1) {
+    font-family: var(--fatA);
+    font-size: 2rem;
+}
+
+.checkFont p:nth-child(2) {
+    font-family: var(--corGar);
+    font-size: 2rem;
+}
+
+.checkFont p:nth-child(3) {
+    font-family: var(--playDis);
+    font-size: 2rem;
+}
+
+.checkFont p:nth-child(4) {
+    font-family: var(--barCon);
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+
 
 
 .herosection {
     margin-top: 10rem;
-    height: 90vh;
+    height: fit-content;
     text-align: center;
     color: black;
 }
@@ -128,7 +151,7 @@ hr {
 
 .karusell > div:first-of-type > h1 {
    font-size: 3rem;
-   font-family: 'Playfair Display', serif;
+   font-family: var(--playDis);
    font-weight: 600;
 }
 
@@ -136,7 +159,7 @@ hr {
 font-size: 1.1rem;
 color: black;
 font-weight: 300;
-font-family: var(--FiraS);
+font-family: var(--);
 
 }
 
@@ -186,7 +209,7 @@ width: fit-content;
     font-size: 0.9rem;
     padding: 0;
     word-spacing: 0;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--barCon);
 }
 
 
@@ -249,7 +272,7 @@ width: fit-content;
     text-decoration: none;
     color: white;
     background-color: rgb(118, 88, 88);
-    padding: 0.5rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 3px;
     width: fit-content;
     font-size: 0.9rem;
@@ -260,7 +283,7 @@ width: fit-content;
     background-color: transparent;
     color: black;
     text-decoration: underline;
-    padding-right: 0;
+    padding: 1rem 0 0 0;
 }
 
 
@@ -272,9 +295,11 @@ width: fit-content;
 }
 
 .active > h2 {
+    text-transform: inherit;
     grid-area: h2;
-    font-size: 1.5rem;
-    font-family: var(--FiraS);
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: var(--playDis);
 
 }
 
@@ -402,11 +427,12 @@ width: fit-content;
 
     .links > a {
         display: inline-block;
+        font-size: 1.1rem;
     }
 
   .links > a:first-of-type {
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
   }
 
 
@@ -443,6 +469,4 @@ top: 0;
         flex-direction: column;
     }
 }
-
-
 

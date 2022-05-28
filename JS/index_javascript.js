@@ -3,17 +3,6 @@
 
 
 
-const scrollDown = document.getElementById("scrollDown");
-const scrollTo = document.querySelector(".toDiv");
-
-scrollDown.addEventListener("click", scrolling);
-
-function scrolling() {
-  const scrollTo = document.querySelector(".toDiv");
-scrollTo.scrollIntoView({behaviour: "smooth"});
-}
-
-
 //--------------------------------------------------------------------
 
 var myArray = {};
