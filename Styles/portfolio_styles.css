@@ -271,6 +271,7 @@ cursor: default;
     .secondchoice > ul > li > input[type="checkbox"] {
         width: 25px;
         height: 25px;
+        border-radius: 0;
     }
 
     .showPortfolio {
