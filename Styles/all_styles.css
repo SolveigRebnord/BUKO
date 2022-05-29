@@ -54,10 +54,19 @@ body {
 
 .activesite {
     position: relative;
-    border-bottom: 1px solid white;
 }
 
+.activesite::after {
+    color: white;
+    font-size: 20px;
+    content: " <=";
+}
 
+.activesite::before {
+    color: white;
+    font-size: 20px;
+    content: "=> ";
+}
 
 .underhero {
     height: 15vh;
@@ -256,6 +265,9 @@ header > nav > ul > li > a {
     color: white;
 }
 
+header > nav > ul > li > a:hover {
+    border-bottom: 1px solid white;
+}
 
 header > nav > ul > li:nth-child(5) {
     border: none;
@@ -471,10 +483,18 @@ div#menu > img {
     gap: 3rem;
     flex-direction: row;
     margin: 5rem 0;
+  
 }
 
 .lastnav a {
     cursor: pointer;
+    border: solid 0.5px var(--whiteish);
+    box-sizing: border-box;
+}
+
+.lastnav a:hover {
+border: solid 0.5px var(--darkBrown);
+
 }
 
 .lastnav a > img {
@@ -522,6 +542,10 @@ footer {
     gap: 1.2rem;
 }
 
+.footerleft > ul > li > a:hover {
+    border-bottom:  1px solid black;
+}
+
 
 .footerleft ul > li > div > a {
     display: inline;
@@ -529,6 +553,12 @@ footer {
     text-transform: initial;
     padding-left: 2rem;
 }
+
+.footerleft ul > li > div > a:hover {
+    font-size: 1rem;
+}
+
+
 
 .footerleft > ul > li:last-child > div > a:first-of-type {
     padding-left: 2.3rem;
@@ -580,8 +610,8 @@ footer > div > div:first-of-type input {
 }
     
     
-input[type=emailnewsletter] {
-    padding-left: 0.5rem;
+input[type=email] {
+    padding-left: 1rem;
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -597,6 +627,7 @@ footer > div > div:first-of-type button {
     font-size: 0.8rem;
     background-color: #92ABAF;
     padding: 0.6rem;
+    cursor: pointer;
 }
     
 

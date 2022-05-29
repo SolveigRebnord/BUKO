@@ -86,6 +86,11 @@ a {
     text-align: center;
 }
 
+.loadmore:hover {
+    background-color: var(--darkBrown);
+    color: white;
+}
+
 .message {
     cursor: initial;
 }
