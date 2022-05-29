@@ -64,9 +64,6 @@ listSinglePost = (data) => {
         data.sku = "Bergen/Oslo";
     }
 
-
-    
-
     
     let content = 
 
