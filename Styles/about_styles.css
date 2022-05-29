@@ -26,12 +26,15 @@ main {
 
 
 .margin {
-margin-top: -18rem;
+    margin-top: -18rem;
     text-align: right;
     margin-bottom: 13rem;
 }
 
 
+.smallerheader {
+    object-position: left;
+}
 
 
 
