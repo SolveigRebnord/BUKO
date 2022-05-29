@@ -28,6 +28,11 @@ main {
 }
 
 
+.smallerheader {
+    object-position: center;
+}
+
+
 
 
 h2 {
@@ -141,6 +146,10 @@ h2 {
 
     h2 {
         max-width: 80%;
+    }
+
+    .smallerheader {
+        transform: scaleX(-1);
     }
 }
 
