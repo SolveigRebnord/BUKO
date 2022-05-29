@@ -1,7 +1,7 @@
 console.log("hello from the news side");
 
 
-fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
+fetch("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
 .then(response => response.json())
 .then(data => {
     console.log(data);
@@ -22,12 +22,22 @@ function listPost (array) {
     for (let post of array) {
         
         if (post.content.rendered.includes("figure")) {
-            let indexNumber = post.content.rendered.indexOf("<figure")
-            console.log(indexNumber);
-            let lastIndexNumber = post.content.rendered.indexOf("</figure>")
-            console.log(lastIndexNumber);
-            let newString = post.content.rendered.slice(indexNumber, lastIndexNumber);
-            console.log(newString);
+
+            let indexNumber = post.content.rendered.indexOf("https")
+            //console.log(indexNumber);
+            let lastIndexNumber = post.content.rendered.indexOf('" alt=')
+            //console.log(lastIndexNumber);
+            let imgUrl = post.content.rendered.slice(indexNumber, lastIndexNumber);
+            //console.log(imgUrl);
+
+            let newIndex = post.content.rendered.indexOf('alt="');
+            //console.log(newIndex);
+            let lastIndex = post.content.rendered.indexOf('" class=');
+            let current = post.content.rendered.slice(newIndex, lastIndex);
+            //console.log(current);
+
+            let altText = current.slice(5);
+            //console.log(altText);
 
 
             // https://bobbyhadz.com/blog/javascript-get-date-without-time
@@ -61,27 +71,37 @@ function listPost (array) {
             list += `
             <div class="showPost">
                       <div>
-                      <h2 class="h2title">${post.title.rendered}</h2>
-                        <div> 
-                          <p>${formattedDate}</p>
-                          ${post.excerpt.rendered}
-                        </div>
+                        <h2 class="h2title">${post.title.rendered}</h2>
+                          <div> 
+                            <p>${formattedDate}</p>
+                            ${post.excerpt.rendered}
+                          </div>
                         <a href="newpost.html?id=${post.id}">Read more</a>
                         ${theLink}
                       </div>
                       <div>
-                        ${newString}
+                        <img style="cursor: pointer" onclick="openImg(this)" src="${imgUrl}" alt="${altText}">
                       </div>
               </div>`
-
-            
+  
         
       }
     }
-
-    
 
     showPost.innerHTML = list;
 }
 
 
+
+    function openImg (element) {
+
+        if (element.className == "") {
+        element.className = "open";
+        document.querySelector("body").style.backgroundColor = "grey";
+    }
+
+    else {
+            element.classList = "";
+            document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+    }
+  }

@@ -290,6 +290,10 @@ hr {
     transform: rotate(-10deg) scaleX(-1);
 }
 
+.lastnav {
+    display: none;
+}
+
 
 
 @media (max-width: 1250px) {

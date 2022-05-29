@@ -1,7 +1,7 @@
-console.log("hello from the portfolio side")
+console.log("hello from the portfolio side");
 
 
-fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed")
+fetch("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed")
 .then(response => response.json())
 .then(data => {
     console.log(data);
@@ -28,12 +28,13 @@ const section = document.querySelector(".sectionPortfolio");
 
   function listPost (array) {
 
+  
    
     let list = "";
 
     for (let post of array) {
       
-
+      
   
             let priceBefore = post.prices.price;
             //console.log(priceBefore);
@@ -52,7 +53,7 @@ const section = document.querySelector(".sectionPortfolio");
             
             list += `<a href="event.html?id=${post.id}">
             <div class="showPortfolio">
-            <img src="${post.images[0].src}">
+            <img src="${post.images[0].src}" alt="${post.images[0].alt}">
             <h2>${post.name}</h2>
             <p class="details">${post.sku}</p>
             <p class="date">${intoDate}</p>
@@ -68,7 +69,7 @@ const section = document.querySelector(".sectionPortfolio");
            
                 list += `<a href="event.html?id=${post.id}">
                 <div class="showPortfolio">
-                <img src="${post.images[0].src}">
+                <img src="${post.images[0].src}" alt="${post.images[0].alt}">
                 <h2>${post.name}</h2>
                 <p class="details">${post.sku}</p>
                 <p class="date">${intoDate}</p>

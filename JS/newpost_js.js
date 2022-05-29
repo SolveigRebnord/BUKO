@@ -36,13 +36,22 @@ listSinglePost = (data) => {
          
  
     if (data.content.rendered.includes("figure")) {
-        let indexNumber = data.content.rendered.indexOf("<figure")
-        //console.log(indexNumber);
-        let lastIndexNumber = data.content.rendered.indexOf("</figure>")
-        //console.log(lastIndexNumber);
-        let newString = data.content.rendered.slice(indexNumber, lastIndexNumber);
-        //console.log(newString);
 
+    let indexNumber = data.content.rendered.indexOf("https")
+        
+            let lastIndexNumber = data.content.rendered.indexOf('" alt=')
+      
+            let imgUrl = data.content.rendered.slice(indexNumber, lastIndexNumber);
+         
+
+            let newIndex = data.content.rendered.indexOf('alt="');
+
+            let lastIndex = data.content.rendered.indexOf('" class=');
+            let current = data.content.rendered.slice(newIndex, lastIndex);
+          
+
+            let altText = current.slice(5);
+            //console.log(altText);
         function intoNumbers(num) {
             return num.toString().padStart(2, '0');
           }
@@ -77,7 +86,7 @@ listSinglePost = (data) => {
         ${theLink}
       </div>
       <div>
-        ${newString}
+      <img src="${imgUrl}" alt="${altText}">
       </div>
     </section>`;
 

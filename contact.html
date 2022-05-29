@@ -41,7 +41,7 @@
  
 <header>
     <div id="logo">
-        <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
+        <a href="index.html"><img src="./img/white_logo_buko.svg" alt="White logo for BUKO"></a>
     </div>
 
     <div id="menu">
@@ -85,8 +85,7 @@
 
 <main>
 
-    <section class="breadcrumbs">
-    </section>
+    <div class="breadcrumbs"></div>
 
 <h1 class="smallerheaderh1 contacth1">Contact</h1>
 
@@ -140,15 +139,15 @@
     <form id="form">
 
      <div>
-        <label id="namelabel" for="name">Full name <p class="nameOK nameBAD"></p></label> 
+        <label id="namelabel">Full name</label><p class="nameOK nameBAD"></p>
         <input type="text" name="name" id="name">
      
       
-        <label for="email">Email <p class="emailOK emailBAD"></p></label>
+        <label>Email</label><p class="emailOK emailBAD"></p>
         <input type="email" name="email" id="email">
        
 
-            <label class="subject">Subject<input placeholder=" " list="subject" name="subject"  /> <p class="subjectOK subjectBAD"></p></label> 
+            <label class="subject">Subject<input placeholder=" " list="subject" name="subject"  /></label> <p class="subjectOK subjectBAD"></p>
            
             <datalist id="subject">
                     <option value="Booking and Arrangement"></option>
@@ -161,7 +160,7 @@
    
 
        <div>
-            <label for="textarea">What can we do for you?</label>
+            <label>What can we do for you?</label>
             <textarea id="textarea" placeholder=".."></textarea>
             <p class="textOK textBAD"></p>
             <button class="buttonstyle" type="submit">Send</button>
@@ -180,8 +179,8 @@
         <div>
             <h3>But, extra thank you to our sponsors</h3>
             <div class="supportimg">
-                <img src="Contact/img/UIB_logo.png" alt="Logo of UIB">
-                <img src="Contact/img/coop_logo.png" alt="Logo of COOP">
+                <img src="./img/UIB_logo.png" alt="Logo of UIB">
+                <img src="./img/coop_logo.png" alt="Logo of COOP">
             </div>
         </div>
 
@@ -229,10 +228,10 @@
 
     <div class="footerright">
         <div>
-            <label for="emailnewsletter">
+            <label>
                 Sign up to our newsletter
             </label>
-            <input type="emailnewsletter">
+            <input type="email">
             <button type="submit">Submit</button>
         </div>
         <div>
@@ -251,9 +250,8 @@
 
 
 
-
-
-</body>
 <script src="./JS/allscripst_script.js"></script>
 <script src="./JS/contact_script.js"></script>
+</body>
+
 </html>

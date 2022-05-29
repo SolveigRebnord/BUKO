@@ -90,26 +90,12 @@ h2 {
 
 .linktoform > img, .support > div > div > a > img {
     max-width: 15px;
-    rotate: 180deg;
+    transform: rotate(180deg);
 }
 
 .support > div > div > a > img {
-    rotate: 0deg;
+    transform: rotate(0deg);
 }
-
-
-
-.open {
-    position: fixed;
-    z-index: 2;
-    max-width: 80%;
-    max-height: 80%;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
-
 
 
 
@@ -149,6 +135,7 @@ h2 {
     }
 
     .smallerheader {
+        -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
     }
 }
@@ -200,6 +187,7 @@ form {
 form > div {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 form > div:nth-child(2) {
@@ -267,25 +255,25 @@ textarea {
 
 
 
-.nameBAD, .emailBAD, .subjectBAD, .nameOK, .emailOK, .textOK, .textBAD {
+.nameBAD, .emailBAD, .subjectBAD, .subjectOK .nameOK, .emailOK, .textOK, .textBAD {
     color: black;
     letter-spacing: 1px;
     font-size: 0.8rem;
     display: inline-block;
     position: absolute;
     right: 0%;
-    top: 35%;
+    top: 36%;
+    text-transform: uppercase;
+}
+
+.nameBAD, .nameOK {
+    top: 2%;
 }
 
 
 .subjectOK, .subjectBAD {
-    font-size: 0.8rem;
-    display: inline-block;
-    position: absolute;
     left: 0%;
-    top: 75%;
-    letter-spacing: 1px;
-    color: black;
+    top: 91%;
 }
 
 .textOK, .textBAD {

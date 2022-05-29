@@ -9,6 +9,26 @@ const future = document.querySelector("section > section.future > h2");
 const navUl = document.querySelector(".undermenu");
 const active = document.querySelector(".active");
 
+const imgs = document.querySelectorAll(".margin img");
+console.log(imgs);
+
+imgs.forEach(element => {
+
+    element.addEventListener("click", function() {
+
+        if (element.className == "") {
+        element.className = "open";
+        document.querySelector("body").style.backgroundColor = "grey";
+    
+    }
+
+    else {
+            element.classList = "";
+            document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+            element.style.cursor = "pointer";
+    }
+    });
+});
 
 
 
@@ -17,7 +37,7 @@ const active = document.querySelector(".active");
 
 var mediaQuery = window.matchMedia("(min-width: 751px)");
 window.addEventListener("scroll", () => {
-    scrolling();
+    scrolling(mediaQuery);
     scrollFunction();
 });
 
@@ -33,12 +53,8 @@ function isInViewport (item) {
 }
 
 
-function scrolling() {
-
-    var mediaQuery = window.matchMedia("(min-width: 750px)");
-    window.addEventListener("change", scrollBig);
-  
-  function scrollBig(m) {
+function scrolling(m) {
+ 
     if (m.matches) { // If media query matches
   
         document.addEventListener('scroll', function () {
@@ -70,36 +86,58 @@ function scrolling() {
     }
 }
 
-mediaQuery.addEventListener("change", scrollBig); //
-scrollBig(mediaQuery);
-}
 
+// Det burde fungere men den refersher før den rekker gjøre det..
 
 var mediaQuery700 = window.matchMedia("(max-width: 749px)");
 
-
+mediaQuery700.addEventListener("change", scrollTo(mediaQuery700));
 
 function scrollTo (m) {
+
+  const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
+  
+
+  const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
+
+  const conductorh2 = document.querySelector("section.conductor > h2");
+
+  const ourstoryh2 = document.querySelector("section.ourstory > h2");
+
+
   if (m.matches) {
 
-    const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
-    storyTitle.addEventListener("click", function() {
-    let element = document.querySelector("section.ourstory > h2");
-    element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-    });
+    const clickLI = document.querySelectorAll(".undermenu > div > ul > li");
+    console.log(clickLI);
+    
 
-    const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
-    conductorTitle.addEventListener("click", function() {
-    let scrollTo = document.querySelector("section.conductor");
-    scrollTo.scrollIntoView({ block: 'start', inline: "nearest",  behavior: 'smooth' });
-});
+    for (let [index, item] of clickLI.entries()) {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        scrollToSection(index);
+      })
+
+    }
+    }
   }
+
+
+
+function scrollToSection(number) {
+
+  if (number === 0) {
+    let header = document.querySelector("section.ourstory > h2");
+    header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
+    
+  }
+
+  if (number === 1) {
+    let header = document.querySelector("section.conductor > h2");
+    header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
+    
+  }
+
 }
-
-mediaQuery700.addEventListener("change", scrollTo);
-scrollTo(mediaQuery700);
-
-
 
 
 

@@ -1,9 +1,5 @@
 
-//----------------------------------------------------------------------
-
-
-
-//--------------------------------------------------------------------
+console.log("heia dette er index");
 
 var myArray = {};
 
@@ -39,15 +35,32 @@ function listData (array) {
   let theArray = "";
 
  
+
+
+ 
   for (let [index, item] of array.entries()) {
+    //console.log(item.content.rendered);
+
+    let newIndex = item.content.rendered.indexOf('alt="');
+    //console.log(newIndex);
+    let lastIndex = item.content.rendered.indexOf('" class=');
+    let current = item.content.rendered.slice(newIndex, lastIndex);
+    //console.log(current);
+
+    let altText = current.slice(5);
+    //console.log(altText);
 
      
-    let indexNumber = item.content.rendered.indexOf('"https')
+
+    let indexNumber = item.content.rendered.indexOf('"https');
     //console.log(indexNumber);
-    let lastIndexNumber = item.content.rendered.indexOf(' alt=')
+    let lastIndexNumber = item.content.rendered.indexOf(' alt=');
     //console.log(lastIndexNumber);
-    let newString = item.content.rendered.slice(indexNumber, lastIndexNumber);
-    //console.log(newString);
+    let imgUrl = item.content.rendered.slice(indexNumber, lastIndexNumber);
+    //console.log(imgUrl);
+
+   
+
 
 
     var theLink = "";
@@ -61,7 +74,7 @@ function listData (array) {
 
 
     theArray += `<div class="divs" onclick="currentSlide(${index+1})">
-        <img src=${newString}>
+        <img src=${imgUrl} alt="${altText}">
     <h2>${item.title.rendered}</h2>
     ${item.excerpt.rendered}
     <div class="links">
@@ -111,7 +124,7 @@ function disbleFunction(m) {
   if (m.matches) {
 
     for (let slide of slides) {
-      removeClick(slide);
+      slide.removeListener("onclick", currentSlide, false);
     }
   }
 }
@@ -152,11 +165,6 @@ disbleFunction(mediaQuery);
 };
   
 
-
-function removeClick(el) {
-  el.style.cursor = "inherit";
-  el.off('onclick'); // funker ikke!
-}
 
 
 //-----------------------------------------------------------------------

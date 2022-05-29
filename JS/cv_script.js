@@ -50,7 +50,7 @@ listSinglePost = (data) => {
         <div class="cvDetails">
             <div class="leftFlex">
                 <p>- ${data.categories[0].name}</p>
-                <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
+                <img onclick="openImg(this)" class="memberimgCV" src="${data.images[0].src}" alt="${data.images[0].alt}">
             </div>
             <div class="rightFlex">
                 <p>${data.sku}</p>
@@ -73,7 +73,7 @@ listSinglePost = (data) => {
         <div class="cvDetails">
             <div class="leftFlex">
                 <p>- ${data.categories[0].name}</p>
-                <img class="memberimgCV" src="${data.images[0].src}" alt=${data.images[0].alt}>
+                <img  onclick="openImg(this)"  class="memberimgCV" src="${data.images[0].src}" alt="${data.images[0].alt}">
             </div>
             <div class="rightFlex">
                 <p>${data.sku}</p>
@@ -90,3 +90,16 @@ listSinglePost = (data) => {
 
 
  
+ 
+function openImg (element) {
+
+    if (element.className == "memberimgCV") {
+    element.classList.replace("memberimgCV", "open") ;
+    document.querySelector("body").style.backgroundColor = "grey";
+    }
+
+    else {
+        element.classList = "memberimgCV";
+            document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+    }
+}

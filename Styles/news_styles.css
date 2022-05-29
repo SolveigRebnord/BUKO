@@ -24,7 +24,7 @@ main {
 }
 
 
-figure img, figure { 
+.showPost > div > img { 
     height: 100%;
     display: inline-block;
     object-fit: cover;

@@ -40,7 +40,7 @@
 
     <header>
         <div id="logo">
-            <a href="index.html"><img src="Index/img/buko_logo_withe.svg" alt="White logo for BUKO"></a>
+            <a href="index.html"><img src="./img/white_logo_buko.svg" alt="White logo for BUKO"></a>
         </div>
     
         <div id="menu">
@@ -59,6 +59,7 @@
             
             
         </nav>
+        
         <div class="search">
             <img src="https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-search-50.png" alt="">
         </div>
@@ -84,47 +85,49 @@
 
 <main>
 
+    <div class="breadcrumbs">
+        <p><a href="index.html">Home</a> / News</p>
+    </div> 
 
 
+    <h1 class="smallerheaderh1">Portfolio</h1>
 
-<h1 class="smallerheaderh1">Portfolio</h1>
-
-<section class="wholePortfolio">
+    <section class="wholePortfolio">
 
     <div>
             <div class="mainchoice">
                 <ul class="list-horisontal">
                     <li>
-                        <label for="portfolioevents">Show portfolio</label><input type="checkbox" name="portfolioevents" checked>
+                        <label>Show portfolio</label><input type="checkbox" name="portfolioevents" checked>
                     </li>
                     <li>
-                        <label for="media">Show media only</label><input type="checkbox" name="media">
+                        <label>Show media only</label><input type="checkbox" name="media">
                     </li>
                 </ul>
             </div>
 
             <div class="secondchoice">
                 <ul class="ul_portfolioevents list-horisontal">
-                    <li><input type="checkbox" name="concerts"><label for="concerts">Concerts</label></li>
-                    <li><input type="checkbox" name="tours"><label for="tours">Tours</label></li>
-                    <li><input type="checkbox" name="assembles"><label for="assembles">Assembles</label></li>
-                    <li><input type="checkbox" name="collaborations"><label for="collaborations">Collaborations</label></li>
+                    <li><input type="checkbox" name="concerts"><label>Concerts</label></li>
+                    <li><input type="checkbox" name="tours"><label>Tours</label></li>
+                    <li><input type="checkbox" name="assembles"><label>Assembles</label></li>
+                    <li><input type="checkbox" name="collaborations"><label>Collaborations</label></li>
                 </ul>
 
                     
                 <ul class="ul_years list-horisontal">
-                    <li><input type="checkbox" name="2018"><label for="2018">2018</label></li>
-                    <li><input type="checkbox" name="2019"><label for="2019">2019</label></li>
-                    <li><input type="checkbox" name="2020"><label for="2020">2020</label></li>
-                    <li><input type="checkbox" name="2021"><label for="2021">2021</label></li>
+                    <li><input type="checkbox" name="2018"><label>2018</label></li>
+                    <li><input type="checkbox" name="2019"><label>2019</label></li>
+                    <li><input type="checkbox" name="2020"><label>2020</label></li>
+                    <li><input type="checkbox" name="2021"><label>2021</label></li>
                 </ul>
 
 
 
                 <ul class="ul_media list-horisontal">
-                    <li><input type="checkbox" name="images"><label for="images">Images</label></li>
-                    <li><input type="checkbox" name="movies"><label for="movies">Movies</label></li>
-                    <li><input type="checkbox" name="soundtracks"><label for="soundtracks">Soundtracks</label></li>
+                    <li><input type="checkbox" name="images"><label>Images</label></li>
+                    <li><input type="checkbox" name="movies"><label>Movies</label></li>
+                    <li><input type="checkbox" name="soundtracks"><label>Soundtracks</label></li>
 
                 </ul>
             </div>
@@ -184,10 +187,10 @@
 
     <div class="footerright">
         <div>
-            <label for="emailnewsletter">
+            <label>
                 Sign up to our newsletter
             </label>
-            <input type="emailnewsletter">
+            <input type="email">
             <button type="submit">Submit</button>
         </div>
         <div>
@@ -203,10 +206,8 @@
     <p>Developed by <span class="underlined">Sunroad</span></p>
 </div>
 </footer>
-</body>
 
 <script src="./JS/allscripst_script.js"></script>
 <script src="./JS/portfolio_script.js"></script>
-
-
+</body>
 </html>

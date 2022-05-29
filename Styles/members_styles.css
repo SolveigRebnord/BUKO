@@ -19,6 +19,8 @@ html {
 }
 
 
+
+
 a {
     text-decoration: none;
 }
@@ -73,6 +75,7 @@ a {
     justify-content: space-evenly;
     margin-top: 3rem;
 }
+
 
 
 .loadmore, .message {
@@ -302,4 +305,15 @@ a {
         object-position: bottom;
     }
 
+}
+
+.open {
+    position: absolute;
+    z-index: 2;
+    width: 200%;
+    height: 300%;
+    top: 300%;
+    left: -500%;
+    transform: translate(0, 0);
+    -ms-transform: translate(0,0);
 }

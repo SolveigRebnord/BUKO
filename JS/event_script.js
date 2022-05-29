@@ -116,7 +116,8 @@ listSinglePost = (data) => {
     let title = data.name;
     document.title = "BUKO | " + title;
 
-
+    const breadCrumbs = document.querySelector(".breadcrumbs");
+    breadCrumbs.innerHTML = `<a href="index.html">Home</a> / <a href="portfolio.html">Portfolio</a> / ${data.name}`;
 
     let priceBefore = data.prices.price;
             //console.log(priceBefore);
@@ -148,7 +149,7 @@ listSinglePost = (data) => {
             </div>
 
             <div class="event_img">
-                <img class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
+                <img onclick="openImg(this)" class="memberimg" src="${data.images[0].src}" alt=${data.images[0].alt}>
                 <div class="gallery"></div>
             </div>`
 
@@ -160,3 +161,15 @@ listSinglePost = (data) => {
 
 
  
+function openImg (element) {
+
+    if (element.className == "memberimg") {
+    element.className += " open";
+    document.querySelector("body").style.backgroundColor = "grey";
+}
+
+    else {
+                element.classList = "memberimg";
+                document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+    }
+}

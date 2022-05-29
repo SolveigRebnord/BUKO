@@ -31,9 +31,16 @@ main {
     margin-bottom: 13rem;
 }
 
+.breadcrumbs {
+    padding: 2rem 0 1rem 0;
+}
 
 .smallerheader {
     object-position: left;
+}
+
+.underhero {
+    padding: 0;
 }
 
 
@@ -76,11 +83,13 @@ transition: 0.8s ;
     position: sticky;
     top: 35%;
     padding-left: 3rem;
+    padding-top: 1rem;
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: 0.3s ease;
+    width: fit-content;
 }
 
 
@@ -172,7 +181,13 @@ section > div > img {
 
     .undermenu {
         position: initial;
+        margin: 0 auto;
         padding: 0 1rem 0 2rem;
+        align-items: center;
+    }
+
+    .undermenu >  div > ul {
+        align-items: center;
     }
 
     .lastnav {
@@ -186,7 +201,7 @@ section > div > img {
         width: 15px; 
         height: 15px;
         background-image: url("https://www.sunroad.no/exam/wp-content/uploads/2022/05/icons8-up-32.png");
-        rotate: 180deg;
+        transform: rotate(180deg);
     }
    
     .margin {
