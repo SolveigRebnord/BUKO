@@ -49,6 +49,9 @@ body {
     padding: 1.5rem 0;
 }
 
+.smallerh1 {
+    display: none;
+}
 
 h1, h2, h3 {
     font-size: 2.5rem;
@@ -174,6 +177,7 @@ header {
     transition: 0.3s;
     z-index: 100;
 }
+
 
 
 
@@ -371,12 +375,17 @@ div#menu > img {
         position: relative;
     }
 
-    .underhero h1 {
+    .underhero > h1:first-of-type {
+        display: none;
+    }
+
+    .smallerh1 {
+        display: inline-block;
         font-size: 2rem;
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -450%;
+        top: -400%;
         color: white;
     }
 }
