@@ -359,20 +359,20 @@ div#menu > img {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
     .heroimg {
         height: 100vh;
         object-position: 15%;
     }
 
-    .smallerheader {
-        height: 20vh;
+    .underhero {
+        height: 0rem;
+        position: relative;
     }
 
-    .underhero {
-        height: 3rem;
-        background-color: transparent;
-        position: relative;
+    .smallerheader {
+        height: 20vh;
     }
 
     .underhero > h1:first-of-type {
@@ -385,7 +385,7 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -400%;
+        top: -800%;
         color: white;
     }
 }
