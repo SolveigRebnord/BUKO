@@ -181,7 +181,7 @@ section > div > img {
 
     .undermenu {
         position: initial;
-        margin: 0 auto;
+        margin: 3rem auto;
         padding: 0 1rem 0 2rem;
         align-items: center;
     }
