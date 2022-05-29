@@ -52,6 +52,13 @@ body {
     margin: 0;
 }
 
+.activesite {
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+
+
 .underhero {
     height: 15vh;
     text-align: center;
@@ -124,7 +131,27 @@ a {
 
 
 
+#searchfullsize, #searchsmallsize {
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 7rem;
+    width: 350px;
+    height: 2.5rem;
+    background-color: var(--whiteish);
+    border: var(--blue-green) 0.5px solid;
+    border-radius: 3px;
+    background-color: rgba(62, 60, 60, 0.751);
+    color: white;
+    font-size: 1rem;
+    padding-left: 1rem;
+    box-shadow: gray 0px 2px 8px;
+}
 
+#searchsmallsize {
+    top: 3.8rem;
+    right: 6rem;
+}
 
 
 #menu  {
@@ -238,6 +265,7 @@ header > nav > ul > li:nth-child(5) {
 header > nav > ul > li:last-of-type {
     border: none;
     padding-right: 1rem;
+    cursor: pointer;
 }
 
 header > nav > ul > li:last-of-type img {
@@ -252,6 +280,7 @@ header > nav > div {
 
 .search {
     display: none;
+    cursor: pointer;
 }
 
 div#menu > img {
@@ -372,6 +401,12 @@ div#menu > img {
     .overlay ul {
         gap: 2rem;
     }
+
+    #searchsmallsize {
+        top: 6.5rem;
+        right: 2rem;
+        width: 300px;
+    }
 }
 
 
@@ -413,6 +448,8 @@ div#menu > img {
         top: -800%;
         color: white;
     }
+
+
 }
 
 

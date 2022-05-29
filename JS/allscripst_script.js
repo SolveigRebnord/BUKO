@@ -1,5 +1,31 @@
 console.log("bip this is the all js");
 
+const searchInputBig = document.getElementById("searchfullsize");
+const search = document.querySelector("header > nav > ul > li:last-of-type");
+
+const searchInputSmall = document.getElementById("searchsmallsize");
+const searching = document.querySelector(".search");
+
+
+search.addEventListener("click", function() {
+  if (searchInputBig.style.display == "none") {
+    searchInputBig.style.display = "inline-block";
+  } 
+
+  else {
+    searchInputBig.style.display = "none";
+  }
+});
+
+searching.addEventListener("click", function() {
+  if (searchInputSmall.style.display == "none") {
+    searchInputSmall.style.display = "inline-block";
+  } 
+
+  else {
+    searchInputSmall.style.display = "none";
+  }
+});
 
 
 const burgerMenu = document.getElementById("menu");

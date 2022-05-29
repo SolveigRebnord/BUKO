@@ -32,6 +32,10 @@ main {
     object-position: center;
 }
 
+.breadcrumbs {
+    margin-left: 0.8rem;
+}
+
 
 
 
@@ -161,6 +165,11 @@ h2 {
     main {
         margin: 0;
     }
+
+    .breadcrumbs {
+        margin-left: 2.5rem;
+    }
+    
 }
 
 
