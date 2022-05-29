@@ -376,7 +376,7 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -400%;
+        top: -500%;
         color: white;
     }
 }
