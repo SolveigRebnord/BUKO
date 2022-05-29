@@ -32,12 +32,17 @@ a {
     margin-left: 6rem;
 }
 
+.smallerheader {
+    object-position: top;
+}
+
+
+
 
 .wholePortfolio {
     width: 100%;
     margin: 5rem auto;
     display: inline;
-    
 }
 
 
@@ -276,6 +281,10 @@ a {
 
     .showPortfolio:hover {
         scale: none;
+    }
+
+    .smallerheader {
+        object-position: top;
     }
 }
 

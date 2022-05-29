@@ -27,6 +27,10 @@ a {
     margin-left: 3rem;
 }
 
+.smallerheader {
+    object-position: bottom;
+}
+
 
 .cvdiv {
     border: solid var(--dark-orange) 1px;
@@ -233,6 +237,10 @@ a {
         margin: 0;
     }
 
+    .smallerheader {
+        object-position: left;
+    }
+
 }
 
 
@@ -288,6 +296,10 @@ a {
         margin: 0 0 4rem 0;
         width: 100%;
         text-align: left;
+    }
+
+    .smallerheader {
+        object-position: bottom;
     }
 
 }
