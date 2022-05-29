@@ -28,6 +28,7 @@ main {
 .margin {
 margin-top: -18rem;
     text-align: right;
+    margin-bottom: 13rem;
 }
 
 
@@ -35,7 +36,6 @@ margin-top: -18rem;
 
 
 .undermenu > div > ul > li > a {
-    color: black;
     text-transform: initial;
 }
 
@@ -51,7 +51,7 @@ transition: 0.8s ;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 
@@ -62,7 +62,11 @@ transition: 0.8s ;
 }
 
 
-
+.lastnav {
+    position: absolute;
+    bottom: -7%;
+    left: 41%;
+}
 
 
 .undermenu {
@@ -85,7 +89,6 @@ transition: 0.8s ;
 .margin > section > div > p {
     max-width: 800px;
 }
-
 
 
 .active {
@@ -123,7 +126,7 @@ section > div > img {
     margin-bottom: 2rem;
     max-width: 800px;
     height: 350px;
-display: inline-block;
+    display: inline-block;
     object-fit: cover;
     object-position: center;
 }
@@ -158,7 +161,6 @@ display: inline-block;
         font-size: 2.5rem;
     }
 
-
 }
 
 
@@ -166,13 +168,12 @@ display: inline-block;
 @media (max-width: 750px) {
 
     .undermenu {
-        position: relative;
+        position: initial;
         padding: 0 1rem 0 2rem;
     }
 
-    .undermenu > div {
-        width: 100%;
-
+    .lastnav {
+        position: initial;
     }
 
     .undermenu > div > ul > li::before {
@@ -186,8 +187,7 @@ display: inline-block;
     }
    
     .margin {
-        margin-left: 0;
-        margin-top: 4rem;
+        margin: 0;
     }
 
     section > div > img, .margin > section > div > p {
@@ -197,9 +197,6 @@ display: inline-block;
     
     .margin > section {
         height: fit-content;
-        margin-bottom: 5rem;
+        margin-bottom: 0;
     }
-
- 
-
 }

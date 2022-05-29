@@ -1,10 +1,15 @@
 console.log("heia, dette er nå js for contact");
 
 
-const imgs = document.querySelectorAll(".playforyou img");
+
+function scrollToForm () {
+    let form = document.querySelector("form");
+    form.scrollIntoView({block: "center", behavior: "smooth"});
+}
+
+
+const imgs = document.querySelectorAll(".divforborders img");
 console.log(imgs);
-
-
 
 imgs.forEach(element => {
 
@@ -72,9 +77,9 @@ validateForm = (e) => {
     else {
             nameInput.style.color = "red"
             nameTheInput.style.border = "solid red 1px";            
-            nameBAD.innerHTML = "At least 5 caracthers!";
+            nameBAD.innerHTML = "At least 5 characters";
             nameBAD.style.color = "red";
-            console.log("Error: Not enough caracthers")
+            console.log("Error: Not enough characters")
         }   
 
     }

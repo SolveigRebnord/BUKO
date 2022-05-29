@@ -14,7 +14,7 @@ html {
     --Nanum: 'Nanum Myeongjo', serif;
     --fatA: 'Abril Fatface', cursive;
     --corGar: 'Cormorant Garamond', serif;
-    --playDis: 'Playful Display', cursive;
+    --playDis: 'Playfair Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
 }
 main {
@@ -22,53 +22,20 @@ main {
     position: relative;
 }
 
-body {
-    margin: 0;
-    background-color: rgb(251, 248, 248);
+
+.contacth1 {
+    margin: 2rem 0;
 }
 
 
-.heroimg {
-    width: 100%;
-    height: 85vh;
-    object-fit: cover;
-    object-position: top;
-    margin: 0;
-}
 
-.underhero {
-    height: 15vh;
-    text-align: center;
-    background-color: rgb(251, 248, 248);
-    margin-bottom: 5rem;
-
-}
-
-@media (max-width: 600px) {
-    .heroimg {
-        height: 70vh;
-    }
-
-    .underhero {
-        height: 30vh;
-    }
-}
-
-h1, h2 {
-
-    font-size: 4.5rem;
-    font-weight: 800;
-
-    color: black;
-    padding-top: 0.5rem;
-    margin: 0;
-
-}
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     max-width: 400px;
+    font-family: var(--playDis);
     margin-bottom:  1rem;
+    text-align: center;
 }
 
 .playforyou {
@@ -95,7 +62,7 @@ h2 {
 
 .boldp {
     font-weight: 500;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .divforborders {
@@ -105,7 +72,6 @@ h2 {
 }
 
 
-
 .divforborders > img {
     width: 100%;
     height: 100%;
@@ -113,10 +79,22 @@ h2 {
     cursor: pointer;
 }
 
+.linktoform:hover {
+    cursor: pointer;
+}
+
+.linktoform > img, .support > div > div > a > img {
+    max-width: 15px;
+    rotate: 180deg;
+}
+
+.support > div > div > a > img {
+    rotate: 0deg;
+}
 
 
 
-  .open {
+.open {
     position: fixed;
     z-index: 2;
     max-width: 80%;
@@ -125,8 +103,7 @@ h2 {
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-  }
-
+}
 
 
 
@@ -134,9 +111,9 @@ h2 {
 .playforyou div:nth-child(2) {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1vw;
     align-items: center;
-    text-align: right;
+    text-align: center;
     font-family: var(--robotCon);
     font-weight: 300;
     padding: 0 2rem;
@@ -147,9 +124,6 @@ h2 {
     flex-direction: row-reverse;
 }
 
-.reverse > div > p {
-    text-align: left;
-}
 
 
 
@@ -167,21 +141,25 @@ h2 {
 
     h2 {
         max-width: 80%;
-        text-align: center;
     }
-
-
-
-    .divforborders div {
-        text-align: center;
-    }
-
-
 }
 
+
 @media (max-width: 600px) {
+
+    .contacth1 {
+        margin-left: 2rem;
+    }
+
+    .playforyou div:nth-child(2) {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+
      h2 {
         font-size: 2.5rem;
+        text-align: left;
     }
 
     main {
@@ -195,7 +173,7 @@ h2 {
 
 form {
     margin-bottom: 6rem;
-    background-color: rgba(189, 172, 169, 0.646);
+    background-color: var(--greyLightBrown);
     color: black;
     display: flex;
     gap: 3rem;
@@ -204,6 +182,10 @@ form {
     align-items: center;
     justify-content: space-between;
     border-radius: 12px;
+}
+
+.form > h2 {
+    text-align: left;
 }
 
 form > div {
@@ -228,7 +210,6 @@ input, textarea {
 
 label {
     text-transform: uppercase;
-    font-family: var(--FiraS);
     font-size: 1.4rem;
     margin-bottom: 0.2rem;
     position: relative;
@@ -246,10 +227,8 @@ form > div > label.subject:after{
 }
 
 
-
-
 form > div > label.subject > input::placeholder {
-    background-image: url(/Contact/img/icons8-chevron-48.png);
+    background-image: url(/img/icons8-chevron-48.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
@@ -267,16 +246,19 @@ textarea {
     padding: 1rem;
 }
 
-.formbutton {
+.form > form > div > button {
     cursor: pointer;
-    background-color: black;
     text-transform: uppercase;
     margin-left: auto;
+    background-color: var(--blue-green);
+    color: white;
+    box-shadow: rgb(187, 182, 182) 2px 5px 10px;
+    padding: 0.5rem 2rem;
 }
 
 
 
-.nameBAD, .emailBAD, .subjectBAD, .nameOK, .emailOK {
+.nameBAD, .emailBAD, .subjectBAD, .nameOK, .emailOK, .textOK, .textBAD {
     color: black;
     letter-spacing: 1px;
     font-size: 0.8rem;
@@ -297,31 +279,36 @@ textarea {
     color: black;
 }
 
-textarea {
-    margin-bottom: 0;
-}
-
-
 .textOK, .textBAD {
-    font-size: 0.8rem;
-    display: inline-block;
-    letter-spacing: 1px;
-    color: black;
-    margin: 1rem 0;
-    font-family: var(--robotCon);
+    position: inherit;
+    margin: 0.5rem 0;
     text-transform: uppercase;
 }
 
+textarea {
+    margin-bottom: 0;
+}
 
 
 
 
 
 .support {
-    margin: 0;
     padding: 6rem 1rem;
     background-color: rgba(238, 228, 227, 0.797);
-text-align: center;
+    text-align: center;
+}
+
+.support h2, .support h3 {
+    margin: 0 auto;
+    max-width: 50%;
+    font-family: var(--playDis);
+}
+
+.support > p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 2rem 0;
 }
 
 .support > div {
@@ -339,33 +326,17 @@ text-align: center;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-
 }
 
-
-.support h2, .support h3 {
-    font-family:serif;
-    color: black;
-    font-weight: 600;
-    font-size: 3.5rem;
-    letter-spacing: 1px;
-    max-width: 50%;
-    margin: 3rem auto;
-
-}
-
-.support p {
-    font-family: var(--FiraS);
-    font-size: 1.2rem;
-    font-weight: 300;
-    max-width: 600px;
-}
 
 .support h3 {
-    font-size: 1.2rem;
-    text-align: left;
-    max-width: fit-content;
+    font-family: var(--barCon);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
     margin: 0;
+    max-width: 400px;
+    text-align: center;
 }
 
 .support img {
@@ -381,34 +352,21 @@ text-align: center;
     flex-wrap: wrap;
 }
 
-
-p.underline {
-    text-decoration: underline;
-    color: black;
-    letter-spacing: 0.5px;
-    font-size: 0.9rem;
-    margin: 1rem 0;
-}
-
-
-
 .support > div > div:nth-child(2) {
     background-color: white;
     border-radius: 10px;
     padding: 2rem 1rem;
     text-align: center;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
-
-.support > div > div:nth-child(2) h3 {
-    text-align: center;
-}
-
-
-
 
 .support div:nth-child(2) hr {
     width: 60%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -428,6 +386,11 @@ p.underline {
         gap: 5rem;
     }
 
+    .support h2 {
+        max-width: 90%;
+        text-align: center;
+    }
+
 }
 
 
@@ -437,18 +400,19 @@ p.underline {
         max-width: 250px;
     }
 
-    .support h2 {
-        font-size: 2.5rem;
-        max-width: 100%;
+    .supportimg {
+        margin: 0 auto;
     }
 
     form {
         border-radius: 0;
     }
 
+    .form > h2 {
+        margin-left: 2rem;
+    }
+
     .support div:nth-child(2) {
         width: 300px;
     }
-
-
 }

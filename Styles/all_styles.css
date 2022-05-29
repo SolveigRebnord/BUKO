@@ -46,7 +46,7 @@ body {
     height: 15vh;
     text-align: center;
     background-color: var(--whiteish);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 
@@ -358,7 +358,7 @@ div#menu > img {
 @media (max-width: 600px) {
     .heroimg {
         height: 100vh;
-        object-position: 20%;
+        object-position: 15%;
     }
 
     .smallerheader {
@@ -376,7 +376,7 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -700%;
+        top: -400%;
         color: white;
     }
 }

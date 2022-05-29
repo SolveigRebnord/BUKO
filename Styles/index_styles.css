@@ -49,7 +49,11 @@ main {
 }
 
 
-
+.underhero > h1 {
+    font-family: var(--playDis);
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
 
 .herosection {
     margin-top: 10rem;

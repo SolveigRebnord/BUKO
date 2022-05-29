@@ -13,6 +13,15 @@ const active = document.querySelector(".active");
 
 
 
+
+
+var mediaQuery = window.matchMedia("(min-width: 751px)");
+window.addEventListener("scroll", () => {
+    scrolling();
+    scrollFunction();
+});
+
+
 function isInViewport (item) {
     const str = item.getBoundingClientRect();
     return (
@@ -22,7 +31,6 @@ function isInViewport (item) {
         str.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-
 
 
 function scrolling() {
@@ -63,22 +71,37 @@ function scrolling() {
 }
 
 mediaQuery.addEventListener("change", scrollBig); //
-    scrollBig(mediaQuery);
+scrollBig(mediaQuery);
 }
 
 
-const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
-storyTitle.addEventListener("click", function() {
-    let scrollTo = document.querySelector("section.ourstory > h2");
-    scrollTo.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-});
-const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
-conductorTitle.addEventListener("click", function() {
+var mediaQuery700 = window.matchMedia("(max-width: 749px)");
+
+
+
+function scrollTo (m) {
+  if (m.matches) {
+
+    const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
+    storyTitle.addEventListener("click", function() {
+    let element = document.querySelector("section.ourstory > h2");
+    element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    });
+
+    const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
+    conductorTitle.addEventListener("click", function() {
     let scrollTo = document.querySelector("section.conductor");
     scrollTo.scrollIntoView({ block: 'start', inline: "nearest",  behavior: 'smooth' });
 });
-const boardTitle = document.querySelector(".undermenu > div > ul > li:nth-child(3)");
-const futureTitle = document.querySelector(".undermenu > div > ul > li:nth-child(4)");
+  }
+}
+
+mediaQuery700.addEventListener("change", scrollTo);
+scrollTo(mediaQuery700);
+
+
+
+
 
 
 /*
