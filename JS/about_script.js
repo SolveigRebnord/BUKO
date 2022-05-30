@@ -16,23 +16,19 @@ imgs.forEach(element => {
 
     element.addEventListener("click", function() {
 
-        if (element.className == "") {
+      if (element.className == "") {
         element.className = "open";
         document.querySelector("body").style.backgroundColor = "grey";
-    
-    }
+      }
 
-    else {
-            element.classList = "";
-            document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
-            element.style.cursor = "pointer";
-    }
-    });
+      else {
+        element.classList = "";
+        document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
+        element.style.cursor = "pointer";
+      }
+
+  });
 });
-
-
-
-
 
 
 var mediaQuery = window.matchMedia("(min-width: 751px)");
@@ -87,7 +83,6 @@ function scrolling(m) {
 }
 
 
-// Det burde fungere men den refersher før den rekker gjøre det..
 
 var mediaQuery700 = window.matchMedia("(max-width: 749px)");
 
@@ -99,17 +94,15 @@ function scrollTo (m) {
 
     const clickLI = document.querySelectorAll(".undermenu > div > ul > li");
     console.log(clickLI);
-    
 
     for (let [index, item] of clickLI.entries()) {
       item.addEventListener("click", function (e) {
         e.preventDefault();
         scrollToSection(index);
       })
-
-    }
     }
   }
+}
 
 
 
@@ -118,7 +111,6 @@ function scrollToSection(number) {
   if (number === 0) {
     let header = document.querySelector("section.ourstory > h2");
     header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
-    
   }
 
   if (number === 1) {
@@ -135,38 +127,6 @@ function scrollToSection(number) {
     let header = document.querySelector("section.conductor > h2");
     header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
   }
-
 }
 
 
-
-
-/*
-const navUl = document.querySelector(".undermenu");
-const active = document.querySelector(".active");
-
-
-var mediaQuery = window.matchMedia("(max-width: 700px)");
-console.log(mediaQuery);
-
-function myFunction(m) {
-  if (m.matches) { // If media query matches
-
-    navUl.style.display = "none";
-    active.style.position = "fixed";
-    active.style.left = "0";
-    active.style.top = "10%";
-    active.style.display = "inline-block";
-  }
-
-
-else { // If media query matches
-    navUl.style.display = "flex";
-}
-}
-
-
-mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
-myFunction(mediaQuery) // Call listener function at run time
-
-*/

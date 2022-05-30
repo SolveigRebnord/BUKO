@@ -1,5 +1,4 @@
 html {
-
     --chocBrown: rgb(167, 138, 126);
     --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
@@ -17,16 +16,15 @@ html {
     --playDis: 'Playfair Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
 }
+
 main {
     margin: 0 4rem;
     position: relative;
 }
 
-
 .contacth1 {
     margin: 2rem 0;
 }
-
 
 .smallerheader {
     object-position: center;
@@ -35,9 +33,6 @@ main {
 .breadcrumbs {
     margin-left: 0.8rem;
 }
-
-
-
 
 h2 {
     font-size: 3rem;
@@ -60,14 +55,12 @@ h2 {
     margin-bottom: 5rem;
     font-size: 1.1rem;
     letter-spacing: 0.4px;
-
 }
 
 .playforyou > p {
     max-width: 400px;
     line-height: 1.5rem;
 }
-
 
 .boldp {
     font-weight: 500;
@@ -79,7 +72,6 @@ h2 {
     width: 100%;
     height: 100%;
 }
-
 
 .divforborders > img {
     width: 100%;
@@ -101,8 +93,6 @@ h2 {
     transform: rotate(0deg);
 }
 
-
-
 .playforyou div:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -118,63 +108,6 @@ h2 {
 .reverse {
     flex-direction: row-reverse;
 }
-
-
-
-
-
-@media (max-width: 900px) {
-    .playforyou {
-        flex-direction: column;
-        padding: 0;
-        height: fit-content;
-    }
-
-    .divforborders > img {
-        max-height: 500px;
-    }
-
-    h2 {
-        max-width: 80%;
-    }
-
-    .smallerheader {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .contacth1 {
-        margin-left: 2rem;
-    }
-
-    .playforyou div:nth-child(2) {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-
-     h2 {
-        font-size: 2.5rem;
-        text-align: left;
-    }
-
-    main {
-        margin: 0;
-    }
-
-    .breadcrumbs {
-        margin-left: 2.5rem;
-    }
-    
-}
-
-
-
-
 
 form {
     margin-bottom: 6rem;
@@ -221,8 +154,6 @@ label {
     position: relative;
 }
 
-
-
 form > div > label.subject:after{
     content: 'Write or choose from the list';
     position: absolute;
@@ -231,7 +162,6 @@ form > div > label.subject:after{
     font-size: 0.8rem;
     text-transform: initial;
 }
-
 
 form > div > label.subject > input::placeholder {
     background-image: url(/img/icons8-chevron-48.png);
@@ -243,8 +173,6 @@ form > div > label.subject > input::placeholder {
 form > div > label.subject > input:hover {
     cursor: pointer;
 }
-
-
 
 textarea {
     width: 400px;
@@ -262,8 +190,6 @@ textarea {
     padding: 0.5rem 2rem;
 }
 
-
-
 .nameBAD, .emailBAD, .subjectBAD, .subjectOK .nameOK, .emailOK, .textOK, .textBAD {
     color: black;
     letter-spacing: 1px;
@@ -279,7 +205,6 @@ textarea {
     top: 2%;
 }
 
-
 .subjectOK, .subjectBAD {
     left: 0%;
     top: 91%;
@@ -294,10 +219,6 @@ textarea {
 textarea {
     margin-bottom: 0;
 }
-
-
-
-
 
 .support {
     padding: 6rem 1rem;
@@ -333,7 +254,6 @@ textarea {
     align-items: flex-start;
     gap: 2rem;
 }
-
 
 .support h3 {
     font-family: var(--barCon);
@@ -386,6 +306,7 @@ textarea {
     }
 }
 
+
 @media (max-width: 800px) {
     .support > div {
         flex-direction: column;
@@ -396,12 +317,58 @@ textarea {
         max-width: 90%;
         text-align: center;
     }
-
 }
 
 
 
+
+@media (max-width: 900px) {
+    
+    .playforyou {
+        flex-direction: column;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .divforborders > img {
+        max-height: 500px;
+    }
+
+    h2 {
+        max-width: 80%;
+    }
+
+    .smallerheader {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
+
+
 @media (max-width: 600px) {
+
+    .contacth1 {
+        margin-left: 2rem;
+    }
+
+    .playforyou div:nth-child(2) {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+     h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .breadcrumbs {
+        margin-left: 2.5rem;
+    }
+
     textarea, input {
         max-width: 250px;
     }

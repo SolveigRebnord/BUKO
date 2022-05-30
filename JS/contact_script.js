@@ -1,47 +1,34 @@
 console.log("heia, dette er nå js for contact");
 
-
-
 function scrollToForm () {
     let form = document.querySelector("form");
     form.scrollIntoView({block: "center", behavior: "smooth"});
 }
 
-
 const imgs = document.querySelectorAll(".divforborders img");
-console.log(imgs);
+//console.log(imgs);
 
 imgs.forEach(element => {
 
     element.addEventListener("click", function() {
 
         if (element.className == "") {
-        element.className = "open";
-        document.querySelector("body").style.backgroundColor = "grey";
-    
+            element.className = "open";
+            document.querySelector("body").style.backgroundColor = "grey";
+        }
 
-    }
-
-    else {
+        else {
             element.classList = "";
             document.querySelector("body").style.backgroundColor = "rgb(251, 248, 248)";
             element.style.cursor = "pointer";
-    }
+        }
     });
 });
-
-
-
-
-
-
 
 
 //Form validation
 
 const form = document.getElementById("form");
-
-
 
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -71,29 +58,21 @@ validateForm = (e) => {
             nameTheInput.style.border = "solid green 1px";            
             nameOK.innerHTML = "Pretty!";
             nameOK.style.color = "green";
-
         }
 
-    else {
+        else {
             nameInput.style.color = "red"
             nameTheInput.style.border = "solid red 1px";            
             nameBAD.innerHTML = "At least 5 characters";
             nameBAD.style.color = "red";
             console.log("Error: Not enough characters")
-        }   
-
+            }   
     }
     
     else {
         nameBAD.innerHTML = "We need something..";
         console.log("Error: No content")
     }
-
-
-
-
-
-
 
     const emailOK = document.querySelector(".emailOK")
     const emailBAD = document.querySelector(".emailBAD")
@@ -107,43 +86,37 @@ validateForm = (e) => {
         nameAfterInput = true;
         console.log("superb, its not empty");
 
+        if (emailPattern.test(emailAfterInput)) {
+            emailAfterInput = true;
+            console.log("Email approved");
+            emailInput.style.color = "green";
+            emailTheInput.style.border = "solid green 1px";            
+            emailOK.innerHTML = "Neat! *Sends spam*";        
+            emailOK.style.color = "green";
+        }
 
-    if (emailPattern.test(emailAfterInput)) {
-        emailAfterInput = true;
-        console.log("Email approved");
-        emailInput.style.color = "green";
-        emailTheInput.style.border = "solid green 1px";            
-        emailOK.innerHTML = "Neat! *Sends spam*";        
-        emailOK.style.color = "green";
+        else {
+            emailAfterInput = false;
+            emailBAD.innerHTML = "I don't think that's correct"
+            console.log("Error: Not valid email")
+            emailInput.style.color = "red"
+            emailTheInput.style.border = "solid red 1px";            
+            emailBAD.style.color = "red";
+        }
     }
 
     else {
         emailAfterInput = false;
-        emailBAD.innerHTML = "I don't think that's correct"
-        console.log("Error: Not valid email")
-        emailInput.style.color = "red"
-        emailTheInput.style.border = "solid red 1px";            
-        emailBAD.style.color = "red";
+        emailBAD.innerHTML = "We need something..";
+        console.log("Error: No content")
     }
-
-}
-
-else {
-    emailAfterInput = false;
-    emailBAD.innerHTML = "We need something..";
-    console.log("Error: No content")
-}
     
 
+    const subjectOK = document.querySelector(".subjectOK")
+    const subjectBAD = document.querySelector(".subjectBAD")
+    const subjectTheInput = document.querySelector("input[name=subject]");
 
-const subjectOK = document.querySelector(".subjectOK")
-const subjectBAD = document.querySelector(".subjectBAD")
-const subjectTheInput = document.querySelector("input[name=subject]");
-
-
-
-
-let subjectAfterInput = subjectInput.value.trim();
+    let subjectAfterInput = subjectInput.value.trim();
     let subjectLength = subjectAfterInput.length;
 
     if (subjectAfterInput != "") {
@@ -159,16 +132,14 @@ let subjectAfterInput = subjectInput.value.trim();
             subjectOK.style.color = "green";
         }
 
-    else {
+        else {
             subjectInput.style.color = "red" 
             subjectBAD.innerHTML = "At least 15 characters";
             subjectBAD.style.color="red";
             console.log("Error: Not enough characters");
             subjectAfterInput = false;
             subjectTheInput.style.border = "solid red 1px";            
-        
         }   
-
     }
     
     else {
@@ -182,10 +153,8 @@ const textOK = document.querySelector(".textOK")
 const textBAD = document.querySelector(".textBAD")
 const textTheInput = document.getElementById("textarea");
 
-
-
 let textAfterInput = textInput.value.trim();
-    let textLength = textAfterInput.length;
+let textLength = textAfterInput.length;
 
     if (textAfterInput != "") {
         textAfterInput = true;
@@ -200,7 +169,7 @@ let textAfterInput = textInput.value.trim();
             textOK.style.color = "green";
         }
 
-    else {
+        else {
             textAfterInput = false;
             textInput.style.color = "red"
             textBAD.innerHTML = "At least 25 characters";
@@ -208,19 +177,12 @@ let textAfterInput = textInput.value.trim();
             textBAD.style.color="red";
             textTheInput.style.border = "solid red 1px";    
         }   
-
     }
     
     else {
         textBAD.innerHTML = "We need something..";
         console.log("Error: No content")
     }
-
-
-
-
-
-
 }
 
 

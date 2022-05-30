@@ -1,5 +1,4 @@
 html {
-
     --chocBrown: rgb(167, 138, 126);
     --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
@@ -8,7 +7,6 @@ html {
     --whiteish: rgb(251, 248, 248);
     --greyLightBrown: #e1d7d1;
     --LIGHTgreyLightBrown: #ede3deaf;
-    
     
     --robotCon: 'Roboto Condensed', sans-serif;
     --FiraS: 'Fira Sans Extra Condensed', sans-serif;
@@ -23,7 +21,6 @@ main {
     margin: 0;
     position: relative;
 }
-
 
 .margin {
     margin-top: -18rem;
@@ -67,20 +64,17 @@ transition: 0.8s ;
     gap: 2rem;
 }
 
-
 .undermenu > div > h1 {
     font-size: 2.5rem;
     padding-bottom: 2rem;
     font-family: var(--playDis);
 }
 
-
 .lastnav {
     position: absolute;
     bottom: -7%;
     left: 41%;
 }
-
 
 .undermenu {
     position: sticky;
@@ -95,8 +89,6 @@ transition: 0.8s ;
     width: fit-content;
 }
 
-
-
 .margin > section {
     height: fit-content;
 }
@@ -105,7 +97,6 @@ transition: 0.8s ;
     max-width: 700px;
     line-height: 1.4rem;
 }
-
 
 .active {
     min-height: 40px;
@@ -116,7 +107,6 @@ transition: 0.8s ;
     transition: 0.5s ease-in;
 }
 
-
 .ourstory, .conductor, .board, .future {
     width: 90%;
     margin: 3rem auto;
@@ -125,7 +115,6 @@ transition: 0.8s ;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-
 }
 
 .margin > section > div {
@@ -134,11 +123,9 @@ transition: 0.8s ;
     align-items: flex-end;
     font-weight: 300;
     font-size: 1rem;
-
-
 }
-section > div > img {
 
+section > div > img {
     margin-bottom: 2rem;
     max-width: 800px;
     height: 350px;
@@ -146,8 +133,6 @@ section > div > img {
     object-fit: cover;
     object-position: center;
 }
-
-
 
 .margin > section > h2 {
     font-family: var(--fatA);
@@ -159,8 +144,8 @@ section > div > img {
 
 
 
-
 @media (max-width: 1100px) {
+
     .margin > section > div > p {
         max-width: 500px;
         text-align: right;
@@ -173,7 +158,6 @@ section > div > img {
     section > h2 {
         font-size: 2.5rem;
     }
-
 }
 
 

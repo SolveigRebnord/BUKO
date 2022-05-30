@@ -1,6 +1,5 @@
 
 html {
-
     --chocBrown: rgb(167, 138, 126);
     --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
@@ -19,7 +18,6 @@ html {
     --barCon: 'Barlow Condensed', sans-serif;
 }
 
-
 main {
     margin: 0 4rem;
 }
@@ -28,7 +26,6 @@ body {
     margin: 0;
     background-color: var(--whiteish);
 }
-
 
 * {
     font-family: var(--FiraS);
@@ -87,18 +84,14 @@ h1, h2, h3 {
     margin: 0;
 }
 
-
-
 p {
     padding: 0;
     margin: 0;
 }
 
-
 .underlined {
     text-decoration: underline;
 }
-
 
 .open {
     position: fixed;
@@ -111,12 +104,9 @@ p {
     -ms-transform: translate(-50%,-50%);
 }
 
-
-
 a {
     color: black;
 }
-
 
 .loadinggif > img {
    max-width: 50px;
@@ -130,15 +120,16 @@ a {
     background-color: var(--whiteish);
 }
 
-
-
 .smallerheader {
     height: 50vh;
     object-position: bottom;
     filter: brightness(50%);
 }
 
-
+.nounderhero {
+    height: 0;
+    width: 0;
+}
 
 #searchfullsize, #searchsmallsize {
     display: none;
@@ -162,7 +153,6 @@ a {
     right: 6rem;
 }
 
-
 #menu  {
     display: none;
 }
@@ -171,7 +161,6 @@ a {
 header > nav > ul > li, footer > div > ul > li, .overlay li, .undermenu > div > ul > li, .wholePortfolio > div > div > ul > li {
     list-style: none;
 }
-
 
 /*bortover liste*/
 header > nav > ul, footer > div > ul, .undermenu > div > ul, .list-horisontal {
@@ -192,7 +181,6 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
     letter-spacing: 1px;
 }
 
-
 /*nedover liste*/
 .overlay ul, footer > div > ul, .list-vertical {
     display: flex;
@@ -201,7 +189,6 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
     padding: 0;
     margin: 0;
 }
-
 
 /* button */ 
 .buttonstyle {
@@ -218,9 +205,7 @@ header > nav > ul > li > a, footer > div > ul > li > a, .overlay a, .undermenu >
 }
 
 
-
 /* HEADER -----------------------------------------------------------*/
-
 
 header {
     box-sizing: border-box;
@@ -239,21 +224,14 @@ header {
     z-index: 100;
 }
 
-
-
-
 #logo > a > img {
     height: 80px;
 }
-
-
 
 header > nav > ul {
     gap: 0;
     align-items: center;
 }
-
-
 
 header > nav > ul > li {
     border-right: solid var(--whiteish) 1px;
@@ -284,7 +262,6 @@ header > nav > ul > li:last-of-type img {
     height: 20px;
     width: 20px;
 }
-
 
 header > nav > div {
     padding-right: 2rem;
@@ -363,8 +340,6 @@ div#menu > img {
     }
 
 }
-
-
 
 
 
@@ -459,15 +434,10 @@ div#menu > img {
 }
 
 
-.nounderhero {
-    height: 0;
-    width: 0;
-}
 
 
 
 /* FOOTER --------------------------------------------------------------*/
-
 
 
 .lastnav {
@@ -499,15 +469,10 @@ border: solid 0.5px var(--darkBrown);
     transform: rotate(-90deg);
 }
 
-
-
-
-
 footer {
     background-color: var(--greyLightBrown);
     padding: 4rem 8vw;
 }
-
 
 footer {
     display: grid;
@@ -540,7 +505,6 @@ footer {
     border-bottom:  1px solid black;
 }
 
-
 .footerleft ul > li > div > a {
     display: inline;
     font-size: 0.9rem;
@@ -552,8 +516,6 @@ footer {
     font-size: 1rem;
 }
 
-
-
 .footerleft > ul > li:last-child > div > a:first-of-type {
     padding-left: 2.3rem;
 }
@@ -561,8 +523,6 @@ footer {
 .footerleft > ul > li > div {
     display: inline-block;
 }
-
-
 
 .footerright {
     display: flex;
@@ -603,7 +563,6 @@ footer > div > div:first-of-type input {
     border: none;
 }
     
-    
 input[type=email] {
     padding-left: 1rem;
     font-size: 1rem;
@@ -611,7 +570,6 @@ input[type=email] {
     letter-spacing: 1px;
 }
 
-    
 footer > div > div:first-of-type button {
     border: none;
     border-radius: 3px;
@@ -623,7 +581,6 @@ footer > div > div:first-of-type button {
     padding: 0.6rem;
     cursor: pointer;
 }
-    
 
 .copyright p {
     text-align: left;
@@ -637,11 +594,15 @@ footer > div > div:first-of-type button {
     padding-top: 0.3rem;
 }
 
+
+
 @media (max-width: 1000px) {
+
     .footerleft ul > li > div {
         display: none;
     }
 }
+
 
 @media (max-width: 650px) {
     
@@ -669,6 +630,7 @@ footer > div > div:first-of-type button {
         text-align: center;
     }
 }
+
 
 @media (max-width: 500px) {
     .footerleft  > ul {

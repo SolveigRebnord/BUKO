@@ -1,5 +1,4 @@
 html {
-
     --chocBrown: rgb(167, 138, 126);
     --darkBrown: rgb(69, 56, 52);
     --dark-orange: #CF9B7F;
@@ -19,8 +18,6 @@ html {
 }
 
 
-
-
 a {
     text-decoration: none;
 }
@@ -34,6 +31,15 @@ a {
     transform: scaleX(-1);
 }
 
+.open {
+    position: absolute;
+    z-index: 2;
+    width: scale(1);
+    height: scale(1);
+   cursor: pointer;
+    transform: translate(65% , 10%);
+    -ms-transform: translate(0,0);
+}
 
 .cvdiv {
     border: solid var(--dark-orange) 1px;
@@ -41,7 +47,6 @@ a {
     text-align: center;
     padding: 1rem;
     transition: 0.4s ease;
-
 }
 
 .cvdiv:hover {
@@ -64,8 +69,6 @@ a {
     text-transform: uppercase;
 }
 
-
-
 .showMembers {
     display: flex;
     flex-direction: row;
@@ -76,8 +79,6 @@ a {
     justify-content: space-evenly;
     margin-top: 3rem;
 }
-
-
 
 .loadmore, .message {
     display: block;
@@ -95,11 +96,6 @@ a {
 .message {
     cursor: initial;
 }
-
-
-
-/*--------------------------------------------------------------*/
-
 
 .memberimg, .memberimgCV {
     width: 250px;
@@ -119,7 +115,6 @@ a {
     margin: 3rem auto 0 auto;
 }
 
-
 .showCV > h1 {
     text-transform: inherit;
     text-align: right;
@@ -138,11 +133,9 @@ a {
     align-items: center;
 }
 
-
 .leftFlex {
     position: relative;
 }
-
 
 .leftFlex > p {
     border: solid var(--blue-green) 3px;
@@ -157,7 +150,6 @@ a {
     padding: 0 20px 15px 0;
     letter-spacing: 1px;
     font-size: 1.2rem;
-
 }
 
 .leftFlex > img {
@@ -201,8 +193,6 @@ a {
     letter-spacing: 1px;
 }
 
-
- 
 .rightFlex > ul {
     margin: 0;
 }
@@ -216,13 +206,11 @@ a {
     margin-bottom: 0;
 }
 
-
 .space {
     margin-top: 0.5rem;
     display: block;
     font-weight: 500;
 }
-
 
 .showCV > div:last-of-type {
     text-align: center;
@@ -235,8 +223,6 @@ a {
 .showCV > div:last-of-type p::after, .showCV > div:last-of-type p::before {
     content: ' " ';
 }
-
-
 
 
 @media (max-width: 1050px) {
@@ -256,12 +242,11 @@ a {
     .smallerheader {
         transform: scaleX(1);
     }
-
 }
 
 
-
 @media (max-width: 700px) {
+
     main {
         margin: 0 1rem;
     }
@@ -270,7 +255,6 @@ a {
         font-size: 2rem;
         padding: 0 1rem 3rem 0
     }
-
 
     .cvDetails {
     flex-direction: column;
@@ -315,12 +299,3 @@ a {
     }
 }
 
-.open {
-    position: absolute;
-    z-index: 2;
-    width: scale(1);
-    height: scale(1);
-   cursor: pointer;
-    transform: translate(65% , 10%);
-    -ms-transform: translate(0,0);
-}
