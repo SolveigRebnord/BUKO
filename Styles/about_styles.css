@@ -43,7 +43,10 @@ main {
     padding: 0;
 }
 
-
+span {
+    font-weight: 800;
+    font-size: 1rem;
+}
 
 .undermenu > div > ul > li > a {
     text-transform: initial;
@@ -99,7 +102,8 @@ transition: 0.8s ;
 }
 
 .margin > section > div > p {
-    max-width: 800px;
+    max-width: 700px;
+    line-height: 1.4rem;
 }
 
 
@@ -143,10 +147,7 @@ section > div > img {
     object-position: center;
 }
 
-.ourstory > div > p > span {
-    font-weight: 800;
-    font-size: 1.2rem;
-}
+
 
 .margin > section > h2 {
     font-family: var(--fatA);

@@ -30,7 +30,8 @@ a {
 }
 
 .smallerheader {
-    object-position: bottom;
+    object-position: center;
+    transform: scaleX(-1);
 }
 
 
@@ -225,10 +226,16 @@ a {
 
 .showCV > div:last-of-type {
     text-align: center;
+    font-size: 1rem;
     font-weight: 300;
-    width: 60%;
+    width: 50%;
     margin: 5rem auto;
 }
+
+.showCV > div:last-of-type p::after, .showCV > div:last-of-type p::before {
+    content: ' " ';
+}
+
 
 
 
@@ -247,7 +254,7 @@ a {
     }
 
     .smallerheader {
-        object-position: left;
+        transform: scaleX(1);
     }
 
 }
@@ -306,11 +313,6 @@ a {
         width: 100%;
         text-align: left;
     }
-
-    .smallerheader {
-        object-position: bottom;
-    }
-
 }
 
 .open {

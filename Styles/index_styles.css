@@ -26,29 +26,6 @@ main {
 }
 
 
-
-.checkFont p:nth-child(1) {
-    font-family: var(--fatA);
-    font-size: 2rem;
-}
-
-.checkFont p:nth-child(2) {
-    font-family: var(--corGar);
-    font-size: 2rem;
-}
-
-.checkFont p:nth-child(3) {
-    font-family: var(--playDis);
-    font-size: 2rem;
-}
-
-.checkFont p:nth-child(4) {
-    font-family: var(--barCon);
-    font-size: 2rem;
-    padding-bottom: 3rem;
-}
-
-
 .underhero > h1 {
     font-family: var(--playDis);
     letter-spacing: 2px;
@@ -56,55 +33,36 @@ main {
 }
 
 .herosection {
-    margin-top: 10rem;
-    height: 1000px;
-    text-align: center;
-    color: black;
-}
-
-.heroimages {
-    box-sizing: border-box;
+    position: relative;
     width: 100%;
-    display: flex;
-    height: 400px;
-    flex-direction: row;
-    gap: 1rem;
-    flex: 1;
-    justify-content: center;
-    flex-shrink: 0.9;
-    overflow: hidden;
-}
-
-.heroimages > img {
-    max-height: 42vw;
-    max-width: 32vw;
-    object-fit: cover;
-    filter:opacity(70%);
-}
-
-
-hr {
-    width: 120px;
+    background-image: url("https://www.sunroad.no/exam/wp-content/uploads/2022/05/joel-wyncott-6c37qhV2Pa4-unsplash2.jpg");
+    width: 100%;
+    height: 600px;
+    background-position: left;
 }
 
 
 
-@media (max-width: 750px) {
-
-    .herosection {
-        margin: 0;
-    }
-    .herosection > div {
-        height: fit-content;
-    }
+.herosection h2 {
+    color: white;
+    margin: 0 auto;
+    padding-top: 250px;
+    text-align: center;
+    max-width: 520px;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: var(--barCon);
+    font-size: 1.7rem;
+    letter-spacing: 1.5px;
 }
+
 
 
 
 
 .color {
     background-color: var(--almostWhite);
-    padding-top: 3vw;
+    padding-top: 8vw;
 }
 
 .karusell {
@@ -120,7 +78,7 @@ hr {
     margin: 0 auto;
 }
 
-.karusell > div:first-of-type > h1 {
+.karusell > div:first-of-type > h2 {
    font-size: 3rem;
    font-family: var(--playDis);
    font-weight: 600;
@@ -167,7 +125,7 @@ hr {
     opacity: 1;
 }
 
-.divs > h2 {
+.divs > h3 {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -252,7 +210,7 @@ hr {
     grid-area: img;
 }
 
-.active > h2 {
+.active > h3 {
     text-transform: inherit;
     grid-area: h2;
     font-size: 1.8rem;
@@ -329,6 +287,12 @@ hr {
 
 @media (max-width: 730px) {
 
+    .herosection h2 {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .karusell > div:first-of-type {
         width: 90%;
         margin: 3rem auto;
@@ -371,7 +335,7 @@ hr {
         background-color: rgba(245, 239, 238, 0.579);
     }
 
-    .divs > h2 {
+    .divs > h3 {
         font-size: 1.2rem;
         text-align: center;
         font-family: var(--FiraS);

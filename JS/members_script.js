@@ -3,7 +3,7 @@ console.log("hello from the members side")
 
 
 
-fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=6&page=1")
+fetch ("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=3&page=1")
 .then(response => response.json())
 .then(data => {
   outPut.innerHTML = "";
@@ -38,7 +38,7 @@ function loadMore (tall) {
   let currPage = pageIndex +=tall;
 
 
-fetch (`https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&page=${currPage}&per_page=6`)
+fetch (`https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&page=${currPage}&per_page=3`)
 .then(response => response.json())
 .then(data => {
 

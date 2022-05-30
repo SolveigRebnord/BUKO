@@ -72,7 +72,7 @@ body {
     height: 15vh;
     text-align: center;
     background-color: var(--whiteish);
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
 }
 
 .smallerh1 {
@@ -439,16 +439,11 @@ div#menu > img {
     }
 
     .underhero {
-        height: 0rem;
-        position: relative;
+        display: none;
     }
 
     .smallerheader {
         height: 15vh;
-    }
-
-    .underhero > h1:first-of-type {
-        display: none;
     }
 
     .smallerh1 {
@@ -457,11 +452,10 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        top: -800%;
+        bottom: 26%;
         color: white;
+        font-family: var(--corGar);
     }
-
-
 }
 
 

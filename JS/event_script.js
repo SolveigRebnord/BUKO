@@ -27,7 +27,7 @@ fetch(`https://www.sunroad.no/exam/wp-json/wc/store/products/${id}?_embed`)
 
 
 
-fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/media`) 
+fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/media?per_page=100`) 
 
 .then(response => response.json())
 .then(data => {
@@ -45,7 +45,7 @@ listMusic(data);
 
 
 
-fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/sr_playlist?_embed`) 
+fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/sr_playlist?_embed&per_page=100`) 
 
 .then(response => response.json())
 .then(data => {
@@ -55,7 +55,7 @@ fetch(`https://www.sunroad.no/exam/wp-json/wp/v2/sr_playlist?_embed`)
         `<h3>Program</h3>
         ${data[0].content.rendered}`;
 
-        console.log(content);
+        //console.log(content);
          showPlaylist.innerHTML = content;
     
 })
@@ -94,7 +94,7 @@ function listMusic (data) {
         `<h3>Watch</h3>
         <div>
         <p>- ${item.title.rendered} -</p>
-        <video class="videoFormat" width="90%" height="fit-content" poster="https://www.sunroad.no/exam/wp-content/uploads/2022/05/larisa-birta-slbOcNlWNHA-unsplash-2-scaled.jpg" controls>
+        <video class="videoFormat" width="90%" height="fit-content" poster="https://www.sunroad.no/exam/wp-content/uploads/2022/05/arindam-mahanta-VEOk8qUl9DU-unsplash-2.jpg" controls>
          <source src="${item.source_url}"></video>
         </div>
 

@@ -95,16 +95,6 @@ mediaQuery700.addEventListener("change", scrollTo(mediaQuery700));
 
 function scrollTo (m) {
 
-  const storyTitle = document.querySelector(".undermenu > div > ul > li:nth-child(1)");
-  
-
-  const conductorTitle = document.querySelector(".undermenu > div > ul > li:nth-child(2)");
-
-  const conductorh2 = document.querySelector("section.conductor > h2");
-
-  const ourstoryh2 = document.querySelector("section.ourstory > h2");
-
-
   if (m.matches) {
 
     const clickLI = document.querySelectorAll(".undermenu > div > ul > li");
@@ -134,7 +124,16 @@ function scrollToSection(number) {
   if (number === 1) {
     let header = document.querySelector("section.conductor > h2");
     header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
-    
+  }
+
+  if (number === 2) {
+    let header = document.querySelector("section.board > h2");
+    header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
+  }
+
+  if (number === 3) {
+    let header = document.querySelector("section.conductor > h2");
+    header.scrollIntoView({ block: "center" ,  behavior: 'smooth' });
   }
 
 }

@@ -75,7 +75,7 @@ function listData (array) {
 
     theArray += `<div class="divs" onclick="currentSlide(${index+1})">
         <img src=${imgUrl} alt="${altText}">
-    <h2>${item.title.rendered}</h2>
+    <h3>${item.title.rendered}</h3>
     ${item.excerpt.rendered}
     <div class="links">
     <a class="buttonstyle" href="newpost.html?id=${item.id}">Read more</a>

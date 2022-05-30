@@ -1,7 +1,7 @@
 console.log("hello from the portfolio side");
 
 
-fetch("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed")
+fetch("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed&per_page=50")
 .then(response => response.json())
 .then(data => {
     console.log(data);
@@ -11,9 +11,9 @@ fetch("https://www.sunroad.no/exam/wp-json/wc/store/products?_embed")
     if (objekt.tags[0].id == 26) {
       portfolioData.push(objekt);
     }
-    //console.log(portfolioList);
+    console.log(portfolioData);
   }
-products = portfolioData;
+    products = portfolioData;
     listPost(portfolioData);
 
 })
@@ -40,33 +40,21 @@ const section = document.querySelector(".sectionPortfolio");
             //console.log(priceBefore);
             let priceLength = priceBefore.length;
 
+            let intoDate = "";
 
             if (priceLength < 9) {
             
-            let intoDate = "0" + priceBefore.slice(0,1) + "." + priceBefore.slice(1,3) + "." + priceBefore.slice(3,7);
+            intoDate = "0" + priceBefore.slice(0,1) + "." + priceBefore.slice(1,3) + "." + priceBefore.slice(3,7);
             //console.log(intoDate);
-
-            if (post.sku.length < 0) {
-              console.log("ups");            // funker ikke     
             }
-
-            
-            list += `<a href="event.html?id=${post.id}">
-            <div class="showPortfolio">
-            <img src="${post.images[0].src}" alt="${post.images[0].alt}">
-            <h2>${post.name}</h2>
-            <p class="details">${post.sku}</p>
-            <p class="date">${intoDate}</p>
-            ${post.short_description}</div></a>`
-
-            }
-
 
             else {
+            intoDate = priceBefore.slice(0,2) + "." + priceBefore.slice(2,4) + "." + priceBefore.slice(4,8);
+              //console.log(intoDate);
+            }
 
-                let intoDate = priceBefore.slice(0,2) + "." + priceBefore.slice(2,4) + "." + priceBefore.slice(4,8);
-                //console.log(intoDate);
-           
+
+
                 list += `<a href="event.html?id=${post.id}">
                 <div class="showPortfolio">
                 <img src="${post.images[0].src}" alt="${post.images[0].alt}">
@@ -75,8 +63,8 @@ const section = document.querySelector(".sectionPortfolio");
                 <p class="date">${intoDate}</p>
                 ${post.short_description}
                 </div></a>`
-        }
-    }
+        
+          }
   
   
     section.innerHTML = list;
