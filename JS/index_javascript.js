@@ -1,18 +1,12 @@
 
 console.log("heia dette er index");
 
-var myArray = {};
-
-
-
-
 const outPutKarusell = document.querySelector(".karusell");
 const ourList = document.querySelector(".outPut");
 
 
-
 async function fetchData(){
-  const response = await fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=30")
+  const response = await fetch ("https://www.sunroad.no/exam/wp-json/wp/v2/posts?_embed&per_page=4")
   const data = await response.json();
   return data;
 }
@@ -20,13 +14,13 @@ async function fetchData(){
 fetchData().then(data => {
   console.log(data);
   let afterClass = listData(data);
+  //console.log(afterClass);
   showSlides(slideIndex);
-  
-
 })
 .catch((error) => {
   console.error('Error:', error);
 });
+
 
 
 function listData (array) {
@@ -34,35 +28,20 @@ function listData (array) {
   //console.log(array);
   let theArray = "";
 
- 
-
-
- 
   for (let [index, item] of array.entries()) {
-    //console.log(item.content.rendered);
 
     let newIndex = item.content.rendered.indexOf('alt="');
-    //console.log(newIndex);
     let lastIndex = item.content.rendered.indexOf('" class=');
     let current = item.content.rendered.slice(newIndex, lastIndex);
-    //console.log(current);
-
     let altText = current.slice(5);
     //console.log(altText);
 
-     
-
     let indexNumber = item.content.rendered.indexOf('"https');
-    //console.log(indexNumber);
     let lastIndexNumber = item.content.rendered.indexOf(' alt=');
-    //console.log(lastIndexNumber);
     let imgUrl = item.content.rendered.slice(indexNumber, lastIndexNumber);
     //console.log(imgUrl);
 
-   
-
-
-
+  
     var theLink = "";
     if (item.tags == 37) {
        theLink = `<a href="portfolio.html">See more events like this</a>`;
@@ -72,189 +51,113 @@ function listData (array) {
          theLink = `<a href="members.html">Read more about our members</a>`;
     }
 
-
-    theArray += `<div class="divs" onclick="currentSlide(${index+1})">
+    theArray += 
+    `<div class="divs" onclick="currentSlide(${index+1})">
         <img src=${imgUrl} alt="${altText}">
-    <h3>${item.title.rendered}</h3>
-    ${item.excerpt.rendered}
-    <div class="links">
-    <a class="buttonstyle" href="newpost.html?id=${item.id}">Read more</a>
-      ${theLink}
-    </div>
+        <h3>${item.title.rendered}</h3>
+        ${item.excerpt.rendered}
+        <div class="links">
+          <a class="buttonstyle" href="newpost.html?id=${item.id}">Read more</a>
+          ${theLink}
+        </div>
     </div>`
-
- 
   }
-
-  
   ourList.innerHTML = theArray;
-
-}
-
-
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
 }
 
 var slideIndex = 1;
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
 
-
-
-
 function showSlides(n) {
   let i;
   
   slides = document.getElementsByClassName("divs");
+  //console.log(slides);
 
-  console.log(slides);
+  var mediaQuery = window.matchMedia("(max-width: 750px)");
+  window.addEventListener("change", disbleFunction);
 
-
-var mediaQuery = window.matchMedia("(max-width: 750px)");
-window.addEventListener("change", disbleFunction);
-
-function disbleFunction(m) {
-  if (m.matches) {
-
-    for (let slide of slides) {
-      slide.removeListener("onclick", currentSlide, false);
+  function disbleFunction(m) {//Funker ikke, men mediaquery fungerer. Den stopper derfor funksjonen fra å kjøre, som er det jeg vil..
+    if (m.matches) {
+      for (let slide of slides) {
+        slide.removeAttr("onclick");
+      }
     }
   }
-}
 
-mediaQuery.addEventListener("change", disbleFunction); // Funker, men feilmelding :)
-disbleFunction(mediaQuery);
+  mediaQuery.addEventListener("change", disbleFunction); 
+  disbleFunction(mediaQuery);
 
-
-
-  
-
- if (n > slides.length) {slideIndex = 1}
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
-  
   
   for (i = 0; i < slides.length; i++) {
     slides[i].className = slides[i].className.replace(" active", "");
   }
   
-
-  
   slides[slideIndex-1].className += " active";
   //console.log(slides[slideIndex-1]);
+
   slides[slideIndex-1].animate(
-    [
-   
-      {
-
-        opacity: 0
-      },
-      {
-
-        opacity: 1
-      }
-    ],
-    { duration: 600, easing: "ease-in-out", fill: "forwards"}
+    [{opacity: 0},{opacity: 1}],
+    {duration: 600, easing: "ease-in-out", fill: "forwards"}
   );
-};
+}
   
-
-
-
-//-----------------------------------------------------------------------
 
 var mediaQuery = window.matchMedia("(max-width: 700px)");
 //console.log(mediaQuery);
 
-function myFunction(m) {
+function mobilSlider(m) {
+
   if (m.matches) { 
 
     const slider = document.querySelector('.outPut');
-
     const buttons = document.querySelector(".buttonsdiv")
     buttons.style.display = "none";
-   //console.log(slider);
 
+    var running = false;
+    var touch; // start touch
+    var scrollLeft;
+    //pageX gir kordinater for klikket 
+    
 
+    slider.addEventListener("mousedown", e => {
+      running = true;
+      touch = e.pageX - slider.offsetLeft; /* offsetLeft gir posisjon til venstre for elementet */
+      scrollLeft = slider.scrollLeft;
+    });
 
+    slider.addEventListener("mouseleave", _ => {
+      running = false;
+    });
 
- 
-let isDown = false;
-let startX;
-let scrollLeft;
+    slider.addEventListener("mouseup", _ => {
+      running = false;
+    });
 
-slider.addEventListener('mousedown', e => {
-  isDown = true;
-
-  startX = e.pageX - slider.offsetLeft; /* offsetLeft gir posisjon til venstre for elementet */
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('mouseleave', _ => {
-  isDown = false;
-
-});
-
-slider.addEventListener('mouseup', _ => {
-  isDown = false;
-
-});
-
-slider.addEventListener('mousemove', e => {
-  if (!isDown) return; /* er det her den klarer å snu og gjøre samme tilbake?*/
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const SCROLL_SPEED = 3;
-  const walk = (x - startX) * SCROLL_SPEED;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-
+    slider.addEventListener("mousemove", e => {
+      if (!running) return; //hvis hvis ikke faktisk sveiper, ikke kjør videre funksjon
+      e.preventDefault();
+      const currentPage = e.pageX - slider.offsetLeft;
+      const speed = 3;
+      const length = (currentPage - touch) * speed;
+      slider.scrollLeft = scrollLeft - length;
+    });
 
   }
-  else {
-
-  }
-
 }
 
-
-mediaQuery.addEventListener("change", myFunction) // Attach listener function on state changes
-myFunction(mediaQuery) // Call listener function at run time
-
-
-
-
-
-
-
-/*
-
-
-function changeList(liste) {
-console.log(liste);
-
-let theList = liste;
-let removedPart = theList.shift();
-  //console.log(removedPart);
-  //console.log(firstArr);
-
-  let middleArr = theList;
-  //console.log(middleArr);
-  let secondPart = middleArr.push(removedPart);
-  //console.log(middleArr);
-  let secondArr = middleArr;
-  //console.log(secondArr);
-  secondArr = liste;
-console.log(liste);
-}
-*/
+mediaQuery.addEventListener("change", mobilSlider) 
+mobilSlider(mediaQuery) 
 
 
 
@@ -264,7 +167,11 @@ console.log(liste);
 
 
 
-/*
+
+
+
+/* Beholde just in case..
+
     if (n > slides.length) {theIndex = 1}
     if (n < 1) {theIndex = slides.length}
 

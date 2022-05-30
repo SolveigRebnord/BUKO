@@ -18,13 +18,11 @@ html {
     --corGar: 'Cormorant Garamond', serif;
     --playDis: 'Playfair Display', cursive;
     --barCon: 'Barlow Condensed', sans-serif;
-
 }
 
 main {
     margin: 0;
 }
-
 
 .underhero > h1 {
     font-family: var(--playDis);
@@ -41,8 +39,6 @@ main {
     background-position: left;
 }
 
-
-
 .herosection h2 {
     color: white;
     margin: 0 auto;
@@ -55,10 +51,6 @@ main {
     font-size: 1.7rem;
     letter-spacing: 1.5px;
 }
-
-
-
-
 
 .color {
     background-color: var(--almostWhite);
@@ -89,11 +81,6 @@ main {
     font-weight: 300;
 }
 
-
-
-
-
-
 .outPut {
     display: flex;
     flex-direction: row;
@@ -106,7 +93,6 @@ main {
     width: 90%;
     padding-top: 1rem;
 }
-
 
 .divs {
     display: flex;
@@ -142,8 +128,6 @@ main {
     height: 16vw;
     object-fit: cover;
 }
-
-
 
 .active {
     width: 800px;
@@ -203,7 +187,6 @@ main {
     font-family: var(--robotCon);
 }
 
-
 .active > img {
     width: 250px;
     height: 250px;
@@ -216,8 +199,6 @@ main {
     font-size: 1.8rem;
     font-family: var(--playDis);
 }
-
-
 
 .buttonsdiv {
     width: 80%;
@@ -237,7 +218,6 @@ main {
     scale: 1.1;
 }
 
-
 .buttonsdiv > button:first-of-type img {
     width: 35px;
     transform: rotate(-95deg) scaleY(-1);
@@ -253,13 +233,11 @@ main {
 }
 
 
-
 @media (max-width: 1250px) {
     .active {
         top: 125%;
     }
 }
-
 
 @media (max-width: 1000px) {
     
@@ -301,7 +279,6 @@ main {
         gap: 1rem;
     }
 
-
     .outPut {
         display: grid;
         grid-template-columns: repeat(4, 300px);
@@ -316,7 +293,6 @@ main {
         scroll-snap-type: both mandatory; /* gjør at den snapper til bilde både x og y vei */
         margin: 0;
     }
-
 
     .active, .divs {
         width: 300px;
@@ -357,7 +333,7 @@ main {
         align-items: center;
         justify-content: flex-end;
     }
-
+    
     .divs > img {
         position: absolute;
         top: 0;
