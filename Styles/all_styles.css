@@ -452,7 +452,7 @@ div#menu > img {
         position: absolute;
         width: 50px;
         left: 10%;
-        bottom: 26%;
+        bottom: 20%;
         color: white;
         font-family: var(--corGar);
     }
