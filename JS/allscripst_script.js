@@ -86,6 +86,6 @@ const topButton = document.querySelector(".topbutton");
 topButton.addEventListener("click", scrollToTop);
 
 function scrollToTop() {
-  const scrollTo = document.querySelector(".underhero");
+  const scrollTo = document.querySelector("h1");
   scrollTo.scrollIntoView({ block: 'end',  behavior: 'smooth' });
 }
