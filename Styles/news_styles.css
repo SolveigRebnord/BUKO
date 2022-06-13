@@ -23,6 +23,10 @@ main {
     margin: 0;
 }
 
+.breadcrumbs {
+    margin-left: 7.5%;
+}
+
 .showPost > div > img { 
     height: 100%;
     display: inline-block;
@@ -162,8 +166,13 @@ main {
     .showPost {
         flex-direction: column-reverse;
         padding: 1rem;
-        min-height: 780px;
+        height: fit-content;
     }
+
+    .showPost > div > img {
+        max-height: 400px;
+    }
+
 
     .h2title {
         font-size: 2.2rem;

@@ -30,6 +30,10 @@ a {
     margin-left: 6rem;
 }
 
+.breadcrumbs {
+    padding-left: 5%;
+}
+
 .smallerheader {
     object-position: left;
 }
